@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "4UpsGlqZ2gANcN/wngoi+qUost1tW9i8ysbK7NdH6LKc32JrMrGJ1TqN2AvfGi6mqoIOVvEmAiouSoxXOcYkiA==",
+  "dgSpecHash": "rD6iESBSV7tHxA6d2iPJjx5Ceg+Bi+UBmcTRJNt5Qlo68jqd3EaDIrSBxCykLS3P91mUEjihBcXe5gGJjBLhrg==",
   "success": true,
   "projectFilePath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.Android\\GUI.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gkhan\\.nuget\\packages\\microcharts.android\\1.0.0-preview1\\microcharts.android.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\gkhan\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\gkhan\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\gkhan\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
     "C:\\Users\\gkhan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\gkhan\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",
@@ -54,5 +59,12 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.android.material\\1.2.1.1\\xamarin.google.android.material.1.2.1.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.Android\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

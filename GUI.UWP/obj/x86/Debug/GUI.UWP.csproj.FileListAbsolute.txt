@@ -124,3 +124,13 @@ C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj
 C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160715180000000.json
 C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Microcharts.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Microcharts.Forms.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\libEGL.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\libGLESv2.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\libSkiaSharp.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.Interop.UWP.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
+C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll

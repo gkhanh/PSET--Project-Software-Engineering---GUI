@@ -30,19 +30,71 @@
     <AppXManifest Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2021-11-26T09:23:02.605</Modified>
+=======
+      <Modified>2021-11-26T10:06:12.620</Modified>
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
       <PackagePath>entrypoint\GUI.UWP.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2021-11-26T09:23:00.761</Modified>
+=======
+      <Modified>2021-11-26T10:06:11.671</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\microcharts.forms\1.0.0-preview1\lib\netstandard2.0\Microcharts.Forms.dll">
+      <PackagePath>Microcharts.Forms.dll</PackagePath>
+      <Modified>2021-04-27T19:32:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\microcharts.forms\1.0.0-preview1\lib\netstandard2.0\Microcharts.dll">
+      <PackagePath>Microcharts.dll</PackagePath>
+      <Modified>2021-04-27T19:31:24.000</Modified>
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T00:15:46.000</Modified>
     </AppxPackagedFile>
+<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+=======
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\libEGL.dll">
+      <PackagePath>libEGL.dll</PackagePath>
+      <Modified>2020-09-11T08:53:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\libGLESv2.dll">
+      <PackagePath>libGLESv2.dll</PackagePath>
+      <Modified>2020-09-11T08:53:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\libSkiaSharp.dll">
+      <PackagePath>libSkiaSharp.dll</PackagePath>
+      <Modified>2020-09-11T08:53:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp\2.80.2\lib\uap10.0.16299\SkiaSharp.dll">
+      <PackagePath>SkiaSharp.dll</PackagePath>
+      <Modified>2020-09-11T08:53:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp.views\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\SkiaSharp.Views.Interop.UWP.dll">
+      <PackagePath>SkiaSharp.Views.Interop.UWP.dll</PackagePath>
+      <Modified>2020-09-11T08:59:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp.views\2.80.2\lib\uap10.0\SkiaSharp.Views.UWP.dll">
+      <PackagePath>SkiaSharp.Views.UWP.dll</PackagePath>
+      <Modified>2020-09-11T08:59:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\skiasharp.views.forms\2.80.2\lib\uap10.0\SkiaSharp.Views.Forms.dll">
+      <PackagePath>SkiaSharp.Views.Forms.dll</PackagePath>
+      <Modified>2020-09-11T09:07:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2018-09-18T19:38:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
@@ -68,7 +120,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI\bin\Debug\netstandard2.0\GUI.dll">
       <PackagePath>GUI.dll</PackagePath>
+<<<<<<< HEAD
       <Modified>2021-11-26T09:22:55.353</Modified>
+=======
+      <Modified>2021-11-26T10:33:15.381</Modified>
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -239,11 +295,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2021-11-26T09:23:00.702</Modified>
+=======
+      <Modified>2021-11-26T10:06:11.619</Modified>
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+<<<<<<< HEAD
       <Modified>2021-11-26T09:23:00.702</Modified>
+=======
+      <Modified>2021-11-26T10:06:11.619</Modified>
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -263,7 +327,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
       <PackagePath>GUI.UWP.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2021-11-26T09:23:02.600</Modified>
+=======
+      <Modified>2021-11-26T10:06:12.616</Modified>
+>>>>>>> 1fd67eb126f17d1622a31ead4fcd134680ad795b
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

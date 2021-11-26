@@ -42,6 +42,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[1.0.0-preview1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
@@ -105,6 +109,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[1.0.0-preview1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

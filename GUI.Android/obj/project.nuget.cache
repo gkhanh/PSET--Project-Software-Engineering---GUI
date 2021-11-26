@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "FIgAtiFpPZPSZAex3mlFZgb+/TXfqo8n2Z8AtkZL1fDrwJzmxs3HZs/KG9YToIx/UjIh8lhT1c/DBJDnIvmDhA==",
+  "dgSpecHash": "JSJZJikJhC+0T4UwOCmwtYCY8XUx/jN2aqexTDmEeDULnA6I4J4Ph2QrPTVSnLHyG9YIqiFbDOs+uL7QZz0Lvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\GUI.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\laris\\.nuget\\packages\\microcharts.android\\1.0.0-preview1\\microcharts.android.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",

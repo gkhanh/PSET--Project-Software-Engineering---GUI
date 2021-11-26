@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "UA3KqD64jEUimZ87/xteZ0XnoVE4o0MDfSxtxXeafRlQnu89/MRGgKbxIjkP2Opl4Ym/JwEFeaVA1UTYY/Jr4g==",
+  "dgSpecHash": "2CPMLq1vsVyXWr7KvV0H11uKexweayEA2HRTIvb6Ctt9G6OVCvpWlXMjSyJrPoikWS/j/hzPVFjPrgD0Vk0y8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\laris\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\microcharts.ios\\1.0.0-preview1\\microcharts.ios.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],

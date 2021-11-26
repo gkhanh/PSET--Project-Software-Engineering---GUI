@@ -1,21 +1,20 @@
-﻿using GUI.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace GUI.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class DailyTemperature : ContentPage
     {
-        public LoginPage()
+        public DailyTemperature()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
         }
     }
 }

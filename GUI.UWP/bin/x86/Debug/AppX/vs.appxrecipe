@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-KIV08VC</Machine>
-    <WindowsUser>gkhan</WindowsUser>
+    <Machine>LAPTOP-N7LGF13F</Machine>
+    <WindowsUser>laris</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=ef7789e4-3ced-4baf-8659-90ba81522e99</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>6CA813878B7B1F4E304A6524A4C58A9F115C876711990E80A31D87408F30C69F</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>50A9D40050FBD6F9BB6F6056A298467B530577ADFA688DFB2D8A029118854792</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a_1.0.0.0_x86__tvxn9nwg7qp2g</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a_tvxn9nwg7qp2g!App</RegisteredUserModeAppID>
     <RegisteredPackageID>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a</RegisteredPackageID>
@@ -27,50 +27,50 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T09:00:27.402</Modified>
+      <Modified>2021-11-26T09:18:51.749</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
       <PackagePath>entrypoint\GUI.UWP.exe</PackagePath>
-      <Modified>2021-11-26T09:00:25.664</Modified>
+      <Modified>2021-11-26T09:18:50.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T00:15:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.essentials\1.6.1\lib\uap10.0.16299\Xamarin.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\xamarin.essentials\1.6.1\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
       <Modified>2021-01-25T19:38:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2021-02-12T13:40:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
       <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
       <Modified>2021-02-12T13:39:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
       <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
       <Modified>2021-02-12T13:39:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2021-02-12T13:39:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI\bin\Debug\netstandard2.0\GUI.dll">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.dll">
       <PackagePath>GUI.dll</PackagePath>
-      <Modified>2021-11-26T09:00:20.911</Modified>
+      <Modified>2021-11-26T09:18:47.462</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
@@ -78,172 +78,172 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T03:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-02-12T04:08:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-11-26T08:59:59.334</Modified>
+      <Modified>2021-11-26T09:14:48.491</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.254</Modified>
+      <Modified>2021-11-26T09:14:48.478</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.255</Modified>
+      <Modified>2021-11-26T09:14:48.478</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.257</Modified>
+      <Modified>2021-11-26T09:14:48.479</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.263</Modified>
+      <Modified>2021-11-26T09:14:48.479</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.264</Modified>
+      <Modified>2021-11-26T09:14:48.480</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.266</Modified>
+      <Modified>2021-11-26T09:14:48.480</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.267</Modified>
+      <Modified>2021-11-26T09:14:48.481</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.268</Modified>
+      <Modified>2021-11-26T09:14:48.481</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.270</Modified>
+      <Modified>2021-11-26T09:14:48.482</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.272</Modified>
+      <Modified>2021-11-26T09:14:48.483</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.273</Modified>
+      <Modified>2021-11-26T09:14:48.483</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.275</Modified>
+      <Modified>2021-11-26T09:14:48.484</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.276</Modified>
+      <Modified>2021-11-26T09:14:48.484</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.279</Modified>
+      <Modified>2021-11-26T09:14:48.484</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.280</Modified>
+      <Modified>2021-11-26T09:14:48.485</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.281</Modified>
+      <Modified>2021-11-26T09:14:48.485</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.285</Modified>
+      <Modified>2021-11-26T09:14:48.485</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.289</Modified>
+      <Modified>2021-11-26T09:14:48.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.293</Modified>
+      <Modified>2021-11-26T09:14:48.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.295</Modified>
+      <Modified>2021-11-26T09:14:48.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.299</Modified>
+      <Modified>2021-11-26T09:14:48.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.305</Modified>
+      <Modified>2021-11-26T09:14:48.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.309</Modified>
+      <Modified>2021-11-26T09:14:48.488</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.311</Modified>
+      <Modified>2021-11-26T09:14:48.488</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.315</Modified>
+      <Modified>2021-11-26T09:14:48.488</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.321</Modified>
+      <Modified>2021-11-26T09:14:48.489</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-11-26T08:59:59.326</Modified>
+      <Modified>2021-11-26T09:14:48.489</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\xamarin_logo.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
-      <Modified>2021-11-26T08:59:59.541</Modified>
+      <Modified>2021-11-26T09:14:48.651</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\icon_about.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icon_about.png">
       <PackagePath>icon_about.png</PackagePath>
-      <Modified>2021-11-26T08:59:59.475</Modified>
+      <Modified>2021-11-26T09:14:48.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\icon_feed.png">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icon_feed.png">
       <PackagePath>icon_feed.png</PackagePath>
-      <Modified>2021-11-26T08:59:59.480</Modified>
+      <Modified>2021-11-26T09:14:48.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.xr.xml">
       <PackagePath>GUI.UWP.xr.xml</PackagePath>
-      <Modified>2021-11-26T09:00:25.590</Modified>
+      <Modified>2021-11-26T09:14:48.641</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-11-26T09:00:25.609</Modified>
+      <Modified>2021-11-26T09:18:50.802</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-11-26T09:00:25.609</Modified>
+      <Modified>2021-11-26T09:18:50.803</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -253,62 +253,62 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T01:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-07-10T00:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-11-26T09:00:26.083</Modified>
+      <Modified>2021-11-26T09:17:03.339</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
       <PackagePath>GUI.UWP.exe</PackagePath>
-      <Modified>2021-11-26T09:00:27.399</Modified>
+      <Modified>2021-11-26T09:18:51.746</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\laris\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

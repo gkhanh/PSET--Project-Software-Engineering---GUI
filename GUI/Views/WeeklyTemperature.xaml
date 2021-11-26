@@ -4,7 +4,7 @@
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
              x:Class="GUI.Views.WeeklyTemperature">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#545E5F">
+        <StackLayout BackgroundColor="#363939">
             
             <Label Text="Weekly overview temperature"
                 VerticalOptions="CenterAndExpand" 

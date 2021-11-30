@@ -134,3 +134,13 @@ C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin
 C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
 C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
 C:\Users\laris\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\Microcharts.Forms.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\Microcharts.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\libEGL.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\libGLESv2.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\libSkiaSharp.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.Interop.UWP.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
+D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\GUI.UWP\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll

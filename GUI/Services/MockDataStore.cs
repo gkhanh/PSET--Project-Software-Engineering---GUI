@@ -1,10 +1,11 @@
 ﻿using GUI.Models;
+using GUI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GUI.Services
+namespace Backup.Services
 {
     public class MockDataStore : IDataStore<Item>
     {
@@ -14,12 +15,12 @@ namespace GUI.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Daily Humidity", Description = "The graph will be shown here." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Daily Light", Description = "The graph will be shown here." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Daily Temperature", Description = "The graph will be shown here." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Weekly Humidity", Description = "The graph will be shown here." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Weekly Light", Description = "The graph will be shown here." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Weekly Temperature", Description = "The graph will be shown here." }
             };
         }
 

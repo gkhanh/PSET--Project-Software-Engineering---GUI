@@ -4,11 +4,11 @@
              x:Class="GUI.Views.AboutPage"
              xmlns:vm="clr-namespace:GUI.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#6A3AFF</Color>
@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-               <!-- <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                <!-- <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
                     <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
                 </ContentView>-->
             </StackLayout>
@@ -40,21 +40,53 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label  x:Name="TemperatureMainPage"
+                <StackLayout
+                     Orientation="Horizontal" Margin="5"
+                    >
+                    <Frame
+                        BackgroundColor="#363939"
+                        CornerRadius="10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        HeightRequest="60"
+                        WidthRequest="400">
+                        <Label 
+                        x:Name="TemperatureMainPage"
+                        Text="Temperature: 10 Degrees"
+                        TextColor="#3FBCCA"
+                        FontSize = "35"
+                           />
+                    </Frame>
+                    <Frame  
+                        x:Name="LightMainPageFrame"
+                        BackgroundColor="#363939"
+                        CornerRadius="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        HeightRequest="60"
+                        WidthRequest="400">
+                        <Label 
+                        x:Name="LightMainPage"
                         Text=""
                         TextColor="#3FBCCA"
-                        FontSize = "20"
-                    />
-                <Label  x:Name="LightMainPage"
+                        FontSize = "35"
+                           />
+                    </Frame>
+                    <Frame
+                        BackgroundColor="#363939"
+                        CornerRadius="10"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        HeightRequest="60"
+                        WidthRequest="400">
+                        <Label 
+                        x:Name="HumidityMainPage"
                         Text=""
                         TextColor="#3FBCCA"
-                        FontSize = "20"
-                    />
-                <Label  x:Name="HumidityMainPage"
-                        Text=""
-                        TextColor="#3FBCCA"
-                        FontSize = "20"
-                    />
+                        FontSize = "35"
+                           />
+                    </Frame>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </Grid>

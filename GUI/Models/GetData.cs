@@ -12,7 +12,7 @@ namespace GUI.Models
         public int Temperature { get; set; }
         public int AirPressure { get; set; }
         public int LightInfo { get; set; }
-        public string Day { get; set; }
+        public string Date { get; set; }
 
     }
 
@@ -25,17 +25,18 @@ namespace GUI.Models
     public class GetHumidity : GetData
     {
         int Humidity{get; set; }
-        string Day { get; set; }
+        string Date { get; set; }
     }
 
     public class GetTemperature : GetData
     {
         int Temperature { get; set; }
-        string Day { get; set; }
+        string Date { get; set; }
     }
 
     public class Air_pressure: GetData
     {
         int pressure { get; set; }
+        string Date { get; set; }
     }
 }

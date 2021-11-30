@@ -12,6 +12,6 @@ namespace GUI.Models
         int Temperature { get; set; }
         int AirPressure { get; set; }
         int LightInfo { get; set; }
-        string Day { get; set; }
+        string Date { get; set; }
     }
 }

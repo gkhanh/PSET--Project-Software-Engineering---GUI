@@ -1,24 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "TnWVEyvqL0bDIvFDS0hsdYenLpzB+K+ZfcOitSSavSuoKE7UyTrXha9v5PmJZVMeXMmh6K9Ug1PYezZNu/ydeQ==",
+  "dgSpecHash": "2CPMLq1vsVyXWr7KvV0H11uKexweayEA2HRTIvb6Ctt9G6OVCvpWlXMjSyJrPoikWS/j/hzPVFjPrgD0Vk0y8g==",
   "success": true,
-  "projectFilePath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.iOS\\GUI.iOS.csproj",
+  "projectFilePath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gkhan\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\microcharts.ios\\1.0.0-preview1\\microcharts.ios.1.0.0-preview1.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Users\\gkhan\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\laris\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\microcharts.ios\\1.0.0-preview1\\microcharts.ios.1.0.0-preview1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\skiasharp\\2.80.2\\skiasharp.2.80.2.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\skiasharp.views\\2.80.2\\skiasharp.views.2.80.2.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.iOS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

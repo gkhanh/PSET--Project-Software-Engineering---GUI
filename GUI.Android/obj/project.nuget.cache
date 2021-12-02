@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W8wVhMtXYQs/3eevxbL7ceNchfGvKtGIOw5jK2G2LzTtyAT70v3ZjgIBFe0faLMP5YAeKqtZKrtDKTiHxxOtpA==",
+  "dgSpecHash": "qQlP4AnSVJxcf0qHyUXjaxdoylGmRSf0kt/Vldx/I8L6t+8kL3JU/QWnbx654LKob0SnqvtgRaN2gyI2MrTfow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\GUI.Android.csproj",
+  "projectFilePath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\GUI.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\laris\\.nuget\\packages\\microcharts.android\\1.0.0-preview1\\microcharts.android.1.0.0-preview1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",

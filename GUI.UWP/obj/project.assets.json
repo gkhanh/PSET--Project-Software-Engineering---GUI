@@ -11195,11 +11195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
       "projectName": "GUI.UWP",
-      "projectPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
+      "projectPath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
       "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\obj\\",
+      "outputPath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -11221,8 +11221,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
-              "projectPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
+            "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
+              "projectPath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
             }
           }
         }

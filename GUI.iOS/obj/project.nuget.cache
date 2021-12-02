@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yn2nmyw1r7QpUOZGdeT0bp3FjamUSuXVOcdDWpyw7MbHgGOM0uqE7p//bKZri6yXn526oqqEaSFiPOxhlcGH/g==",
+  "dgSpecHash": "L2psCoJOuh5N17JaV7qqZbmXK/eZTa8eOTFvsThEQAkA3RW7hmpnGiLyUso1sqpriNADMJ2LYtLnFodzYno6PA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
+  "projectFilePath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\laris\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microcharts.ios\\1.0.0-preview1\\microcharts.ios.1.0.0-preview1.nupkg.sha512",

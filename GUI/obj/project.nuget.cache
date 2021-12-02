@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SO8ENxu2nqlZ35nXJHgEnRX5KA1G3YEpBfstX3/NIHnVkYVsMBQS0F4fdjsWmB9BY6Ahm8h5/9NmsMYoNiyq0A==",
+  "dgSpecHash": "ZUTLdnQ80H6pbXBbcQ5VY9B7qbe3qHsmdpmIsEStWTRmQ3I3fvQ2bnelzZ6KC4oLoLOukEU3CKvGr5BNBnpBzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj",
+  "projectFilePath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\laris\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",
     "C:\\Users\\laris\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

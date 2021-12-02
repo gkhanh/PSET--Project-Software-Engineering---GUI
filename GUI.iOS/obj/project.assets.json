@@ -2151,11 +2151,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
       "projectName": "GUI.iOS",
-      "projectPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
+      "projectPath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
       "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\obj\\",
+      "outputPath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2176,8 +2176,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
-              "projectPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
+            "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
+              "projectPath": "C:\\Users\\laris\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
             }
           }
         }

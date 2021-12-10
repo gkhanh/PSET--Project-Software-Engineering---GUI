@@ -5,15 +5,80 @@
              x:Class="GUI.Views.WeeklyTemperature">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#363939">
-            
-            <Label Text="Weekly overview temperature"
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Weekly overview temperature"
+                Grid.Row="0"
+                Grid.Column="0"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <microcharts:ChartView
-                    x:Name="TemperatureWeek"
+                <microcharts:ChartView
+                    x:Name="HumidityDay"
+                    Grid.Row="1"
+                    Grid.Column="0"
                     HeightRequest="300"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Weekly overview temperature"
+                Grid.Row="3"
+                Grid.Column="0"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <microcharts:ChartView
+                    x:Name="TemperatureWeek"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    HeightRequest="300"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Weekly overview temperature"
+                Grid.Row="0"
+                Grid.Column="2"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <microcharts:ChartView
+                    x:Name="TemperatureWeek1"   
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    HeightRequest="300"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+
+                <BoxView Grid.Row="1" Grid.Column="1" VerticalOptions="FillAndExpand" WidthRequest="1" Color="White"/>
+                <BoxView Grid.Row="4" Grid.Column="1" VerticalOptions="FillAndExpand" WidthRequest="1" Color="White"/>
+
+                <BoxView Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="White"/>
+                <BoxView Grid.Row="2" Grid.Column="2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="White"/>
+
+                <Label Text="Weekly overview temperature"
+                Grid.Row="3"
+                Grid.Column="2"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <microcharts:ChartView
+                    x:Name="TemperatureWeek2"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    HeightRequest="300"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

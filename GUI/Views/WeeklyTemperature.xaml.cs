@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using Microcharts;
 using SkiaSharp;
 
-
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -74,8 +72,10 @@ namespace GUI.Views
         {
             InitializeComponent();
             TemperatureWeek.Chart = new LineChart {  Entries = entries, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, LabelColor = SKColor.Parse("#FFFFFF") };
-            //chartViewLine.Chart = new LineChart { Entries = entries, LineMode = LineMode.Straight };
-
+            TemperatureWeek1.Chart = new LineChart {  Entries = entries, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, LabelColor = SKColor.Parse("#FFFFFF") };
+            TemperatureWeek2.Chart = new LineChart {  Entries = entries, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, LabelColor = SKColor.Parse("#FFFFFF") };
+            HumidityDay.Chart = new LineChart {  Entries = entries, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, LabelColor = SKColor.Parse("#FFFFFF") };
+            //chartViewLine.Chart = new LineChart { Entries = entries, LineMode = LineMode.Straight 
         }
     }
 }

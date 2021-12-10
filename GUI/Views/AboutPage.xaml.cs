@@ -17,9 +17,10 @@ namespace GUI.Views
         public AboutPage()
         {
             InitializeComponent();
-            TemperatureMainPage.Text = "Temperature: 10 Degrees";
-            LightMainPage.Text = "Light: 4500 Lumen";
-            HumidityMainPage.Text = "Humidity: 84%";
+            //TemperatureMainPage.Text = "Temperature: 10 Degrees";
+            //LightMainPage.Text = "Light: 4500 Lumen";
+            //HumidityMainPage.Text = "Humidity: 84%";
+            
             Receive_connection receive_Connection = new Receive_connection();
             Console.WriteLine("Test");
             receive_Connection.RetrieveData();

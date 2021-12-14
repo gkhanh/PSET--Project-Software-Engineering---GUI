@@ -27,10 +27,5 @@ namespace GUI.ViewModels
             }
             //return maxValue;
         }
-
-        public void ShowHighestData(List<T> data, Converter<T, T> projection)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

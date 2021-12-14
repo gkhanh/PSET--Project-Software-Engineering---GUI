@@ -5,11 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microcharts;
 using SkiaSharp;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-
 
 namespace GUI.Views
 {

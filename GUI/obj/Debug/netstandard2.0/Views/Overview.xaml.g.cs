@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GUI.Views.WeeklyTemperature.xaml", "Views/WeeklyTemperature.xaml", typeof(global::GUI.Views.WeeklyTemperature))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("GUI.Views.Overview.xaml", "Views/Overview.xaml", typeof(global::GUI.Views.Overview))]
 
 namespace GUI.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\WeeklyTemperature.xaml")]
-    public partial class WeeklyTemperature : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Overview.xaml")]
+    public partial class Overview : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Microcharts.Forms.ChartView HumidityDay;
@@ -30,7 +30,7 @@ namespace GUI.Views {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WeeklyTemperature));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Overview));
             HumidityDay = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Microcharts.Forms.ChartView>(this, "HumidityDay");
             TemperatureWeek = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Microcharts.Forms.ChartView>(this, "TemperatureWeek");
             TemperatureWeek1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Microcharts.Forms.ChartView>(this, "TemperatureWeek1");

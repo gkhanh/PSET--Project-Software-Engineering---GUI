@@ -8,30 +8,63 @@
     xmlns:viewmodels="clr-namespace:GUI.ViewModels"
     x:DataType="viewmodels:DailyTemperatureViewModel"
     BackgroundColor="White">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <StackLayout Grid.Row="0">
-            <microcharts:ChartView
-                x:Name="TemperatureDaily"
-                Grid.Row="0"
-                HeightRequest="500"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="CenterAndExpand"
-                WidthRequest="1300" />
-        </StackLayout>
-        <StackLayout Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
 
-                <Label
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Picker
+                        x:Name="picker"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        TitleColor="Red"
+                        Title="{Binding PickerTitle}"
+                        ItemDisplayBinding="{Binding Name}"
+                        ItemsSource="{Binding Items}"
+                        SelectedItem="{Binding SelectedItem}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        />
+
+                    <microcharts:ChartView
+                        Chart="{Binding Chart}"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        HeightRequest="500"
+                        WidthRequest="1300"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        />
+
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
                     Grid.Row="0"
                     FontSize="50"
                     HorizontalOptions="CenterAndExpand"
@@ -39,7 +72,7 @@
                     TextColor="Black"
                     VerticalOptions="CenterAndExpand" />
 
-                <Label
+                    <Label
                     Grid.Row="1"
                     FontSize="20"
                     HorizontalOptions="CenterAndExpand"
@@ -47,22 +80,15 @@
                     TextColor="Black"
                     VerticalOptions="FillAndExpand" />
 
-                <Label
+                    <Label
                     Grid.Row="2"
                     FontSize="20"
                     HorizontalOptions="CenterAndExpand"
                     Text="Date: 16 - 12 - 2021"
                     TextColor="Black"
                     VerticalOptions="FillAndExpand" />
-            </Grid>
-        </StackLayout>
-        <StackLayout Grid.Row="2">
-            <Picker
-                Title="Charts"
-                ItemDisplayBinding="{Binding Name}"
-                ItemsSource="{Binding Items}"
-                SelectedItem="{Binding SelectedItem}"
-                TitleColor="Yellow" />
-        </StackLayout>
-    </Grid>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
 </ContentPage>

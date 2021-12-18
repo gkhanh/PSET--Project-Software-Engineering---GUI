@@ -3,14 +3,19 @@ using Microcharts;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
 using Xamarin.Forms;
 
 namespace GUI.ViewModels
 {
     public class DailyTemperatureViewModel : BaseViewModel
     {
+        /// <summary>
+        /// //////////////////////////////////////////////////////////////////
+        /// </summary>
+
+        // Declare a picker title name
+        private string pickerTitle { get; set; }
+
         // Declare a picker list
         private List<Picker_Item> items { get; set; }
 
@@ -18,20 +23,29 @@ namespace GUI.ViewModels
         private Picker_Item selectedItem;
 
         // Declare a temperature microchart list
-        private List<Microcharts.ChartEntry> chartEntries_temp { get; set; }
+        private List<ChartEntry> chartEntries_temp { get; set; }
 
         // Declare a humidity microchart list
-        private List<Microcharts.ChartEntry> chartEntries_hum { get; set; }
+        private List<ChartEntry> chartEntries_hum { get; set; }
 
         // Declare a light microchart list
-        private List<Microcharts.ChartEntry> chartEntries_light { get; set; }
+        private List<ChartEntry> chartEntries_light { get; set; }
 
-        // Declare a selected chart
-        private List<Microcharts.ChartEntry> selectedList { get; set; }
+        // Declare a selected list of chart entries
+        private List<ChartEntry> selectedChartEntries { get; set; }
+
+        // Declare a line chart
+        private LineChart chart { get; set; }
 
         /// <summary>
         /// //////////////////////////////////////////////////////////////////
         /// </summary>
+
+        // Declare a PUBLIC picker title to display the items on the picker
+        public string PickerTitle
+        {
+            get { return pickerTitle; }
+        }
 
         // Declare a PUBLIC picker item 'Ilist' to display to the view
         public IList<Picker_Item> Items
@@ -41,12 +55,12 @@ namespace GUI.ViewModels
         // Declare a PUBLIC chart entries 'Ilist'to display to the view
         public IList<Microcharts.ChartEntry> SelectedChartEntries
         {
-            get { return selectedList; }
+            get { return selectedChartEntries; }
             set
             {
-                if (selectedList != (List<ChartEntry>)value)
+                if (selectedChartEntries != (List<ChartEntry>)value)
                 {
-                    selectedList = (List<ChartEntry>)value;
+                    selectedChartEntries = (List<ChartEntry>)value;
                     OnPropertyChanged();
                 }
             }
@@ -61,41 +75,62 @@ namespace GUI.ViewModels
                 if(selectedItem != value)
                 {
                     selectedItem = value;
+                    ChangeGraph(selectedItem.Name);
+                }
+            }
+        }
+
+        // Declare a PUBLIC selected chart to display
+        public LineChart Chart
+        {
+            get { return chart; }
+            set { if(chart != value)
+                {
+                    chart = value;
                     OnPropertyChanged();
                 }
             }
         }
-        
+
+        /// <summary>
+        /// //////////////////////////////////////////////////////////////////
+        /// </summary>
+
         // CONSTRUCTOR
         public DailyTemperatureViewModel()
         {
+            SetupPicker();
+            SetupGraphs();
+
+            // Set chart with temperature data as default entries
+            chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+        }
+
+        // Function to setup picker control
+        private void SetupPicker()
+        {
             items = new List<Picker_Item>();
-            selectedItem = new Picker_Item {};
+            selectedItem = new Picker_Item { };
+            pickerTitle = "Select graph data:";
+
             items.Add(new Picker_Item { Name = "Temperature" });
             items.Add(new Picker_Item { Name = "Humidity" });
             items.Add(new Picker_Item { Name = "Light" });
-
-            SetupGraph(0);
         }
 
         // Function to setup graph
-        public void SetupGraph(int choice) // Later, we will pass parsed data. Arguments will be (int choice, list<string> data)
+        private void SetupGraphs()
         {
-            switch(choice){
-                // Temperature
-                case 0:
-                    // TODO: Get parsed data and assign to 'temp_entries'
-
-                    // Make a 'Microchart' chart for temperature
-                    List<Microcharts.ChartEntry> temp_entries = new List<Microcharts.ChartEntry>
+            // Temperature chart entries
+            chartEntries_temp = new List<Microcharts.ChartEntry>
                     {
-                        new ChartEntry(20)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "12:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "20",
-                        },
+                            new ChartEntry(20)
+                            {
+                                Color = SKColor.Parse("#FF1E90FF"),
+                                Label = "12:00",
+                                TextColor = SKColor.Parse("FF000000"),
+                                ValueLabel = "20",
+                            },
                         new ChartEntry(6)
                         {
                             Color = SKColor.Parse("#FF1E90FF"),
@@ -133,16 +168,8 @@ namespace GUI.ViewModels
                         },
                     };
 
-                    // Assign 'selectedList' with temperature entries
-                    selectedList = temp_entries;
-                    break;
-
-                // Humidity
-                case 1:
-                    // TODO: Get parsed data and assign to 'temp_entries'
-
-                    // Make a 'Microchart' chart for temperature
-                    List<Microcharts.ChartEntry> hum_entries = new List<Microcharts.ChartEntry>
+            // Humidity chart entries
+            chartEntries_hum = new List<Microcharts.ChartEntry>
                     {
                         new ChartEntry(10)
                         {
@@ -188,16 +215,8 @@ namespace GUI.ViewModels
                         },
                     };
 
-                    // Assign 'selectedList' with temperature entries
-                    selectedList = hum_entries;
-                    break;
-
-                // Light
-                case 2:
-                    // TODO: Get parsed data and assign to 'temp_entries'
-
-                    // Make a 'Microchart' chart for temperature
-                    List<Microcharts.ChartEntry> light_entries = new List<Microcharts.ChartEntry>
+            // Light chart entries
+            chartEntries_light = new List<Microcharts.ChartEntry>
                     {
                         new ChartEntry(8)
                         {
@@ -242,12 +261,28 @@ namespace GUI.ViewModels
                             ValueLabel = "20",
                         },
                     };
+        }
 
-                    // Assign 'selectedList' with temperature entries
-                    selectedList = light_entries;
-                    break;
+        // Function that handles changing of graph from picker data
+        private void ChangeGraph(string name)
+        {
+            if (name == items[0].Name)
+            {
+                // TEMPERATURE:
+                Chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
             }
-                
+
+            if (name == items[1].Name)
+            {
+                // HUMIDITY:
+                Chart = new LineChart { Entries = chartEntries_hum, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+            }
+
+            if (name == items[2].Name)
+            {
+                // LIGHT:
+                Chart = new LineChart { Entries = chartEntries_light, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+            }
         }
     }
 }

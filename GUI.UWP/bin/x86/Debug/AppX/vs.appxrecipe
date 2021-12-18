@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-KIV08VC</Machine>
-    <WindowsUser>gkhan</WindowsUser>
+    <Machine>ARIEF-ROG-G531</Machine>
+    <WindowsUser>Arief</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=ef7789e4-3ced-4baf-8659-90ba81522e99</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>6CA813878B7B1F4E304A6524A4C58A9F115C876711990E80A31D87408F30C69F</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>6DD877C2E89B26B7D154A0F34AE4D577FE435E3D2B094345A66F4DA542DE3979</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a_1.0.0.0_x86__tvxn9nwg7qp2g</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a_tvxn9nwg7qp2g!App</RegisteredUserModeAppID>
     <RegisteredPackageID>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a</RegisteredPackageID>
@@ -27,441 +27,441 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-14T08:50:42.005</Modified>
+      <Modified>2021-12-18T22:40:57.152</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
       <PackagePath>entrypoint\GUI.UWP.exe</PackagePath>
-      <Modified>2021-12-14T08:50:40.229</Modified>
+      <Modified>2021-12-18T22:40:56.182</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\microcharts.forms\1.0.0-preview1\lib\netstandard2.0\Microcharts.Forms.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\microcharts.forms\1.0.0-preview1\lib\netstandard2.0\Microcharts.Forms.dll">
       <PackagePath>Microcharts.Forms.dll</PackagePath>
       <Modified>2021-04-27T19:32:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\microcharts.forms\1.0.0-preview1\lib\netstandard2.0\Microcharts.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\microcharts.forms\1.0.0-preview1\lib\netstandard2.0\Microcharts.dll">
       <PackagePath>Microcharts.dll</PackagePath>
       <Modified>2021-04-27T19:31:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
       <Modified>2021-10-22T23:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2021-03-17T20:03:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\restsharp\106.13.0\lib\netstandard2.0\RestSharp.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\restsharp\106.15.0\lib\netstandard2.0\RestSharp.dll">
       <PackagePath>RestSharp.dll</PackagePath>
-      <Modified>2021-10-30T07:34:56.000</Modified>
+      <Modified>2021-12-08T14:02:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2021-02-05T00:15:46.000</Modified>
+      <Modified>2021-10-10T06:49:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\libEGL.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp\2.80.3\runtimes\win10-x86\nativeassets\uap10.0\libEGL.dll">
       <PackagePath>libEGL.dll</PackagePath>
-      <Modified>2020-09-11T08:53:36.000</Modified>
+      <Modified>2021-07-09T22:08:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\libGLESv2.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp\2.80.3\runtimes\win10-x86\nativeassets\uap10.0\libGLESv2.dll">
       <PackagePath>libGLESv2.dll</PackagePath>
-      <Modified>2020-09-11T08:53:40.000</Modified>
+      <Modified>2021-07-09T22:07:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\libSkiaSharp.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp\2.80.3\runtimes\win10-x86\nativeassets\uap10.0\libSkiaSharp.dll">
       <PackagePath>libSkiaSharp.dll</PackagePath>
-      <Modified>2020-09-11T08:53:38.000</Modified>
+      <Modified>2021-07-09T22:08:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp\2.80.2\lib\uap10.0.16299\SkiaSharp.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp\2.80.3\lib\uap10.0.16299\SkiaSharp.dll">
       <PackagePath>SkiaSharp.dll</PackagePath>
-      <Modified>2020-09-11T08:53:26.000</Modified>
+      <Modified>2021-07-09T22:08:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp.views\2.80.2\runtimes\win10-x86\nativeassets\uap10.0\SkiaSharp.Views.Interop.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp.views\2.80.3\runtimes\win10-x86\nativeassets\uap10.0\SkiaSharp.Views.Interop.UWP.dll">
       <PackagePath>SkiaSharp.Views.Interop.UWP.dll</PackagePath>
-      <Modified>2020-09-11T08:59:38.000</Modified>
+      <Modified>2021-07-09T22:08:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp.views\2.80.2\lib\uap10.0\SkiaSharp.Views.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp.views\2.80.3\lib\uap10.0\SkiaSharp.Views.UWP.dll">
       <PackagePath>SkiaSharp.Views.UWP.dll</PackagePath>
-      <Modified>2020-09-11T08:59:38.000</Modified>
+      <Modified>2021-07-09T22:08:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\skiasharp.views.forms\2.80.2\lib\uap10.0\SkiaSharp.Views.Forms.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\skiasharp.views.forms\2.80.3\lib\uap10.0\SkiaSharp.Views.Forms.dll">
       <PackagePath>SkiaSharp.Views.Forms.dll</PackagePath>
-      <Modified>2020-09-11T09:07:14.000</Modified>
+      <Modified>2021-07-09T22:08:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\system.runtime.compilerservices.unsafe\6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\system.runtime.compilerservices.unsafe\6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2021-10-22T23:40:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\system.text.encodings.web\6.0.0\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\system.text.encodings.web\6.0.0\lib\netstandard2.0\System.Text.Encodings.Web.dll">
       <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
       <Modified>2021-10-22T23:42:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\system.text.json\6.0.0\lib\netstandard2.0\System.Text.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\system.text.json\6.0.1\lib\netstandard2.0\System.Text.Json.dll">
       <PackagePath>System.Text.Json.dll</PackagePath>
-      <Modified>2021-10-22T23:45:06.000</Modified>
+      <Modified>2021-11-17T18:03:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.essentials\1.6.1\lib\uap10.0.16299\Xamarin.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\xamarin.essentials\1.7.0\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
-      <Modified>2021-01-25T19:38:56.000</Modified>
+      <Modified>2021-07-13T15:07:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\xamarin.forms\5.0.0.2291\lib\uap10.0.16299\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
-      <Modified>2021-02-12T13:40:48.000</Modified>
+      <Modified>2021-12-09T10:32:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\xamarin.forms\5.0.0.2291\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP.dll">
       <PackagePath>Xamarin.Forms.Platform.UAP.dll</PackagePath>
-      <Modified>2021-02-12T13:39:20.000</Modified>
+      <Modified>2021-12-09T10:32:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\xamarin.forms\5.0.0.2291\lib\uap10.0.16299\Xamarin.Forms.Platform.dll">
       <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
-      <Modified>2021-02-12T13:39:20.000</Modified>
+      <Modified>2021-12-09T10:31:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\xamarin.forms\5.0.0.2291\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
-      <Modified>2021-02-12T13:39:22.000</Modified>
+      <Modified>2021-12-09T10:31:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\bin\Debug\netstandard2.0\GUI.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.dll">
       <PackagePath>GUI.dll</PackagePath>
-      <Modified>2021-12-14T08:50:26.661</Modified>
+      <Modified>2021-12-18T23:30:13.077</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2020-12-02T03:52:00.000</Modified>
+      <Modified>2020-12-02T02:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\xamarin.forms\5.0.0.2291\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
-      <Modified>2021-02-12T04:08:38.000</Modified>
+      <Modified>2021-12-09T10:24:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\icons8-graph-30.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icons8-graph-30.png">
       <PackagePath>icons8-graph-30.png</PackagePath>
-      <Modified>2021-12-10T10:55:14.481</Modified>
+      <Modified>2021-12-18T10:16:24.750</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.803</Modified>
+      <Modified>2021-12-18T10:16:24.223</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.805</Modified>
+      <Modified>2021-12-18T10:16:24.223</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.805</Modified>
+      <Modified>2021-12-18T10:16:24.224</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.805</Modified>
+      <Modified>2021-12-18T10:16:24.225</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.805</Modified>
+      <Modified>2021-12-18T10:16:24.225</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.806</Modified>
+      <Modified>2021-12-18T10:16:24.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.806</Modified>
+      <Modified>2021-12-18T10:16:24.227</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.807</Modified>
+      <Modified>2021-12-18T10:16:24.227</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.809</Modified>
+      <Modified>2021-12-18T10:16:24.228</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.809</Modified>
+      <Modified>2021-12-18T10:16:24.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.809</Modified>
+      <Modified>2021-12-18T10:16:24.230</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.810</Modified>
+      <Modified>2021-12-18T10:16:24.230</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.810</Modified>
+      <Modified>2021-12-18T10:16:24.231</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.810</Modified>
+      <Modified>2021-12-18T10:16:24.232</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.811</Modified>
+      <Modified>2021-12-18T10:16:24.232</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.811</Modified>
+      <Modified>2021-12-18T10:16:24.233</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.811</Modified>
+      <Modified>2021-12-18T10:16:24.234</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.811</Modified>
+      <Modified>2021-12-18T10:16:24.234</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.811</Modified>
+      <Modified>2021-12-18T10:16:24.235</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.812</Modified>
+      <Modified>2021-12-18T10:16:24.236</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.812</Modified>
+      <Modified>2021-12-18T10:16:24.236</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.813</Modified>
+      <Modified>2021-12-18T10:16:24.237</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.813</Modified>
+      <Modified>2021-12-18T10:16:24.238</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.813</Modified>
+      <Modified>2021-12-18T10:16:24.238</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.814</Modified>
+      <Modified>2021-12-18T10:16:24.239</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.814</Modified>
+      <Modified>2021-12-18T10:16:24.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-02T08:04:27.814</Modified>
+      <Modified>2021-12-18T10:16:24.240</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\xamarin_logo.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
-      <Modified>2021-12-02T08:04:28.577</Modified>
+      <Modified>2021-12-18T10:16:24.818</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\icon_about.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icon_about.png">
       <PackagePath>icon_about.png</PackagePath>
-      <Modified>2021-12-02T08:04:28.524</Modified>
+      <Modified>2021-12-18T10:16:24.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\icon_feed.png">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icon_feed.png">
       <PackagePath>icon_feed.png</PackagePath>
-      <Modified>2021-12-02T08:04:28.524</Modified>
+      <Modified>2021-12-18T10:16:24.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-12-02T08:04:27.817</Modified>
+      <Modified>2021-12-18T10:16:24.245</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.xr.xml">
       <PackagePath>GUI.UWP.xr.xml</PackagePath>
-      <Modified>2021-12-02T08:04:28.562</Modified>
+      <Modified>2021-12-18T10:16:24.794</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-14T08:50:40.085</Modified>
+      <Modified>2021-12-18T22:40:56.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-14T08:50:40.085</Modified>
+      <Modified>2021-12-18T22:40:56.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2020-12-02T03:59:30.000</Modified>
+      <Modified>2020-12-02T02:59:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2020-12-02T01:52:06.000</Modified>
+      <Modified>2020-12-02T00:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-07-10T00:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-14T08:49:47.200</Modified>
+      <Modified>2021-12-18T10:24:40.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
       <PackagePath>GUI.UWP.exe</PackagePath>
-      <Modified>2021-12-14T08:50:41.997</Modified>
+      <Modified>2021-12-18T22:40:57.147</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
       <Name>Microsoft.UI.Xaml.2.4</Name>
       <Version>2.42007.9001.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42007.9001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\gkhan\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\microsoft.ui.xaml\2.4.3\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.29713.2</Version>
+      <Version>2.2.30527.2</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.29713.2</Version>
+      <Version>2.2.30527.2</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.29713.2</Version>
+      <Version>2.2.30527.2</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.30527.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.29301.2</Version>
+      <Version>2.2.30316.1</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.29301.2</Version>
+      <Version>2.2.30316.1</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Arief\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.29301.2</Version>
+      <Version>2.2.30316.1</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.30316.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Arief\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.13\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>ARM64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.30035.0</Version>
+      <Version>14.0.29231.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.30035.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>

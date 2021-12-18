@@ -51,7 +51,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RestSharp/106.13.0": {
+      "RestSharp/106.15.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/RestSharp.dll": {}
@@ -60,7 +60,7 @@
           "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
-      "SkiaSharp/2.80.2": {
+      "SkiaSharp/2.80.3": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -90,16 +90,30 @@
           }
         }
       },
-      "SkiaSharp.Views/2.80.2": {
+      "SkiaSharp.Views/2.80.3": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "2.80.2"
+          "SkiaSharp": "2.80.3"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/2.80.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.3",
+          "SkiaSharp.Views": "2.80.3",
+          "Xamarin.Forms": "4.6.0.772"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -156,7 +170,7 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/6.0.0": {
+      "System.Text.Json/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
@@ -195,7 +209,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -212,7 +226,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2291": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -341,10 +355,11 @@
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
           "Newtonsoft.Json": "13.0.1",
-          "RestSharp": "106.13.0",
-          "System.Text.Json": "6.0.0",
-          "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "RestSharp": "106.15.0",
+          "SkiaSharp.Views.Forms": "2.80.3",
+          "System.Text.Json": "6.0.1",
+          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Forms": "5.0.0.2291"
         },
         "compile": {
           "bin/placeholder/GUI.dll": {}
@@ -404,7 +419,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RestSharp/106.13.0": {
+      "RestSharp/106.15.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/RestSharp.dll": {}
@@ -413,7 +428,7 @@
           "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
-      "SkiaSharp/2.80.2": {
+      "SkiaSharp/2.80.3": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -425,16 +440,30 @@
           "buildTransitive/xamarinios1.0/SkiaSharp.targets": {}
         }
       },
-      "SkiaSharp.Views/2.80.2": {
+      "SkiaSharp.Views/2.80.3": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "2.80.2"
+          "SkiaSharp": "2.80.3"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/2.80.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.3",
+          "SkiaSharp.Views": "2.80.3",
+          "Xamarin.Forms": "4.6.0.772"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -491,7 +520,7 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/6.0.0": {
+      "System.Text.Json/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
@@ -530,7 +559,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -547,7 +576,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2291": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -676,10 +705,11 @@
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
           "Newtonsoft.Json": "13.0.1",
-          "RestSharp": "106.13.0",
-          "System.Text.Json": "6.0.0",
-          "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "RestSharp": "106.15.0",
+          "SkiaSharp.Views.Forms": "2.80.3",
+          "System.Text.Json": "6.0.1",
+          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Forms": "5.0.0.2291"
         },
         "compile": {
           "bin/placeholder/GUI.dll": {}
@@ -739,7 +769,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RestSharp/106.13.0": {
+      "RestSharp/106.15.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/RestSharp.dll": {}
@@ -748,7 +778,7 @@
           "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
-      "SkiaSharp/2.80.2": {
+      "SkiaSharp/2.80.3": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -763,16 +793,30 @@
           "buildTransitive/xamarinios1.0/SkiaSharp.targets": {}
         }
       },
-      "SkiaSharp.Views/2.80.2": {
+      "SkiaSharp.Views/2.80.3": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "2.80.2"
+          "SkiaSharp": "2.80.3"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/2.80.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.3",
+          "SkiaSharp.Views": "2.80.3",
+          "Xamarin.Forms": "4.6.0.772"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -829,7 +873,7 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/6.0.0": {
+      "System.Text.Json/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
@@ -868,7 +912,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -885,7 +929,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2291": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1014,10 +1058,11 @@
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
           "Newtonsoft.Json": "13.0.1",
-          "RestSharp": "106.13.0",
-          "System.Text.Json": "6.0.0",
-          "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "RestSharp": "106.15.0",
+          "SkiaSharp.Views.Forms": "2.80.3",
+          "System.Text.Json": "6.0.1",
+          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Forms": "5.0.0.2291"
         },
         "compile": {
           "bin/placeholder/GUI.dll": {}
@@ -1077,7 +1122,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "RestSharp/106.13.0": {
+      "RestSharp/106.15.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/RestSharp.dll": {}
@@ -1086,7 +1131,7 @@
           "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
-      "SkiaSharp/2.80.2": {
+      "SkiaSharp/2.80.3": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -1101,16 +1146,30 @@
           "buildTransitive/xamarinios1.0/SkiaSharp.targets": {}
         }
       },
-      "SkiaSharp.Views/2.80.2": {
+      "SkiaSharp.Views/2.80.3": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "2.80.2"
+          "SkiaSharp": "2.80.3"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/2.80.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.3",
+          "SkiaSharp.Views": "2.80.3",
+          "Xamarin.Forms": "4.6.0.772"
+        },
+        "compile": {
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -1167,7 +1226,7 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/6.0.0": {
+      "System.Text.Json/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
@@ -1206,7 +1265,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "Xamarin.Essentials/1.7.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -1223,7 +1282,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2291": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1352,10 +1411,11 @@
         "dependencies": {
           "Microcharts.Forms": "1.0.0-preview1",
           "Newtonsoft.Json": "13.0.1",
-          "RestSharp": "106.13.0",
-          "System.Text.Json": "6.0.0",
-          "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "RestSharp": "106.15.0",
+          "SkiaSharp.Views.Forms": "2.80.3",
+          "System.Text.Json": "6.0.1",
+          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Forms": "5.0.0.2291"
         },
         "compile": {
           "bin/placeholder/GUI.dll": {}
@@ -1441,10 +1501,10 @@
         "packageIcon.png"
       ]
     },
-    "RestSharp/106.13.0": {
-      "sha512": "vwUdmmtC5vtePeNfBWnFcixBF2KjUeVv3ss4ZFzCIkOf7NB7W/9qX8JNZD9DOrz2yGk4AJW8k9znwgPZhnoiNg==",
+    "RestSharp/106.15.0": {
+      "sha512": "HM7ohR6AscxedNenrrl93DSZG6hvdnA7O+NHyCl/6ZKTfn8psQ9rRmUpcb9eWr+140vmfxoVemql0bUoeGEW3A==",
       "type": "package",
-      "path": "restsharp/106.13.0",
+      "path": "restsharp/106.15.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1452,15 +1512,15 @@
         "lib/net452/RestSharp.xml",
         "lib/netstandard2.0/RestSharp.dll",
         "lib/netstandard2.0/RestSharp.xml",
-        "restsharp.106.13.0.nupkg.sha512",
+        "restsharp.106.15.0.nupkg.sha512",
         "restsharp.nuspec",
         "restsharp.png"
       ]
     },
-    "SkiaSharp/2.80.2": {
-      "sha512": "D25rzdCwh+3L+XyXqpNa+H/yiLJbE3/R3K/XexwHyQjGdzZvSufFW3oqf3En7hhqSIsxsJ8f5NEZ0J5W5wlGBg==",
+    "SkiaSharp/2.80.3": {
+      "sha512": "qX6tGNP3+MXNYe2pKm0PCRiJ/cx+LTeLaggwZifB7sUMXhECfKKKHJq45VqZKt37xQegnCCdf1jHXwmHeJQs5Q==",
       "type": "package",
-      "path": "skiasharp/2.80.2",
+      "path": "skiasharp/2.80.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1498,6 +1558,7 @@
         "buildTransitive/xamarinmac2.0/SkiaSharp.targets",
         "buildTransitive/xamarintvos1.0/SkiaSharp.targets",
         "buildTransitive/xamarinwatchos1.0/SkiaSharp.targets",
+        "interactive-extensions/dotnet/SkiaSharp.DotNet.Interactive.dll",
         "lib/monoandroid1.0/SkiaSharp.dll",
         "lib/monoandroid1.0/SkiaSharp.xml",
         "lib/net462/SkiaSharp.dll",
@@ -1536,14 +1597,14 @@
         "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
-        "skiasharp.2.80.2.nupkg.sha512",
+        "skiasharp.2.80.3.nupkg.sha512",
         "skiasharp.nuspec"
       ]
     },
-    "SkiaSharp.Views/2.80.2": {
-      "sha512": "qOvmMOZ2lkT6BTbmSNjsA46ugUeo6X6Vonok5RE3rYWpCEFxB1FvBqbKoaLY5XpdLWzyS3qinAuT2JLSyoPRvg==",
+    "SkiaSharp.Views/2.80.3": {
+      "sha512": "2KFwV6j/mUmrJU8YgRvsihn3J2UCPh2PyX97N+71CCLq1Uc85fZwR3D8LZf7/Ec5bOlSP+1Wk98gKcRrk4mMZg==",
       "type": "package",
-      "path": "skiasharp.views/2.80.2",
+      "path": "skiasharp.views/2.80.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1568,8 +1629,47 @@
         "runtimes/win10-arm64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
-        "skiasharp.views.2.80.2.nupkg.sha512",
+        "skiasharp.views.2.80.3.nupkg.sha512",
         "skiasharp.views.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Forms/2.80.3": {
+      "sha512": "RLNIPW2o3zjCD+42ev/+iaOOgPCoXI4g7X89bADG/qp0tcUZngXvhGi6mqQgHOe1THaPSWib5vwSqdb3A1/aQA==",
+      "type": "package",
+      "path": "skiasharp.views.forms/2.80.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/net462/SkiaSharp.Views.Forms.targets",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.xml",
+        "lib/net462/_._",
+        "lib/tizen40/SkiaSharp.Views.Forms.dll",
+        "lib/tizen40/SkiaSharp.Views.Forms.xml",
+        "lib/uap10.0/SkiaSharp.Views.Forms.dll",
+        "lib/uap10.0/SkiaSharp.Views.Forms.xml",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.xml",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.dll",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.xml",
+        "ref/net462/_._",
+        "ref/netstandard1.3/SkiaSharp.Views.Forms.dll",
+        "ref/netstandard1.3/SkiaSharp.Views.Forms.xml",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.dll",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.xml",
+        "ref/tizen40/SkiaSharp.Views.Forms.dll",
+        "ref/tizen40/SkiaSharp.Views.Forms.xml",
+        "ref/uap10.0/SkiaSharp.Views.Forms.dll",
+        "ref/uap10.0/SkiaSharp.Views.Forms.xml",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.xml",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
+        "skiasharp.views.forms.2.80.3.nupkg.sha512",
+        "skiasharp.views.forms.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -1725,10 +1825,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/6.0.0": {
-      "sha512": "zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
+    "System.Text.Json/6.0.1": {
+      "sha512": "X3cTdM+jna1YyfTUzToW7aVgINFv7R1W4+1+3hua/YCyLjApPoR8fd+2Cep9DbfYjbv+rBx4K6dlmAWEJr9AHg==",
       "type": "package",
-      "path": "system.text.json/6.0.0",
+      "path": "system.text.json/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1774,7 +1874,7 @@
         "lib/netcoreapp3.1/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.6.0.0.nupkg.sha512",
+        "system.text.json.6.0.1.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1860,10 +1960,10 @@
         "version.txt"
       ]
     },
-    "Xamarin.Essentials/1.6.1": {
-      "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
+    "Xamarin.Essentials/1.7.0": {
+      "sha512": "xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
       "type": "package",
-      "path": "xamarin.essentials/1.6.1",
+      "path": "xamarin.essentials/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1872,15 +1972,6 @@
         "lib/monoandroid10.0/Xamarin.Essentials.dll",
         "lib/monoandroid10.0/Xamarin.Essentials.pdb",
         "lib/monoandroid10.0/Xamarin.Essentials.xml",
-        "lib/monoandroid80/Xamarin.Essentials.dll",
-        "lib/monoandroid80/Xamarin.Essentials.pdb",
-        "lib/monoandroid80/Xamarin.Essentials.xml",
-        "lib/monoandroid81/Xamarin.Essentials.dll",
-        "lib/monoandroid81/Xamarin.Essentials.pdb",
-        "lib/monoandroid81/Xamarin.Essentials.xml",
-        "lib/monoandroid90/Xamarin.Essentials.dll",
-        "lib/monoandroid90/Xamarin.Essentials.pdb",
-        "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
         "lib/netstandard1.0/Xamarin.Essentials.pdb",
         "lib/netstandard1.0/Xamarin.Essentials.xml",
@@ -1907,14 +1998,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.6.1.nupkg.sha512",
+        "xamarin.essentials.1.7.0.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2012": {
-      "sha512": "Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+    "Xamarin.Forms/5.0.0.2291": {
+      "sha512": "No5HI+c05RBDT5Oe7ZSRaO+cQVeZNhrYdchvczNeZdWQiwrux8RJcVg8chI4DZ2xODeBjF0juIF9u1A5ysZ+uQ==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2012",
+      "path": "xamarin.forms/5.0.0.2291",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2123,7 +2214,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2012.nupkg.sha512",
+        "xamarin.forms.5.0.0.2291.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2138,25 +2229,26 @@
       "GUI >= 1.0.0",
       "Microcharts.Forms >= 1.0.0-preview1",
       "Newtonsoft.Json >= 13.0.1",
-      "RestSharp >= 106.13.0",
-      "System.Text.Json >= 6.0.0",
-      "Xamarin.Essentials >= 1.6.1",
-      "Xamarin.Forms >= 5.0.0.2012"
+      "RestSharp >= 106.15.0",
+      "SkiaSharp.Views.Forms >= 2.80.3",
+      "System.Text.Json >= 6.0.1",
+      "Xamarin.Essentials >= 1.7.0",
+      "Xamarin.Forms >= 5.0.0.2291"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gkhan\\.nuget\\packages\\": {},
+    "C:\\Users\\Arief\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.iOS\\GUI.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
       "projectName": "GUI.iOS",
-      "projectPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.iOS\\GUI.iOS.csproj",
-      "packagesPath": "C:\\Users\\gkhan\\.nuget\\packages\\",
-      "outputPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
+      "packagesPath": "C:\\Users\\Arief\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2164,7 +2256,7 @@
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\gkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Arief\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -2179,8 +2271,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.csproj": {
-              "projectPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.csproj"
+            "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
+              "projectPath": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
             }
           }
         }
@@ -2199,19 +2291,23 @@
           },
           "RestSharp": {
             "target": "Package",
-            "version": "[106.13.0, )"
+            "version": "[106.15.0, )"
+          },
+          "SkiaSharp.Views.Forms": {
+            "target": "Package",
+            "version": "[2.80.3, )"
           },
           "System.Text.Json": {
             "target": "Package",
-            "version": "[6.0.0, )"
+            "version": "[6.0.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.6.1, )"
+            "version": "[1.7.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2012, )"
+            "version": "[5.0.0.2291, )"
           }
         }
       }

@@ -74,3 +74,28 @@ D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\obj\Debug\netstandard
 D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\obj\Debug\netstandard2.0\ref\GUI.dll
 D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\obj\Debug\netstandard2.0\GUI.pdb
 D:\2nd year\Quarter 2\Project Software Engineering\GUI\GUI\obj\Debug\netstandard2.0\Views\Overview.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.csproj.AssemblyReference.cache
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\DailyHumidity.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\DailyLight.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\DailyTemperature.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\Overview.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\WeeklyHumidity.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\WeeklyLight.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\WeeklyTemperature.xaml.g.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.AssemblyInfoInputs.cache
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.AssemblyInfo.cs
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.dll
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\ref\GUI.dll
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.pdb
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.deps.json
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.dll
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\ref\GUI.dll
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.pdb
+C:\Users\Arief\Source\Repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\XamlC.stamp

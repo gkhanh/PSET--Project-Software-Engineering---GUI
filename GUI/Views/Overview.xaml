@@ -20,26 +20,26 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-
+                
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    HorizontalOptions="CenterAndExpand"
-                    Text="Weekly overview temperature"
-                    VerticalOptions="CenterAndExpand" />
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     HorizontalOptions="CenterAndExpand"
+                     Text="Weekly temperature"
+                     VerticalOptions="CenterAndExpand" />
                 <microcharts:ChartView
-                    x:Name="HumidityDay"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    HeightRequest="300"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand" />
-
+                     x:Name="HumidityDay"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     HeightRequest="300"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand" />
+                
                 <Label
                     Grid.Row="3"
                     Grid.Column="0"
                     HorizontalOptions="CenterAndExpand"
-                    Text="Weekly overview temperature"
+                    Text="Weekly humidity"
                     VerticalOptions="CenterAndExpand" />
                 <microcharts:ChartView
                     x:Name="TemperatureWeek"
@@ -53,7 +53,7 @@
                     Grid.Row="0"
                     Grid.Column="2"
                     HorizontalOptions="CenterAndExpand"
-                    Text="Weekly overview temperature"
+                    Text="Weekly light"
                     VerticalOptions="CenterAndExpand" />
                 <microcharts:ChartView
                     x:Name="TemperatureWeek1"
@@ -68,32 +68,32 @@
                     Grid.Column="1"
                     VerticalOptions="FillAndExpand"
                     WidthRequest="1"
-                    Color="White" />
+                    />
                 <BoxView
                     Grid.Row="4"
                     Grid.Column="1"
                     VerticalOptions="FillAndExpand"
                     WidthRequest="1"
-                    Color="White" />
+                    />
 
                 <BoxView
                     Grid.Row="2"
                     Grid.Column="0"
                     HeightRequest="1"
                     HorizontalOptions="FillAndExpand"
-                    Color="White" />
+                    />
                 <BoxView
                     Grid.Row="2"
                     Grid.Column="2"
                     HeightRequest="1"
                     HorizontalOptions="FillAndExpand"
-                    Color="White" />
+                    />
 
                 <Label
                     Grid.Row="3"
                     Grid.Column="2"
                     HorizontalOptions="CenterAndExpand"
-                    Text="Weekly overview temperature"
+                    Text="Weekly air pressure"
                     VerticalOptions="CenterAndExpand" />
                 <microcharts:ChartView
                     x:Name="TemperatureWeek2"
@@ -103,6 +103,10 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand" />
             </Grid>
+            <Label Text="Enschede, Netherlands"
+                   FontSize="40"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="End" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

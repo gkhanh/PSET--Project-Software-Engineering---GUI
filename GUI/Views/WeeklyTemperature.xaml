@@ -3,10 +3,10 @@
     x:Class="GUI.Views.WeeklyTemperature"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#363939">
-
+        <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label
+                <!--<Label
                     Grid.Row="0"
                     Grid.Column="0"
                     HorizontalOptions="CenterAndExpand"
@@ -34,7 +34,7 @@
                     Grid.Column="0"
                     HeightRequest="300"
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand" />
+                    VerticalOptions="FillAndExpand" />-->
 
                 <Label
                     Grid.Row="3"
@@ -50,7 +50,7 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand" />
 
-                <Label
+                <!--<Label
                     Grid.Row="0"
                     Grid.Column="2"
                     HorizontalOptions="CenterAndExpand"
@@ -62,7 +62,7 @@
                     Grid.Column="2"
                     HeightRequest="300"
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand" />
+                    VerticalOptions="FillAndExpand" />-->
 
                 <BoxView
                     Grid.Row="1"
@@ -74,23 +74,20 @@
                     Grid.Row="4"
                     Grid.Column="1"
                     VerticalOptions="FillAndExpand"
-                    WidthRequest="1"
-                    Color="White" />
+                    WidthRequest="1" />
 
                 <BoxView
                     Grid.Row="2"
                     Grid.Column="0"
                     HeightRequest="1"
-                    HorizontalOptions="FillAndExpand"
-                    Color="White" />
+                    HorizontalOptions="FillAndExpand" />
                 <BoxView
                     Grid.Row="2"
                     Grid.Column="2"
                     HeightRequest="1"
                     HorizontalOptions="FillAndExpand"
                     Color="White" />
-
-                <Label
+                <!--<Label
                     Grid.Row="3"
                     Grid.Column="2"
                     HorizontalOptions="CenterAndExpand"
@@ -102,7 +99,7 @@
                     Grid.Column="2"
                     HeightRequest="300"
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand" />
+                    VerticalOptions="FillAndExpand" />-->
             </Grid>
         </StackLayout>
     </ContentPage.Content>

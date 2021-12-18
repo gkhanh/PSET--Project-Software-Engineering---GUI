@@ -2,13 +2,56 @@
 <ContentPage
     x:Class="GUI.Views.DailyLight"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GUI"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <microcharts:ChartView
+                    x:Name="LightDaily"
+                    Grid.Row="0"
+                    HeightRequest="500"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="1300" />
+                <!--  BackgroundColor="#FFA9A9A9"  -->
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        FontSize="50"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Hourly Light"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand" />
+                    <Label
+                        Grid.Row="1"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Location: Enschede"
+                        TextColor="Black"
+                        VerticalOptions="FillAndExpand" />
+                    <Label
+                        Grid.Row="2"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Date: 16 - 12 - 2021"
+                        TextColor="Black"
+                        VerticalOptions="FillAndExpand" />
+                </Grid>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

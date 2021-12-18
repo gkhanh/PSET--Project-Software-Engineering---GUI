@@ -2,13 +2,67 @@
 <ContentPage
     x:Class="GUI.Views.DailyTemperature"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GUI"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    xmlns:viewmodels="clr-namespace:GUI.ViewModels"
+    x:DataType="viewmodels:DailyTemperatureViewModel"
+    BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <microcharts:ChartView
+                x:Name="TemperatureDaily"
+                Grid.Row="0"
+                HeightRequest="500"
                 HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="1300" />
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    FontSize="50"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Hourly Temperature"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+
+                <Label
+                    Grid.Row="1"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Location: Enschede"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand" />
+
+                <Label
+                    Grid.Row="2"
+                    FontSize="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Date: 16 - 12 - 2021"
+                    TextColor="Black"
+                    VerticalOptions="FillAndExpand" />
+            </Grid>
+        </StackLayout>
+        <StackLayout Grid.Row="2">
+            <Picker
+                Title="Charts"
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding SelectedItem}"
+                TitleColor="Yellow" />
+        </StackLayout>
+    </Grid>
 </ContentPage>

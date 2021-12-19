@@ -2,6 +2,7 @@
 using Microcharts;
 using SkiaSharp;
 using System.Collections.Generic;
+using System.Linq;
 
 /************* IMPORTANT MESSAGE (PLEASE READ ME) *************/
 
@@ -72,8 +73,26 @@ namespace GUI.ViewModels
         // Declare a list of parsed py-sensor data
         private List<PySensor> pySensors { get; set; }
 
+        // Declare a list of parsed py-temperature data
+        private List<float> pyTemperatures { get; set; }
+
+        // Declare a list of parsed py-pressure data
+        private List<float> pyPressure { get; set; }
+
+        // Declare a list of parsed py-light data
+        private List<int> pyLight { get; set; }
+
         // Declare a list of parsed lht-sensor data
         private List<LhtSensor> lhtSensors { get; set; }
+
+        // Declare a list of parsed lht-temperature data
+        private List<float> lhtTemperatures { get; set; }
+
+        // Declare a list of parsed lht-pressure data
+        private List<float> lhtHumidity { get; set; }
+
+        // Declare a list of parsed lht-light data
+        private List<int> lhtLight { get; set; }
 
         /// PUBLIC MEMBER VARIABLES FOR VIEW HANDLING
         /// //////////////////////////////////////////////////////////////////
@@ -145,6 +164,12 @@ namespace GUI.ViewModels
                 if (sensorPickerSelectedItem != value)
                 {
                     sensorPickerSelectedItem = value;
+
+                    // Change graph entry source when sensor source changed
+                    ChangeGraphSource(sensorPickerSelectedItem.Name);
+
+                    // Change graph when 'selectedItem' of graph 'picker' has changed
+                    ChangeGraph(graphPickerSelectedItem.Name);
                 }
             }
         }
@@ -184,6 +209,7 @@ namespace GUI.ViewModels
         {
             // Set up connection and view elements
             SetupConnection();
+            SortSensorData();
             SetupPicker();
             SetupGraphs();
             graphTitle = "Hourly Temperature";
@@ -241,18 +267,50 @@ namespace GUI.ViewModels
             sensorPickerItems.Add(new Picker_Item { Name = "Py-sensor" });
             sensorPickerItems.Add(new Picker_Item { Name = "Lht-sensor" });
 
-            sensorPickerSelectedItem = ensorPickerItems[0];
+            sensorPickerSelectedItem = sensorPickerItems[0];
+        }
+
+        // Function to gather and sort data using the parsed sensor data
+        private void SortSensorData()
+        {
+            // Py sensor data gathering
+            var temperature = sensorParser.GetTemperatures(pySensors);
+            var pressure = sensorParser.GetPressure(pySensors);
+            var light = sensorParser.GetLight(pySensors);
+
+            pyTemperatures = Enumerable.Reverse(temperature).ToList();
+            pyPressure = Enumerable.Reverse(pressure).ToList();
+            pyLight = Enumerable.Reverse(light).ToList();
+
+            // Lht sensor data gathering
+            temperature = sensorParser.GetTemperatures(lhtSensors);
+            var humidity = sensorParser.GetHumidity(lhtSensors);
+            light = sensorParser.GetLight(lhtSensors);
+
+            lhtTemperatures = Enumerable.Reverse(temperature).ToList();
+            lhtHumidity = Enumerable.Reverse(humidity).ToList();
+            lhtLight = Enumerable.Reverse(light).ToList();
         }
 
         // Function to setup graph
         private void SetupGraphs()
         {
-            // Temperature chart entries
+            // Chart entry initialisation
             chartEntries_temp = new List<ChartEntry>();
-            var pyTemperatures = sensorParser.GetTemperatures(pySensors);
-            var pyTimes = sensorParser.GetTimes(pySensors);
-            var pyTimeIndex = 0;
+            chartEntries_hum = new List<ChartEntry>();
+            chartEntries_light = new List<ChartEntry>();
 
+            var pyTimes = sensorParser.GetTimes(pySensors);
+            var lhtTimes = sensorParser.GetTimes(lhtSensors);
+
+            // Times are reversed to correctly show data
+            pyTimes = Enumerable.Reverse(pyTimes).ToList();
+            lhtTimes = Enumerable.Reverse(lhtTimes).ToList();
+
+            var pyTimeIndex = 0;
+            var lhtTimeIndex = 0;
+
+            // By default, display data of Py-sensors
             foreach (var element in pyTemperatures)
             {
                 var entry = new ChartEntry(element)
@@ -269,12 +327,6 @@ namespace GUI.ViewModels
             // Reset py time index
             pyTimeIndex = 0;
 
-            // Humidity chart entries
-            chartEntries_hum = new List<ChartEntry>();
-            var lhtHumidity = sensorParser.GetHumidity(lhtSensors);
-            var lhtTimes = sensorParser.GetTimes(lhtSensors);
-            var lhtTimeIndex = 0;
-
             foreach (var element in lhtHumidity)
             {
                 var entry = new ChartEntry(element)
@@ -288,10 +340,6 @@ namespace GUI.ViewModels
                 lhtTimeIndex++;
             }
 
-            // Light chart entries
-            chartEntries_light = new List<ChartEntry>();
-            var pyLight = sensorParser.GetLight(pySensors);
-
             foreach(var element in pyLight)
             {
                 var entry = new ChartEntry(element)
@@ -303,6 +351,122 @@ namespace GUI.ViewModels
                 };
                 chartEntries_light.Add(entry);
                 pyTimeIndex++;
+            }
+        }
+
+        // Function that handles changing of graph entries source
+        private void ChangeGraphSource(string name)
+        {
+            // Clear current entries
+            chartEntries_temp = new List<ChartEntry>();
+            chartEntries_hum = new List<ChartEntry>();
+            chartEntries_light = new List<ChartEntry>();
+
+            // Get sensor times
+            var pyTimes = sensorParser.GetTimes(pySensors);
+            var lhtTimes = sensorParser.GetTimes(lhtSensors);
+
+            // Times are reversed to correctly show data
+            pyTimes = Enumerable.Reverse(pyTimes).ToList();
+            lhtTimes = Enumerable.Reverse(lhtTimes).ToList();
+
+            var pyTimeIndex = 0;
+            var lhtTimeIndex = 0;
+
+            // Py-sensor selected
+            if (name == sensorPickerItems[0].Name)
+            {
+                // Py sensor selected
+                foreach (var element in pyTemperatures)
+                {
+                    var entry = new ChartEntry(element)
+                    {
+                        Color = SKColor.Parse("#FF1E90FF"),
+                        Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                        TextColor = SKColor.Parse("FF000000"),
+                        ValueLabel = element.ToString()
+                    };
+                    chartEntries_temp.Add(entry);
+                    pyTimeIndex++;
+                }
+
+                // Reset py time index
+                pyTimeIndex = 0;
+
+                foreach (var element in lhtHumidity)
+                {
+                    var entry = new ChartEntry(element)
+                    {
+                        Color = SKColor.Parse("#FF1E90FF"),
+                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        TextColor = SKColor.Parse("FF000000"),
+                        ValueLabel = element.ToString()
+                    };
+                    chartEntries_hum.Add(entry);
+                    lhtTimeIndex++;
+                }
+
+                foreach (var element in pyLight)
+                {
+                    var entry = new ChartEntry(element)
+                    {
+                        Color = SKColor.Parse("#FF1E90FF"),
+                        Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                        TextColor = SKColor.Parse("FF000000"),
+                        ValueLabel = element.ToString()
+                    };
+                    chartEntries_light.Add(entry);
+                    pyTimeIndex++;
+                }
+            }
+
+            // Lht-sensor selected
+            if (name == sensorPickerItems[1].Name)
+            {
+                foreach (var element in lhtTemperatures)
+                {
+                    var entry = new ChartEntry(element)
+                    {
+                        Color = SKColor.Parse("#FF1E90FF"),
+                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        TextColor = SKColor.Parse("FF000000"),
+                        ValueLabel = element.ToString()
+                    };
+                    chartEntries_temp.Add(entry);
+                    lhtTimeIndex++;
+                }
+
+                // Reset lht time index
+                lhtTimeIndex = 0;
+
+                foreach (var element in lhtHumidity)
+                {
+                    var entry = new ChartEntry(element)
+                    {
+                        Color = SKColor.Parse("#FF1E90FF"),
+                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        TextColor = SKColor.Parse("FF000000"),
+                        ValueLabel = element.ToString()
+                    };
+                    chartEntries_hum.Add(entry);
+                    lhtTimeIndex++;
+                }
+
+                // Reset lht time index
+                lhtTimeIndex = 0;
+
+                foreach (var element in lhtLight)
+                {
+                    var entry = new ChartEntry(element)
+                    {
+                        Color = SKColor.Parse("#FF1E90FF"),
+                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        TextColor = SKColor.Parse("FF000000"),
+                        ValueLabel = element.ToString()
+                    };
+                    chartEntries_light.Add(entry);
+                    lhtTimeIndex++;
+                }
             }
         }
 

@@ -112,17 +112,17 @@ namespace GUI.Models
                 Console.WriteLine($"Database name: {connection}");
                 Console.WriteLine($"Connection string: {connection.ConnectionString}\n");
 
-                //here queries can be made
-                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData LIMIT 6";
+                // queries can be made here
+                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc LIMIT 30";
                 var py_list = Select(py_query, sshClient, connection);
 
-                var lht_query = "SELECT" + " * FROM PSET_test_db.LhtData  ORDER BY idLhtData LIMIT 6";
+                var lht_query = "SELECT" + " * FROM PSET_test_db.LhtData  ORDER BY idLhtData desc LIMIT 30";
                 var lht_list = Select(lht_query, sshClient, connection);
 
                 // all_sensors(py_list, lht_list);
                 var unparsed_sensors = new Pair<List<string>, List<string>>(py_list, lht_list);
 
-                //return a list of types of sensors
+                // return a list of types of sensors
                 return unparsed_sensors;
             }
         }

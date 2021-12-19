@@ -28,12 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\DailyHumidity.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\DailyLight.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\DailyTemperature.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -45,12 +39,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Overview.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\WeeklyHumidity.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\WeeklyLight.xaml">
-      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\WeeklyTemperature.xaml">
       <Generator>MSBuild:Compile</Generator>

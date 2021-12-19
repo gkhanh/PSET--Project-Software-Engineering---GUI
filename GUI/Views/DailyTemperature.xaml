@@ -29,31 +29,27 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Picker
+                    <StackLayout Grid.Row="0" Grid.Column="2">
+                        <Picker
                         x:Name="GraphPicker"
-                        Grid.Row="0"
-                        Grid.Column="2"
                         TitleColor="Red"
                         Title="{Binding GraphPickerTitle}"
                         ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding GraphPickerItems}"
                         SelectedItem="{Binding SelectedGraphItem}"
                         VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        />
+                        HorizontalOptions="End"/>
 
-                    <Picker
+                        <Picker
                         x:Name="SensorPicker"
-                        Grid.Row="1"
-                        Grid.Column="2"
                         TitleColor="Red"
                         Title="{Binding SensorPickerTitle}"
                         ItemDisplayBinding="{Binding Name}"
                         ItemsSource="{Binding SensorPickerItems}"
                         SelectedItem="{Binding SelectedSensorItem}"
                         VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        />
+                        HorizontalOptions="End"/>
+                    </StackLayout>
 
                     <microcharts:ChartView
                         Chart="{Binding Chart}"

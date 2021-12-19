@@ -272,6 +272,18 @@ namespace GUI.Models
         }
 
         // TEMPORARY FUNCTION (PLEASE REVIEW)
+        public List<float> GetTemperatures(List<LhtSensor> sensor)
+        {
+            var temperatures = new List<float>();
+
+            foreach (var element in sensor)
+            {
+                temperatures.Add(element.Temperature);
+            }
+            return temperatures;
+        }
+
+        // TEMPORARY FUNCTION (PLEASE REVIEW)
         public List<DateTime> GetTimes(List<PySensor> sensor)
         {
             var times = new List<DateTime>();
@@ -298,6 +310,19 @@ namespace GUI.Models
         }
 
         // TEMPORARY FUNCTION (PLEASE REVIEW)
+        public List<float> GetPressure(List<PySensor> sensor)
+        {
+            var pressure = new List<float>();
+
+            foreach (var element in sensor)
+            {
+                pressure.Add(element.Pressure);
+            }
+
+            return pressure;
+        }
+
+        // TEMPORARY FUNCTION (PLEASE REVIEW)
         public List<float> GetHumidity(List<LhtSensor> sensor)
         {
             var humidities = new List<float>();
@@ -316,6 +341,19 @@ namespace GUI.Models
             var lights = new List<int>();
 
             foreach(var element in sensor)
+            {
+                lights.Add(element.Light);
+            }
+
+            return lights;
+        }
+
+        // TEMPORARY FUNCTION (PLEASE REVIEW)
+        public List<int> GetLight(List<LhtSensor> sensor)
+        {
+            var lights = new List<int>();
+
+            foreach (var element in sensor)
             {
                 lights.Add(element.Light);
             }

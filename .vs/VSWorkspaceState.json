@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GUI",
+    "\\GUI\\ViewModels"
   ],
   "SelectedNode": "\\GUI.sln",
   "PreviewInSolutionExplorer": false

@@ -1,17 +1,34 @@
 ﻿using GUI.Models;
 using Microcharts;
 using SkiaSharp;
-using System;
 using System.Collections.Generic;
-using Xamarin.Forms;
+
+/************* IMPORTANT MESSAGE (PLEASE READ ME) *************/
+
+/* TODO: Use this class as template for a ViewModel. This ViewModel is equipped with
+         the necessary variables and functions that is used in a View within this
+         application. (See 'Daily overview temperature' page in application)
+
+         Please follow the structure of this class, beginning declarations of private
+         and public member variables. Continuing with the constructor and function
+         implementations for this ViewModel.
+
+         Remember, comments are always appreciated.
+
+         Of course, dont hesitate to ask if you need help clarifying what all this means.
+         Just let me know...
+
+         Arief.K
+*/
 
 namespace GUI.ViewModels
 {
     public class DailyTemperatureViewModel : BaseViewModel
     {
-        /// <summary>
+        /// PRIVATE MEMBER VARIABLES FOR LOCAL HANDLING
         /// //////////////////////////////////////////////////////////////////
-        /// </summary>
+        /// Below are the required private member variables to handle the declaration
+        /// variables to display to the view
 
         // Declare a picker title name
         private string pickerTitle { get; set; }
@@ -37,9 +54,10 @@ namespace GUI.ViewModels
         // Declare a line chart
         private LineChart chart { get; set; }
 
-        /// <summary>
+        /// PUBLIC MEMBER VARIABLES FOR VIEW HANDLING
         /// //////////////////////////////////////////////////////////////////
-        /// </summary>
+        /// Below are the required public member varibles to handle the implementation
+        /// and displaying to the view
 
         // Declare a PUBLIC picker title to display the items on the picker
         public string PickerTitle
@@ -75,6 +93,8 @@ namespace GUI.ViewModels
                 if(selectedItem != value)
                 {
                     selectedItem = value;
+
+                    // Change graph when 'selectedItem' of 'picker' has changed
                     ChangeGraph(selectedItem.Name);
                 }
             }
@@ -92,9 +112,9 @@ namespace GUI.ViewModels
             }
         }
 
-        /// <summary>
+        /// ViewModel constructor
         /// //////////////////////////////////////////////////////////////////
-        /// </summary>
+        /// In this constructor, the initialisation process is performed.
 
         // CONSTRUCTOR
         public DailyTemperatureViewModel()

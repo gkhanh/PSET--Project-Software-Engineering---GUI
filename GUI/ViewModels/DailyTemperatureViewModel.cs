@@ -30,16 +30,26 @@ namespace GUI.ViewModels
         /// Below are the required private member variables to handle the declaration
         /// variables to display to the view
 
-        // Declare a picker title name
-        private string pickerTitle { get; set; }
+        // Declare a graph picker title name
+        private string graphPickerTitle { get; set; }
 
-        // Declare a picker list
-        private List<Picker_Item> items { get; set; }
+        // Declare a graph picker list
+        private List<Picker_Item> graphPickerItems { get; set; }
 
+        // Declare a sensor picker title name
+        private string sensorPickerTitle { get; set; }
+
+        // Declare a sensor picker list
+        private List<Picker_Item> sensorPickerItems { get; set; }
+
+        // Declare a graph title
         private string graphTitle { get; set; }
 
-        // Declare a picker selected item
-        private Picker_Item selectedItem;
+        // Declare a graph picker selected item
+        private Picker_Item graphPickerSelectedItem;
+
+        // Declare a sensor picker selected item
+        private Picker_Item sensorPickerSelectedItem;
 
         // Declare a temperature microchart list
         private List<ChartEntry> chartEntries_temp { get; set; }
@@ -56,20 +66,41 @@ namespace GUI.ViewModels
         // Declare a line chart
         private LineChart chart { get; set; }
 
+        // Declare a sensor parser
+        private SensorParser sensorParser { get; set; }
+
+        // Declare a list of parsed py-sensor data
+        private List<PySensor> pySensors { get; set; }
+
+        // Declare a list of parsed lht-sensor data
+        private List<LhtSensor> lhtSensors { get; set; }
+
         /// PUBLIC MEMBER VARIABLES FOR VIEW HANDLING
         /// //////////////////////////////////////////////////////////////////
         /// Below are the required public member varibles to handle the implementation
         /// and displaying to the view
 
-        // Declare a PUBLIC picker title to display the items on the picker
-        public string PickerTitle
+        // Declare a PUBLIC graph picker title to display the items on the picker
+        public string GraphPickerTitle
         {
-            get { return pickerTitle; }
+            get { return graphPickerTitle; }
         }
 
-        // Declare a PUBLIC picker item 'Ilist' to display to the view
-        public IList<Picker_Item> Items
-        { get { return items; }
+        // Declare a PUBLIC sensor picker title to display the items on the picker
+        public string SensorPickerTitle
+        {
+            get { return sensorPickerTitle; }
+        }
+
+        // Declare a PUBLIC graph picker item 'Ilist' to display to the view
+        public IList<Picker_Item> GraphPickerItems
+        { get { return graphPickerItems; }
+        }
+
+        // Declare a PUBLIC sensor picker item 'Ilist' to display to the view
+        public IList<Picker_Item> SensorPickerItems
+        {
+            get { return sensorPickerItems; }
         }
 
         // Declare a PUBLIC chart entries 'Ilist'to display to the view
@@ -86,18 +117,34 @@ namespace GUI.ViewModels
             }
         }
 
-        // Declare a PUBLIC selected item to display the selected item on the picker
-        public Picker_Item SelectedItem
+        // Declare a PUBLIC selected graph item to display the selected item on the picker
+        public Picker_Item SelectedGraphItem
         {
-            get { return selectedItem; }
+            get { return graphPickerSelectedItem; }
             set
             {
-                if (selectedItem != value)
+                if (graphPickerSelectedItem != value)
                 {
-                    selectedItem = value;
-                    ChangeName(selectedItem.Name);
-                    // Change graph when 'selectedItem' of 'picker' has changed
-                    ChangeGraph(selectedItem.Name);
+                    graphPickerSelectedItem = value;
+
+                    // Change graph name when 'selectedItem' of graph 'picker' has changed
+                    ChangeName(graphPickerSelectedItem.Name);
+                    
+                    // Change graph when 'selectedItem' of graph 'picker' has changed
+                    ChangeGraph(graphPickerSelectedItem.Name);
+                }
+            }
+        }
+
+        // Declare a PUBLIC selected item to display the selected item on the picker
+        public Picker_Item SelectedSensorItem
+        {
+            get { return sensorPickerSelectedItem; }
+            set
+            {
+                if (sensorPickerSelectedItem != value)
+                {
+                    sensorPickerSelectedItem = value;
                 }
             }
         }
@@ -114,6 +161,7 @@ namespace GUI.ViewModels
             }
         }
 
+        // Declare a PUBLIC graph title to display
         public string GraphTitle
         {
             get {return graphTitle;}
@@ -131,29 +179,43 @@ namespace GUI.ViewModels
         /// //////////////////////////////////////////////////////////////////
         /// In this constructor, the initialisation process is performed.
 
-        //dhjkahdkjshdjkashdasldhhakj
-        
         // CONSTRUCTOR
         public DailyTemperatureViewModel()
         {
+            // Set up connection and view elements
+            SetupConnection();
             SetupPicker();
             SetupGraphs();
             graphTitle = "Hourly Temperature";
+           
             // Set chart with temperature data as default entries
             chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
         }
 
-        public void ChangeName(string name)
+        // Function to setup SSH connection
+        private void SetupConnection()
         {
-            if(name == items[0].Name)
+            sensorParser = new SensorParser();
+            var unparsedList = DatabaseConnection.Connect();
+            var parsedPySensor = sensorParser.Parse(unparsedList.First);
+            var parsedLhtSensor = sensorParser.Parse(unparsedList.Second);
+
+            pySensors = parsedPySensor.First;
+            lhtSensors = parsedLhtSensor.Second;
+        }
+
+        // Function to change graph name from picker data
+        private void ChangeName(string name)
+        {
+            if(name == graphPickerItems[0].Name)
             {
                 GraphTitle = "Hourly Temperature";
             }
-            if (name == items[1].Name)
+            if (name == graphPickerItems[1].Name)
             {
                 GraphTitle = "Hourly Humidity";
             }
-            if (name == items[2].Name)
+            if (name == graphPickerItems[2].Name)
             {
                 GraphTitle = "Hourly Light";
             }
@@ -162,176 +224,104 @@ namespace GUI.ViewModels
         // Function to setup picker control
         private void SetupPicker()
         {
-            items = new List<Picker_Item>();
-            selectedItem = new Picker_Item { };
-            pickerTitle = "Select graph data:";
+            graphPickerItems = new List<Picker_Item>();
+            graphPickerSelectedItem = new Picker_Item { };
+            graphPickerTitle = "Select graph data:";
 
-            items.Add(new Picker_Item { Name = "Temperature" });
-            items.Add(new Picker_Item { Name = "Humidity" });
-            items.Add(new Picker_Item { Name = "Light" });
+            graphPickerItems.Add(new Picker_Item { Name = "Temperature" });
+            graphPickerItems.Add(new Picker_Item { Name = "Humidity" });
+            graphPickerItems.Add(new Picker_Item { Name = "Light" });
+
+            graphPickerSelectedItem = graphPickerItems[0];
+
+            sensorPickerItems = new List<Picker_Item>();
+            sensorPickerSelectedItem = new Picker_Item { };
+            sensorPickerTitle = "Select sensor data:";
+
+            sensorPickerItems.Add(new Picker_Item { Name = "Py-sensor" });
+            sensorPickerItems.Add(new Picker_Item { Name = "Lht-sensor" });
+
+            sensorPickerSelectedItem = ensorPickerItems[0];
         }
 
         // Function to setup graph
         private void SetupGraphs()
         {
             // Temperature chart entries
-            chartEntries_temp = new List<Microcharts.ChartEntry>
-                    {
-                            new ChartEntry(20)
-                            {
-                                Color = SKColor.Parse("#FF1E90FF"),
-                                Label = "12:00",
-                                TextColor = SKColor.Parse("FF000000"),
-                                ValueLabel = "20",
-                            },
-                        new ChartEntry(6)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "13:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "6",
-                        },
-                        new ChartEntry(17)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "14:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "17",
-                        },
-                        new ChartEntry(12)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "15:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "12",
-                        },
-                        new ChartEntry(19)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "16:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "19",
-                        },
-                        new ChartEntry(4)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "17:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "4",
-                        },
-                    };
+            chartEntries_temp = new List<ChartEntry>();
+            var pyTemperatures = sensorParser.GetTemperatures(pySensors);
+            var pyTimes = sensorParser.GetTimes(pySensors);
+            var pyTimeIndex = 0;
+
+            foreach (var element in pyTemperatures)
+            {
+                var entry = new ChartEntry(element)
+                {
+                    Color = SKColor.Parse("#FF1E90FF"),
+                    Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                    TextColor = SKColor.Parse("FF000000"),
+                    ValueLabel = element.ToString()
+                };
+                chartEntries_temp.Add(entry);
+                pyTimeIndex++;
+            }
+
+            // Reset py time index
+            pyTimeIndex = 0;
 
             // Humidity chart entries
-            chartEntries_hum = new List<Microcharts.ChartEntry>
-                    {
-                        new ChartEntry(10)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "12:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "10",
-                        },
-                        new ChartEntry(6)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "13:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "6",
-                        },
-                        new ChartEntry(17)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "14:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "17",
-                        },
-                        new ChartEntry(12)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "15:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "12",
-                        },
-                        new ChartEntry(21)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "16:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "21",
-                        },
-                        new ChartEntry(7)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "17:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "7",
-                        },
-                    };
+            chartEntries_hum = new List<ChartEntry>();
+            var lhtHumidity = sensorParser.GetHumidity(lhtSensors);
+            var lhtTimes = sensorParser.GetTimes(lhtSensors);
+            var lhtTimeIndex = 0;
+
+            foreach (var element in lhtHumidity)
+            {
+                var entry = new ChartEntry(element)
+                {
+                    Color = SKColor.Parse("#FF1E90FF"),
+                    Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                    TextColor = SKColor.Parse("FF000000"),
+                    ValueLabel = element.ToString()
+                };
+                chartEntries_hum.Add(entry);
+                lhtTimeIndex++;
+            }
 
             // Light chart entries
-            chartEntries_light = new List<Microcharts.ChartEntry>
-                    {
-                        new ChartEntry(8)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "12:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "8",
-                        },
-                        new ChartEntry(6)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "13:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "6",
-                        },
-                        new ChartEntry(17)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "14:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "17",
-                        },
-                        new ChartEntry(12)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "15:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "12",
-                        },
-                        new ChartEntry(21)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "16:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "21",
-                        },
-                        new ChartEntry(20)
-                        {
-                            Color = SKColor.Parse("#FF1E90FF"),
-                            Label = "17:00",
-                            TextColor = SKColor.Parse("FF000000"),
-                            ValueLabel = "20",
-                        },
-                    };
+            chartEntries_light = new List<ChartEntry>();
+            var pyLight = sensorParser.GetLight(pySensors);
+
+            foreach(var element in pyLight)
+            {
+                var entry = new ChartEntry(element)
+                {
+                    Color = SKColor.Parse("#FF1E90FF"),
+                    Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                    TextColor = SKColor.Parse("FF000000"),
+                    ValueLabel = element.ToString()
+                };
+                chartEntries_light.Add(entry);
+                pyTimeIndex++;
+            }
         }
 
         // Function that handles changing of graph from picker data
         private void ChangeGraph(string name)
         {
-            if (name == items[0].Name)
+            if (name == graphPickerItems[0].Name)
             {
                 // TEMPERATURE:
                 Chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
             }
 
-            if (name == items[1].Name)
+            if (name == graphPickerItems[1].Name)
             {
                 // HUMIDITY:
                 Chart = new LineChart { Entries = chartEntries_hum, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
             }
 
-            if (name == items[2].Name)
+            if (name == graphPickerItems[2].Name)
             {
                 // LIGHT:
                 Chart = new LineChart { Entries = chartEntries_light, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };

@@ -30,14 +30,27 @@
                     </Grid.ColumnDefinitions>
 
                     <Picker
-                        x:Name="picker"
+                        x:Name="GraphPicker"
                         Grid.Row="0"
                         Grid.Column="2"
                         TitleColor="Red"
-                        Title="{Binding PickerTitle}"
+                        Title="{Binding GraphPickerTitle}"
                         ItemDisplayBinding="{Binding Name}"
-                        ItemsSource="{Binding Items}"
-                        SelectedItem="{Binding SelectedItem}"
+                        ItemsSource="{Binding GraphPickerItems}"
+                        SelectedItem="{Binding SelectedGraphItem}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        />
+
+                    <Picker
+                        x:Name="SensorPicker"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        TitleColor="Red"
+                        Title="{Binding SensorPickerTitle}"
+                        ItemDisplayBinding="{Binding Name}"
+                        ItemsSource="{Binding SensorPickerItems}"
+                        SelectedItem="{Binding SelectedSensorItem}"
                         VerticalOptions="Center"
                         HorizontalOptions="End"
                         />

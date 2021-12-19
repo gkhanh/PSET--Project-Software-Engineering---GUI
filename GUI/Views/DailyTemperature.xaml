@@ -68,7 +68,7 @@
                     Grid.Row="0"
                     FontSize="50"
                     HorizontalOptions="CenterAndExpand"
-                    Text="Hourly Temperature"
+                    Text="{Binding GraphTitle}"
                     TextColor="Black"
                     VerticalOptions="CenterAndExpand" />
 

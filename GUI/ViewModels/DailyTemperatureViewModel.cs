@@ -36,6 +36,8 @@ namespace GUI.ViewModels
         // Declare a picker list
         private List<Picker_Item> items { get; set; }
 
+        private string graphTitle { get; set; }
+
         // Declare a picker selected item
         private Picker_Item selectedItem;
 
@@ -67,7 +69,7 @@ namespace GUI.ViewModels
 
         // Declare a PUBLIC picker item 'Ilist' to display to the view
         public IList<Picker_Item> Items
-        { get {return items;}
+        { get { return items; }
         }
 
         // Declare a PUBLIC chart entries 'Ilist'to display to the view
@@ -90,10 +92,10 @@ namespace GUI.ViewModels
             get { return selectedItem; }
             set
             {
-                if(selectedItem != value)
+                if (selectedItem != value)
                 {
                     selectedItem = value;
-
+                    ChangeName(selectedItem.Name);
                     // Change graph when 'selectedItem' of 'picker' has changed
                     ChangeGraph(selectedItem.Name);
                 }
@@ -104,9 +106,22 @@ namespace GUI.ViewModels
         public LineChart Chart
         {
             get { return chart; }
-            set { if(chart != value)
+            set { if (chart != value)
                 {
                     chart = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public string GraphTitle
+        {
+            get {return graphTitle;}
+            set
+            {
+                if(graphTitle != value)
+                {
+                    graphTitle = value;
                     OnPropertyChanged();
                 }
             }
@@ -116,14 +131,32 @@ namespace GUI.ViewModels
         /// //////////////////////////////////////////////////////////////////
         /// In this constructor, the initialisation process is performed.
 
+        //dhjkahdkjshdjkashdasldhhakj
+        
         // CONSTRUCTOR
         public DailyTemperatureViewModel()
         {
             SetupPicker();
             SetupGraphs();
-
+            graphTitle = "Hourly Temperature";
             // Set chart with temperature data as default entries
             chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+        }
+
+        public void ChangeName(string name)
+        {
+            if(name == items[0].Name)
+            {
+                GraphTitle = "Hourly Temperature";
+            }
+            if (name == items[1].Name)
+            {
+                GraphTitle = "Hourly Humidity";
+            }
+            if (name == items[2].Name)
+            {
+                GraphTitle = "Hourly Light";
+            }
         }
 
         // Function to setup picker control

@@ -11189,7 +11189,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Arief\\.nuget\\packages\\": {},
+    "C:\\Users\\gkhan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
@@ -11197,11 +11197,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
+      "projectUniqueName": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.UWP\\GUI.UWP.csproj",
       "projectName": "GUI.UWP",
-      "projectPath": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
-      "packagesPath": "C:\\Users\\Arief\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\obj\\",
+      "projectPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.UWP\\GUI.UWP.csproj",
+      "packagesPath": "C:\\Users\\gkhan\\.nuget\\packages\\",
+      "outputPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -11210,7 +11210,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Arief\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -11225,8 +11225,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
-              "projectPath": "C:\\Users\\Arief\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
+            "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.csproj": {
+              "projectPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.csproj"
             }
           }
         }

@@ -11,7 +11,10 @@ will mainly be used to integrate front and back end developments.
 For implementing in this project, please follow the structure layout defined for the respective classes mentioned below:
 
 Model template - (https://github.com/gkhanh/PSET--Project-Software-Engineering---GUI/blob/master/GUI/Models/Picker_Item.cs)
+
 ViewModel template - (https://github.com/gkhanh/PSET--Project-Software-Engineering---GUI/blob/master/GUI/ViewModels/DailyTemperatureViewModel.cs)
+
 ViewClass template (.cs) - (https://github.com/gkhanh/PSET--Project-Software-Engineering---GUI/blob/master/GUI/Views/DailyTemperature.xaml.cs)
+
 View template (.xaml) - (https://github.com/gkhanh/PSET--Project-Software-Engineering---GUI/blob/master/GUI/Views/DailyTemperature.xaml)
 

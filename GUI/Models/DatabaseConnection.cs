@@ -113,10 +113,10 @@ namespace GUI.Models
                 Console.WriteLine($"Connection string: {connection.ConnectionString}\n");
 
                 // queries can be made here
-                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc LIMIT 30";
+                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc LIMIT 15";
                 var py_list = Select(py_query, sshClient, connection);
 
-                var lht_query = "SELECT" + " * FROM PSET_test_db.LhtData  ORDER BY idLhtData desc LIMIT 30";
+                var lht_query = "SELECT" + " * FROM PSET_test_db.LhtData  ORDER BY idLhtData desc LIMIT 15";
                 var lht_list = Select(lht_query, sshClient, connection);
 
                 // all_sensors(py_list, lht_list);

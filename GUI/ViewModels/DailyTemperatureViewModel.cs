@@ -207,6 +207,8 @@ namespace GUI.ViewModels
         // CONSTRUCTOR
         public DailyTemperatureViewModel()
         {
+            Title = "Hour overview";
+
             // Set up connection and view elements
             SetupConnection();
             SortSensorData();

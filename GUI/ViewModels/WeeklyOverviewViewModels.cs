@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using GUI.Models;
 using Microcharts;
 using SkiaSharp;
@@ -116,6 +114,8 @@ namespace GUI.ViewModels
         // CONSTRUCTOR
         public WeeklyOverviewViewModels()
         {
+            Title = "Daily overview";
+
             SetupPicker();
             SetupGraphs();
             graphTitle = "Daily Temperature";

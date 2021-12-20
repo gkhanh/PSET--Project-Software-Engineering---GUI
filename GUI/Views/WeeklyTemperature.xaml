@@ -6,6 +6,7 @@
     xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     xmlns:viewmodels="clr-namespace:GUI.ViewModels"
     x:DataType="viewmodels:WeeklyOverviewViewModels"
+    Title="{Binding Title}"
     BackgroundColor="White">
     <StackLayout>
         <Grid>

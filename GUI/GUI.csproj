@@ -8,10 +8,17 @@
 
   <ItemGroup>
     <None Remove="Resources\sky.jpg" />
+    <None Remove="Resources\sunny.png" />
+    <None Remove="Resources\sunset.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\sunny.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\sky.jpg" />
+    <EmbeddedResource Include="Resources\sunset.jpg" />
   </ItemGroup>
 
   <ItemGroup>

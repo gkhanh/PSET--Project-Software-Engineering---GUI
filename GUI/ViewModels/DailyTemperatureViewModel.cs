@@ -318,7 +318,7 @@ namespace GUI.ViewModels
                 var entry = new ChartEntry(element)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                    Label = (pyTimes[pyTimeIndex].Hour + 1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
                     TextColor = SKColor.Parse("FF000000"),
                     ValueLabel = element.ToString()
                 };
@@ -334,7 +334,7 @@ namespace GUI.ViewModels
                 var entry = new ChartEntry(element)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                    Label = (lhtTimes[lhtTimeIndex].Hour+1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
                     TextColor = SKColor.Parse("FF000000"),
                     ValueLabel = element.ToString()
                 };
@@ -347,7 +347,7 @@ namespace GUI.ViewModels
                 var entry = new ChartEntry(element)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                    Label = (pyTimes[pyTimeIndex].Hour+1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
                     TextColor = SKColor.Parse("FF000000"),
                     ValueLabel = element.ToString()
                 };
@@ -384,7 +384,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                        Label = (pyTimes[pyTimeIndex].Hour+1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.ToString()
                     };
@@ -400,7 +400,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.ToString()
                     };
@@ -413,7 +413,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = pyTimes[pyTimeIndex].Hour.ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                        Label = (pyTimes[pyTimeIndex].Hour + 1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.ToString()
                     };
@@ -430,7 +430,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.ToString()
                     };
@@ -446,7 +446,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.ToString()
                     };
@@ -462,7 +462,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = lhtTimes[lhtTimeIndex].Hour.ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.ToString()
                     };

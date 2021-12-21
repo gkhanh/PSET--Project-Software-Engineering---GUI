@@ -3,6 +3,7 @@ using MySqlConnector;
 using Renci.SshNet;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace GUI.Models
 {
@@ -103,6 +104,7 @@ namespace GUI.Models
                     Port = localPort,
                     UserID = databaseUserName,
                     Password = databasePassword,
+                    ConnectionTimeout = 30,
                 };
 
                 var connection = new MySqlConnection(csb.ConnectionString);
@@ -112,11 +114,33 @@ namespace GUI.Models
                 Console.WriteLine($"Database name: {connection}");
                 Console.WriteLine($"Connection string: {connection.ConnectionString}\n");
 
+                var temp_list = new List<string>();
+                var limit = 0;
+                var index = 42;
+
                 // queries can be made here
-                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc LIMIT 15";
+                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc LIMIT 43";
                 var py_list = Select(py_query, sshClient, connection);
 
-                var lht_query = "SELECT" + " * FROM PSET_test_db.LhtData  ORDER BY idLhtData desc LIMIT 15";
+                for (int i = 0; i < 4; i++)
+                {
+                    // Check id
+                    limit = int.Parse(py_list[index]) - 43;
+
+                    Debug.WriteLine($"\nLimit is: {limit}");
+
+                    py_query = $"SELECT" + $" * FROM PSET_test_db.PyData where idPyData < {limit} ORDER BY idPyData desc LIMIT 43";
+
+                    temp_list = Select(py_query, sshClient, connection);
+
+                    foreach (var element in temp_list)
+                    {
+                        py_list.Add(element);
+                        index++;
+                    }
+                }
+
+                var lht_query = "SELECT" + " * FROM PSET_test_db.LhtData  ORDER BY idLhtData desc LIMIT 40";
                 var lht_list = Select(lht_query, sshClient, connection);
 
                 // all_sensors(py_list, lht_list);

@@ -70,29 +70,20 @@ namespace GUI.ViewModels
         // Declare a sensor parser
         private SensorParser sensorParser { get; set; }
 
+        // Declare an daily average parser
+        private CalculateAverageDay averageDay { get;set; }
+
         // Declare a list of parsed py-sensor data
         private List<PySensor> pySensors { get; set; }
-
-        // Declare a list of parsed py-temperature data
-        private List<float> pyTemperatures { get; set; }
-
-        // Declare a list of parsed py-pressure data
-        private List<float> pyPressure { get; set; }
-
-        // Declare a list of parsed py-light data
-        private List<int> pyLight { get; set; }
 
         // Declare a list of parsed lht-sensor data
         private List<LhtSensor> lhtSensors { get; set; }
 
-        // Declare a list of parsed lht-temperature data
-        private List<float> lhtTemperatures { get; set; }
+        private List<GraphData> averageGraph { get; set; }
 
-        // Declare a list of parsed lht-pressure data
-        private List<float> lhtHumidity { get; set; }
+        private List<GraphData> averagePyGraph { get; set; }
 
-        // Declare a list of parsed lht-light data
-        private List<int> lhtLight { get; set; }
+        private List<GraphData> averageLhtGraph { get; set; }
 
         /// PUBLIC MEMBER VARIABLES FOR VIEW HANDLING
         /// //////////////////////////////////////////////////////////////////
@@ -123,7 +114,7 @@ namespace GUI.ViewModels
         }
 
         // Declare a PUBLIC chart entries 'Ilist'to display to the view
-        public IList<Microcharts.ChartEntry> SelectedChartEntries
+        public IList<ChartEntry> SelectedChartEntries
         {
             get { return selectedChartEntries; }
             set
@@ -211,6 +202,7 @@ namespace GUI.ViewModels
 
             // Set up connection and view elements
             SetupConnection();
+            ComputeDailyAverage();
             SortSensorData();
             SetupPicker();
             SetupGraphs();
@@ -220,22 +212,10 @@ namespace GUI.ViewModels
             chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
         }
 
-        // Function to setup SSH connection
-        private void SetupConnection()
-        {
-            sensorParser = new SensorParser();
-            var unparsedList = DatabaseConnection.Connect();
-            var parsedPySensor = sensorParser.Parse(unparsedList.First);
-            var parsedLhtSensor = sensorParser.Parse(unparsedList.Second);
-
-            pySensors = parsedPySensor.First;
-            lhtSensors = parsedLhtSensor.Second;
-        }
-
         // Function to change graph name from picker data
         private void ChangeName(string name)
         {
-            if(name == graphPickerItems[0].Name)
+            if (name == graphPickerItems[0].Name)
             {
                 GraphTitle = "Hourly Temperature";
             }
@@ -272,26 +252,83 @@ namespace GUI.ViewModels
             sensorPickerSelectedItem = sensorPickerItems[0];
         }
 
+        // Function to setup SSH connection
+        private void SetupConnection()
+        {
+            sensorParser = new SensorParser();
+            var unparsedList = DatabaseConnection.Connect();
+
+            var parsedPySensor = sensorParser.Parse(unparsedList.First);
+            var parsedLhtSensor = sensorParser.Parse(unparsedList.Second);
+
+            pySensors = parsedPySensor.First;
+            lhtSensors = parsedLhtSensor.Second;
+        }
+
+        // Function to calculate daily average
+        private void ComputeDailyAverage()
+        {
+            averageDay = new CalculateAverageDay();
+
+            sensorParser.SortData_Py(pySensors);
+            sensorParser.SortData_LHT(lhtSensors);
+
+            averageDay.CalculateAveragePy(sensorParser.getWierenPy(), sensorParser.getSaxionPy());
+            averageDay.CalculateAverageLHT(sensorParser.getWierenLHT(), sensorParser.getGronauLHT());
+        }
+
         // Function to gather and sort data using the parsed sensor data
         private void SortSensorData()
         {
+            // Initialise graph
+            averagePyGraph = new List<GraphData>();
+            averageLhtGraph = new List<GraphData>();
+
             // Py sensor data gathering
-            var temperature = sensorParser.GetTemperatures(pySensors);
-            var pressure = sensorParser.GetPressure(pySensors);
-            var light = sensorParser.GetLight(pySensors);
+            var pyWierden = averageDay.getDayAverageWierdenPy();
+            var pySaxion = averageDay.getDayAverageSaxionPy();
 
-            pyTemperatures = Enumerable.Reverse(temperature).ToList();
-            pyPressure = Enumerable.Reverse(pressure).ToList();
-            pyLight = Enumerable.Reverse(light).ToList();
+            // Lht-sensor data gathering
+            var lhtWierden = averageDay.getDayAverageWierdenLHT();
+            var lhtGronau = averageDay.getDayAverageWierdenLHT();
 
-            // Lht sensor data gathering
-            temperature = sensorParser.GetTemperatures(lhtSensors);
-            var humidity = sensorParser.GetHumidity(lhtSensors);
-            light = sensorParser.GetLight(lhtSensors);
+            // Create variable to store py-sensor averages
+            var averageTempPySensor = new List<float>();
+            var averagePresPySensor = new List<float>();
+            var averageLightPySensor = new List<float>();
 
-            lhtTemperatures = Enumerable.Reverse(temperature).ToList();
-            lhtHumidity = Enumerable.Reverse(humidity).ToList();
-            lhtLight = Enumerable.Reverse(light).ToList();
+            // Create variable to store lht-sensor averages
+            var averageTempLhtSensor = new List<float>();
+            var averageHumLhtSensor = new List<float>();
+            var averageLightLhtSensor = new List<float>();
+
+            // Using py-sensor timings
+            var pyTimes = sensorParser.GetTimes(pySaxion);
+            pyTimes = Enumerable.Reverse(pyTimes).ToList();
+
+            for (int i = 0; i < pyWierden.Count; i++)
+            {
+                // Combine py-sensors
+                averageTempPySensor.Add((pyWierden[i].average_temperature + pySaxion[i].average_temperature / 2));
+                averagePresPySensor.Add((pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2));
+                averageLightPySensor.Add((pyWierden[i].average_light + pySaxion[i].average_light / 2));
+
+                // Combine lht-sensors
+                averageTempLhtSensor.Add((lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 2));
+                averageHumLhtSensor.Add((lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2));
+                averageLightLhtSensor.Add((lhtWierden[i].average_light + lhtGronau[i].average_light / 2));
+            }
+
+            for(int i = 0; i < pyWierden.Count; i++)
+            {
+                // Gather all combined averages
+                var pySensors = new GraphData(averageTempPySensor[i], averagePresPySensor[i], 0.0f, averageLightPySensor[i], "Average_data_" + i, pyTimes[i]);
+                var lhtSensors = new GraphData(averageTempLhtSensor[i], 0.0f, averageHumLhtSensor[i], averageLightLhtSensor[i], "Average_data_" + i, pyTimes[i]);
+
+                // Add to list of average graphs
+                averagePyGraph.Add(pySensors);
+                averageLhtGraph.Add(lhtSensors);
+            }
         }
 
         // Function to setup graph
@@ -302,57 +339,40 @@ namespace GUI.ViewModels
             chartEntries_hum = new List<ChartEntry>();
             chartEntries_light = new List<ChartEntry>();
 
-            var pyTimes = sensorParser.GetTimes(pySensors);
-            var lhtTimes = sensorParser.GetTimes(lhtSensors);
-
-            // Times are reversed to correctly show data
-            pyTimes = Enumerable.Reverse(pyTimes).ToList();
-            lhtTimes = Enumerable.Reverse(lhtTimes).ToList();
-
-            var pyTimeIndex = 0;
-            var lhtTimeIndex = 0;
-
-            // By default, display data of Py-sensors
-            foreach (var element in pyTemperatures)
+            foreach (var element in averagePyGraph)
             {
-                var entry = new ChartEntry(element)
+                var entry = new ChartEntry(element.average_temperature)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = (pyTimes[pyTimeIndex].Hour + 1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                    Label = element.date,
                     TextColor = SKColor.Parse("FF000000"),
-                    ValueLabel = element.ToString()
+                    ValueLabel = element.average_temperature.ToString()
                 };
                 chartEntries_temp.Add(entry);
-                pyTimeIndex++;
             }
 
-            // Reset py time index
-            pyTimeIndex = 0;
-
-            foreach (var element in lhtHumidity)
+            foreach (var element in averagePyGraph)
             {
-                var entry = new ChartEntry(element)
+                var entry = new ChartEntry(element.average_pressure)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = (lhtTimes[lhtTimeIndex].Hour+1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                    Label = element.date,
                     TextColor = SKColor.Parse("FF000000"),
-                    ValueLabel = element.ToString()
+                    ValueLabel = element.average_pressure.ToString()
                 };
                 chartEntries_hum.Add(entry);
-                lhtTimeIndex++;
             }
 
-            foreach(var element in pyLight)
+            foreach(var element in averagePyGraph)
             {
-                var entry = new ChartEntry(element)
+                var entry = new ChartEntry(element.average_light)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = (pyTimes[pyTimeIndex].Hour+1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                    Label = element.date,
                     TextColor = SKColor.Parse("FF000000"),
-                    ValueLabel = element.ToString()
+                    ValueLabel = element.average_light.ToString()
                 };
                 chartEntries_light.Add(entry);
-                pyTimeIndex++;
             }
         }
 
@@ -364,110 +384,84 @@ namespace GUI.ViewModels
             chartEntries_hum = new List<ChartEntry>();
             chartEntries_light = new List<ChartEntry>();
 
-            // Get sensor times
-            var pyTimes = sensorParser.GetTimes(pySensors);
-            var lhtTimes = sensorParser.GetTimes(lhtSensors);
-
-            // Times are reversed to correctly show data
-            pyTimes = Enumerable.Reverse(pyTimes).ToList();
-            lhtTimes = Enumerable.Reverse(lhtTimes).ToList();
-
-            var pyTimeIndex = 0;
-            var lhtTimeIndex = 0;
-
             // Py-sensor selected
             if (name == sensorPickerItems[0].Name)
             {
                 // Py sensor selected
-                foreach (var element in pyTemperatures)
+                foreach (var element in averagePyGraph)
                 {
-                    var entry = new ChartEntry(element)
+                    var entry = new ChartEntry(element.average_temperature)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = (pyTimes[pyTimeIndex].Hour+1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                        Label = element.date,
                         TextColor = SKColor.Parse("FF000000"),
-                        ValueLabel = element.ToString()
+                        ValueLabel = element.average_temperature.ToString()
                     };
                     chartEntries_temp.Add(entry);
-                    pyTimeIndex++;
                 }
 
-                // Reset py time index
-                pyTimeIndex = 0;
-
-                foreach (var element in lhtHumidity)
+                foreach (var element in averagePyGraph)
                 {
-                    var entry = new ChartEntry(element)
+                    var entry = new ChartEntry(element.average_pressure)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = element.date,
                         TextColor = SKColor.Parse("FF000000"),
-                        ValueLabel = element.ToString()
+                        ValueLabel = element.average_pressure.ToString()
                     };
                     chartEntries_hum.Add(entry);
-                    lhtTimeIndex++;
                 }
 
-                foreach (var element in pyLight)
+                foreach (var element in averagePyGraph)
                 {
-                    var entry = new ChartEntry(element)
+                    var entry = new ChartEntry(element.average_light)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = (pyTimes[pyTimeIndex].Hour + 1).ToString() + ':' + pyTimes[pyTimeIndex].Minute.ToString(),
+                        Label = element.date,
                         TextColor = SKColor.Parse("FF000000"),
-                        ValueLabel = element.ToString()
+                        ValueLabel = element.average_light.ToString()
                     };
                     chartEntries_light.Add(entry);
-                    pyTimeIndex++;
                 }
             }
 
             // Lht-sensor selected
             if (name == sensorPickerItems[1].Name)
             {
-                foreach (var element in lhtTemperatures)
+                foreach (var element in averageLhtGraph)
                 {
-                    var entry = new ChartEntry(element)
+                    var entry = new ChartEntry(element.average_temperature)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = element.date,
                         TextColor = SKColor.Parse("FF000000"),
-                        ValueLabel = element.ToString()
+                        ValueLabel = element.average_temperature.ToString()
                     };
                     chartEntries_temp.Add(entry);
-                    lhtTimeIndex++;
                 }
 
-                // Reset lht time index
-                lhtTimeIndex = 0;
-
-                foreach (var element in lhtHumidity)
+                foreach (var element in averageLhtGraph)
                 {
-                    var entry = new ChartEntry(element)
+                    var entry = new ChartEntry(element.average_humidity)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = element.date,
                         TextColor = SKColor.Parse("FF000000"),
-                        ValueLabel = element.ToString()
+                        ValueLabel = element.average_humidity.ToString()
                     };
                     chartEntries_hum.Add(entry);
-                    lhtTimeIndex++;
                 }
 
-                // Reset lht time index
-                lhtTimeIndex = 0;
-
-                foreach (var element in lhtLight)
+                foreach (var element in averageLhtGraph)
                 {
-                    var entry = new ChartEntry(element)
+                    var entry = new ChartEntry(element.average_light)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = (lhtTimes[lhtTimeIndex].Hour + 1).ToString() + ':' + lhtTimes[lhtTimeIndex].Minute.ToString(),
+                        Label = element.date,
                         TextColor = SKColor.Parse("FF000000"),
-                        ValueLabel = element.ToString()
+                        ValueLabel = element.average_light.ToString()
                     };
                     chartEntries_light.Add(entry);
-                    lhtTimeIndex++;
                 }
             }
         }

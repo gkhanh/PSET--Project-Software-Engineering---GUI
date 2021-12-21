@@ -13,26 +13,8 @@ namespace GUI.ViewModels
         // Declare a parsed py-sensor data list
         private List<PySensor> pySensors { get; set; }
 
-        // Declare a list of parsed py-temperature data
-        private List<float> pyTemperatures { get; set; }
-
-        // Declare a list of parsed py-pressure data
-        private List<float> pyPressure { get; set; }
-
-        // Declare a list of parsed py-light data
-        private List<int> pyLight { get; set; }
-
         // Declare a parsed lht-sensor data list
         private List<LhtSensor> lhtSensors { get; set; }
-
-        // Declare a list of parsed lht-temperature data
-        private List<float> lhtTemperatures { get; set; }
-
-        // Declare a list of parsed lht-pressure data
-        private List<float> lhtHumidity { get; set; }
-
-        // Declare a list of parsed lht-light data
-        private List<int> lhtLight { get; set; }
 
         // Declare an average temperature
         private string averageTemperature { get; set; }
@@ -55,10 +37,15 @@ namespace GUI.ViewModels
         // Declare a city title
         private string cityTitle { get; set; }
 
+        // Declare an daily average parser
+        private CalculateAverageDay averageDay { get; set; }
+
+        private List<GraphData> averageGraph { get; set; }
+
         /// <summary>
         /// //////////////////////////////////////////////////////
         /// </summary>
-        
+
         // Declare a PUBLIC average temperature to display
         public string AverageTemperature
         {
@@ -149,8 +136,8 @@ namespace GUI.ViewModels
         public AboutViewModel()
         {
             SetupConnection();
+            ComputeAllSensorAverage();
             SortSensorData();
-            CalculateAverages();
             SetupImageSlider();
 
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
@@ -182,72 +169,87 @@ namespace GUI.ViewModels
             };
         }
 
+        // Function to calculate daily average
+        private void ComputeAllSensorAverage()
+        {
+            averageDay = new CalculateAverageDay();
+            averageGraph = new List<GraphData>();
+
+            sensorParser.SortData_Py(pySensors);
+            sensorParser.SortData_LHT(lhtSensors);
+
+            averageDay.CalculateAveragePy(sensorParser.getWierenPy(), sensorParser.getSaxionPy());
+            averageDay.CalculateAverageLHT(sensorParser.getWierenLHT(), sensorParser.getGronauLHT());
+        }
+
         // Function to gather and sort data using the parsed sensor data
         private void SortSensorData()
         {
             // Py sensor data gathering
-            var temperature = sensorParser.GetTemperatures(pySensors);
-            var pressure = sensorParser.GetPressure(pySensors);
-            var light = sensorParser.GetLight(pySensors);
+            var pyWierden = averageDay.getDayAverageWierdenPy();
+            var pySaxion = averageDay.getDayAverageSaxionPy();
 
-            pyTemperatures = Enumerable.Reverse(temperature).ToList();
-            pyPressure = Enumerable.Reverse(pressure).ToList();
-            pyLight = Enumerable.Reverse(light).ToList();
+            // Lht-sensor data gathering
+            var lhtWierden = averageDay.getDayAverageWierdenLHT();
+            var lhtGronau = averageDay.getDayAverageWierdenLHT();
 
-            // Lht sensor data gathering
-            temperature = sensorParser.GetTemperatures(lhtSensors);
-            var humidity = sensorParser.GetHumidity(lhtSensors);
-            light = sensorParser.GetLight(lhtSensors);
+            // Create variable to store lht-sensor averages
+            var averageTempLhtSensor = new List<float>();
+            var averageHumLhtSensor = new List<float>();
+            var averageLightLhtSensor = new List<float>();
+            var averagePresPySensor = new List<float>();
 
-            lhtTemperatures = Enumerable.Reverse(temperature).ToList();
-            lhtHumidity = Enumerable.Reverse(humidity).ToList();
-            lhtLight = Enumerable.Reverse(light).ToList();
-        }
+            /*// Create variable to store averages of all sensors combined
+            var averageTempAllSensor = new List<float>();
+            var averageHumAllSensor = new List<float>();
+            var averagePresAllSensor = new List<float>();
+            var averageLightAllSensor = new List<float>();*/
 
-        // TEMPORARY: Function to calculate averages of data
-        private void CalculateAverages()
-        {
-            // TODO: TEMPORARY FIX
-            var sumTemp = 0.0f;
-            var sumHum = 0.0f;
-            var sumPres = 0.0f;
-            var sumLight = 0;
+            // Using py-sensor timings
+            var lhtTimes = sensorParser.GetTimes(lhtWierden);
+            lhtTimes = Enumerable.Reverse(lhtTimes).ToList();
 
-            var avgTempList = new List<float>();
-            var avgLightList = new List<int>();
-
-            for (int i = 0; i < pyTemperatures.Count; i++)
+            for (int i = 0; i < lhtWierden.Count; i++)
             {
-                avgTempList.Add(pyTemperatures[i]);
-                avgTempList.Add(lhtTemperatures[i]);
-                avgLightList.Add(pyLight[i]);
-                avgLightList.Add(lhtLight[i]);
+                // Combine lht-sensors
+                averageTempLhtSensor.Add((lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 2));
+                averagePresPySensor.Add((pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2));
+                averageHumLhtSensor.Add((lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2));
+                averageLightLhtSensor.Add((lhtWierden[i].average_light + lhtGronau[i].average_light / 2));
+
+                /*// Combine all sensors
+                averageTempAllSensor.Add((pyWierden[i].average_temperature + pySaxion[i].average_temperature + lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 4));
+                averageLightAllSensor.Add((pyWierden[i].average_light + pySaxion[i].average_light + lhtWierden[i].average_light + lhtGronau[i].average_light / 4));
+                averageHumAllSensor.Add((lhtWierden[i].average_light + lhtGronau[i].average_light / 2));
+                averagePresAllSensor.Add((pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2));*/
             }
 
-            foreach (var element in avgTempList)
+            for (int i = 0; i < lhtWierden.Count; i++)
             {
-                sumTemp += element;
+                // Gather all combined averages
+                var allSensors = new GraphData(averageTempLhtSensor[i], averagePresPySensor[i], averageHumLhtSensor[i], averageLightLhtSensor[i], "Average_data_" + i, lhtTimes[i]);
+
+                // Add to list of average graphs
+                averageGraph.Add(allSensors);
             }
 
-            foreach (var element in lhtHumidity)
+            var sumAvgTemp = 0.0f;
+            var sumAvgPres = 0.0f;
+            var sumAvgHum = 0.0f;
+            var sumAvgLight = 0.0f;
+
+            for(int i = 0; i < pyWierden.Count; i++)
             {
-                sumHum += element;
+                sumAvgTemp += averageGraph[i].average_temperature;
+                sumAvgPres += averageGraph[i].average_pressure;
+                sumAvgHum += averageGraph[i].average_humidity;
+                sumAvgLight += averageGraph[i].average_light;
             }
 
-            foreach (var element in pyPressure)
-            {
-                sumPres += element;
-            }
-
-            foreach (var element in avgLightList)
-            {
-                sumLight += element;
-            }
-
-            averageTemperature = "Temperature: " + Math.Round(sumTemp / avgTempList.Count, 0).ToString() + "°C";
-            averageHumidity = "Humidity: " + Math.Round(sumHum / avgTempList.Count, 0).ToString() + "%";
-            averagePressure = "Pressure: " + Math.Round(sumPres / avgTempList.Count, 0).ToString() + " Pa";
-            averageLight = "Light: " + (sumLight / avgTempList.Count).ToString() + " Lumen";
+            averageTemperature = "Temperature: " + Math.Round(sumAvgTemp / averageGraph.Count, 2).ToString() + "°C";
+            averagePressure = "Pressure: " + Math.Round(sumAvgPres / averageGraph.Count, 2).ToString() + " Pa";
+            averageHumidity = "Humidity: " + Math.Round(sumAvgHum / averageGraph.Count, 2).ToString() + "%";
+            averageLight = "Light: " + Math.Round(sumAvgLight / averageGraph.Count, 2).ToString() + " Lumen";
         }
     }
 }

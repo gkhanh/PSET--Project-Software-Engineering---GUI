@@ -1,16 +1,40 @@
 ﻿using Castle.Core;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace GUI.Models
 {
     class SensorParser
     {
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // Variables used to parse received data from the remote database
         private int dataIndex { get; set; }
         private List<PySensor> pySensors { get; set; }
         private List<LhtSensor> lhtSensors { get; set; }
 
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // Device name to compare with the data retrieved to split it up in the right list
+        private string wierden_py = "py-wierden";
+        private string saxion_py = "py-saxion";
+        private string wierden_lht = "lht-wierden";
+        private string gronau_lht = "lht-gronau";
+        
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // In this list the ordered data is stored
+        private List<PySensor> WierdenList_Py = new List<PySensor>();
+        private List<PySensor> SaxionList_Py = new List<PySensor>();
+        private List<LhtSensor> WierdenList_LHT = new List<LhtSensor>();
+        private List<LhtSensor> GronauList_LHT = new List<LhtSensor>();
+
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // Functions to get the sorted data 
+        public List<PySensor> getWierenPy() { return WierdenList_Py; }
+        public List<PySensor> getSaxionPy() { return SaxionList_Py; }
+        public List<LhtSensor> getWierenLHT() { return WierdenList_LHT; }
+        public List<LhtSensor> getGronauLHT() { return GronauList_LHT; }
+
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // Function to parse the received data from the remote database
         public Pair<List<PySensor>,List<LhtSensor>> Parse(List<string> data)
         {
             // Set data index to '0'
@@ -257,105 +281,111 @@ namespace GUI.Models
             return parsedSensors;
         }
 
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // Function to sort the data from the Py device and split it up in two lists one with the device in Wierden
+        // and one with the device in Saxion.
+        //-----------------------------------------------------------------------------------------------------------------------------
+        public void SortData_Py(List<PySensor> data)
+        {
+            for (int i = 0; i < data.Count; i++)
+            {
+                //-----------------------------------------------------------------------------------------------------------------------------
+                // If statement: If the device name is wierden-py it gets stored in the WierdenList_Py else in the SaxionList_py
+                //-----------------------------------------------------------------------------------------------------------------------------
+                if (data[i].Name == wierden_py)
+                {
+                    WierdenList_Py.Add(data[i]);
+                    // Write to debug to show the data stored in the wierden_py list
+                    //Debug.WriteLine($"Name:  { data[i].device_name}, temperature: {data[i].temperature}, pressure: " +
+                    //     $"{data[i].pressure} light: {data[i].light} timestamp: {data[i].timestamp}");
+                }
+                else if (data[i].Name == saxion_py)
+                {
+                    SaxionList_Py.Add(data[i]);
+                    // Write to debug to show the data stored in the saxion_py list
+                    //Debug.WriteLine($"Name:  { data[i].device_name}, temperature: {data[i].temperature}, pressure: " +
+                    //    $"{data[i].pressure} light: {data[i].light} timestamp: {data[i].timestamp}");
+                }
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------------------
+        // Function to sort the data from the LHT device and split it up in two lists one with the device in Wierden
+        // and one with the device in Gronau.
+        //-----------------------------------------------------------------------------------------------------------------------------
+        public void SortData_LHT(List<LhtSensor> data)
+        {
+            //Debug.WriteLine("Sortdata LHT by wieren & gronau: ");
+            for (int i = 0; i < data.Count; i++)
+            {
+                //-----------------------------------------------------------------------------------------------------------------------------
+                // If statement: If the device name is wierden-lht it gets stored in the WierdenList_LHT else in the GronauList_LHT
+                //-----------------------------------------------------------------------------------------------------------------------------
+                if (data[i].Name == wierden_lht)
+                {
+                    WierdenList_LHT.Add(data[i]);
+                    // Write to debug to show the data stored in the wierden_lht list
+                    //Debug.WriteLine($"Name:  { data[i].device_name}, temperature: {data[i].temperature}, pressure: " +
+                    //    $"{data[i].pressure} light: {data[i].light} timestamp: {data[i].timestamp}");
+                }
+                else if (data[i].Name == gronau_lht)
+                {
+                    GronauList_LHT.Add(data[i]);
+                    // Write to debug to show the data stored in the gronau_lht list
+                    //Debug.WriteLine($"Name:  { data[i].device_name}, temperature: {data[i].temperature}, pressure: " +
+                    //$"{data[i].pressure} light: {data[i].light} timestamp: {data[i].timestamp}");
+                }
+            }
+        }
+
         // TODO: FUNCTIONS SUCH AS (MAX, MIN AND AVERAGE) SHOULD BE IMPLEMENTED BELOW:
 
         // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<float> GetTemperatures(List<PySensor> sensor)
+        public List<float> GetTemperatures(List<float> sensor)
         {
             var temperatures = new List<float>();
 
             foreach(var element in sensor)
             {
-                temperatures.Add(element.Temperature);
+                temperatures.Add(element);
             }
             return temperatures;
         }
 
         // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<float> GetTemperatures(List<LhtSensor> sensor)
+        public List<string> GetTimes(List<GraphData> sensor)
         {
-            var temperatures = new List<float>();
-
-            foreach (var element in sensor)
-            {
-                temperatures.Add(element.Temperature);
-            }
-            return temperatures;
-        }
-
-        // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<DateTime> GetTimes(List<PySensor> sensor)
-        {
-            var times = new List<DateTime>();
+            var times = new List<string>();
 
             foreach(var element in sensor)
             {
-                times.Add(element.Time);
+                times.Add(element.date);
             }
 
             return times;
         }
 
         // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<DateTime> GetTimes(List<LhtSensor> sensor)
-        {
-            var times = new List<DateTime>();
-
-            foreach (var element in sensor)
-            {
-                times.Add(element.Time);
-            }
-
-            return times;
-        }
-
-        // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<float> GetPressure(List<PySensor> sensor)
+        public List<float> GetPressure(List<GraphData> sensor)
         {
             var pressure = new List<float>();
 
             foreach (var element in sensor)
             {
-                pressure.Add(element.Pressure);
+                pressure.Add(element.average_pressure);
             }
 
             return pressure;
         }
 
         // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<float> GetHumidity(List<LhtSensor> sensor)
+        public List<float> GetLight(List<GraphData> sensor)
         {
-            var humidities = new List<float>();
+            var lights = new List<float>();
 
             foreach(var element in sensor)
             {
-                humidities.Add(element.Humidity);
-            }
-
-            return humidities;
-        }
-
-        // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<int> GetLight(List<PySensor> sensor)
-        {
-            var lights = new List<int>();
-
-            foreach(var element in sensor)
-            {
-                lights.Add(element.Light);
-            }
-
-            return lights;
-        }
-
-        // TEMPORARY FUNCTION (PLEASE REVIEW)
-        public List<int> GetLight(List<LhtSensor> sensor)
-        {
-            var lights = new List<int>();
-
-            foreach (var element in sensor)
-            {
-                lights.Add(element.Light);
+                lights.Add(element.average_light);
             }
 
             return lights;

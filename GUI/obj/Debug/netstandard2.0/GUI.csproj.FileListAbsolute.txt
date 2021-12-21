@@ -74,7 +74,6 @@ C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Deb
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.dll
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\ref\GUI.dll
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.pdb
-C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.csproj.AssemblyReference.cache
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
@@ -91,3 +90,4 @@ C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Deb
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.dll
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\ref\GUI.dll
 C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.pdb
+C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\obj\Debug\netstandard2.0\GUI.csproj.AssemblyReference.cache

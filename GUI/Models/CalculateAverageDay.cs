@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace GUI.Models
 {
@@ -102,14 +103,14 @@ namespace GUI.Models
                     0.0f,
                     sum_LightWierden / count_LightWierden,
                     "wierden-Py",
-                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));
+                    DateTime.Now.AddHours(-i).Hour.ToString()));
 
                 DayAverageSaxionPy.Add(new GraphData(sum_TemperatureSaxion / count_TemperatureSaxion,
                     sum_PressureSaxion / count_PressureSaxion,
                     0.0f,
                     sum_LightSaxion / count_LightSaxion,
                     "saxion-py",
-                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));
+                    DateTime.Now.AddHours(-i).Hour.ToString()));
             }
         }
 
@@ -120,15 +121,15 @@ namespace GUI.Models
         {
             int count_TemperatureWierden = 0,
                     count_TemperatureGronau = 0,
-                    count_PressureWierden = 0,
-                    count_PressureGronau = 0,
+                    count_HumidityWierden = 0,
+                    count_HumidityGronau = 0,
                     count_LightWierden = 0,
                     count_LightGronau = 0;
 
             float sum_TemperatureWierden = 0,
                     sum_TemperatureGronau = 0,
-                    sum_PressureWierden = 0,
-                    sum_PressureGronau = 0,
+                    sum_HumidityWierden = 0,
+                    sum_HumidityGronau = 0,
                     sum_LightWierden = 0,
                     sum_LightGronau = 0;
 
@@ -152,8 +153,8 @@ namespace GUI.Models
                 {
                     if (DateTime.Now.AddHours(-i).Hour == item.Time.Hour)
                     {
-                        count_PressureWierden++;
-                        sum_PressureWierden += item.Humidity;
+                        count_HumidityWierden++;
+                        sum_HumidityWierden += item.Humidity;
                     }
                 }
                 foreach (var item in Wierden_LHT)
@@ -179,8 +180,8 @@ namespace GUI.Models
                 {
                     if (DateTime.Now.AddHours(-i).Hour == item.Time.Hour)
                     {
-                        count_PressureGronau++;
-                        sum_PressureGronau += item.Humidity;
+                        count_HumidityGronau++;
+                        sum_HumidityGronau += item.Humidity;
                     }
                 }
                 foreach (var item in Gronau_LHT)
@@ -197,19 +198,29 @@ namespace GUI.Models
                 //-----------------------------------------------------------------------------------------------------------------------------
                 DayAverageWierdenLHT.Add(new GraphData(sum_TemperatureWierden / count_TemperatureWierden,
                     0.0f,
-                    sum_PressureWierden / count_PressureWierden,
+                    sum_HumidityWierden / count_HumidityWierden,
                     sum_LightWierden / count_LightWierden,
                     "wierden-lht",
-                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));
+                    DateTime.Now.AddHours(-i).Hour.ToString()));
 
                 DayAverageGronauLHT.Add(new GraphData(sum_TemperatureGronau / count_TemperatureGronau,
                     0.0f,
-                    sum_PressureGronau / count_PressureGronau,
+                    sum_HumidityGronau / count_HumidityGronau,
                     sum_LightGronau / count_LightGronau,
                     "gronau-lht",
-                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));
+                    DateTime.Now.AddHours(-i).Hour.ToString()));
             }
 
+
+            // PRINT DEBUG LIST
+            foreach(var item in Gronau_LHT)
+            {
+                Debug.WriteLine(item.Name);
+                Debug.WriteLine(item.Temperature);
+                Debug.WriteLine(item.Humidity);
+                Debug.WriteLine(item.Light);
+                Debug.WriteLine(item.Time);
+            }
         }
     }
 }

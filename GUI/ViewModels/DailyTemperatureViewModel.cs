@@ -1,6 +1,7 @@
 ﻿using GUI.Models;
 using Microcharts;
 using SkiaSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -207,9 +208,9 @@ namespace GUI.ViewModels
             SetupPicker();
             SetupGraphs();
             graphTitle = "Hourly Temperature";
-           
+
             // Set chart with temperature data as default entries
-            chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+            chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
         }
 
         // Function to change graph name from picker data
@@ -309,14 +310,14 @@ namespace GUI.ViewModels
             for (int i = 0; i < pyWierden.Count; i++)
             {
                 // Combine py-sensors
-                averageTempPySensor.Add((pyWierden[i].average_temperature + pySaxion[i].average_temperature / 2));
-                averagePresPySensor.Add((pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2));
-                averageLightPySensor.Add((pyWierden[i].average_light + pySaxion[i].average_light / 2));
+                averageTempPySensor.Add((float)Math.Round(pyWierden[i].average_temperature + pySaxion[i].average_temperature / 2,1));
+                averagePresPySensor.Add((float)Math.Round(pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2,1));
+                averageLightPySensor.Add((float)Math.Round(pyWierden[i].average_light + pySaxion[i].average_light / 2,1));
 
                 // Combine lht-sensors
-                averageTempLhtSensor.Add((lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 2));
-                averageHumLhtSensor.Add((lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2));
-                averageLightLhtSensor.Add((lhtWierden[i].average_light + lhtGronau[i].average_light / 2));
+                averageTempLhtSensor.Add((float)Math.Round(lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 2,1));
+                averageHumLhtSensor.Add((float)Math.Round(lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2,1));
+                averageLightLhtSensor.Add((float)Math.Round(lhtWierden[i].average_light + lhtGronau[i].average_light / 2,1));
             }
 
             for(int i = 0; i < pyWierden.Count; i++)
@@ -344,9 +345,9 @@ namespace GUI.ViewModels
                 var entry = new ChartEntry(element.average_temperature)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = element.date,
+                    Label = (int.Parse(element.date) + 1).ToString(),
                     TextColor = SKColor.Parse("FF000000"),
-                    ValueLabel = element.average_temperature.ToString()
+                    ValueLabel = element.average_temperature.ToString(),
                 };
                 chartEntries_temp.Add(entry);
             }
@@ -356,7 +357,7 @@ namespace GUI.ViewModels
                 var entry = new ChartEntry(element.average_pressure)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = element.date,
+                    Label = (int.Parse(element.date) + 1).ToString(),
                     TextColor = SKColor.Parse("FF000000"),
                     ValueLabel = element.average_pressure.ToString()
                 };
@@ -368,7 +369,7 @@ namespace GUI.ViewModels
                 var entry = new ChartEntry(element.average_light)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
-                    Label = element.date,
+                    Label = (int.Parse(element.date) + 1).ToString(),
                     TextColor = SKColor.Parse("FF000000"),
                     ValueLabel = element.average_light.ToString()
                 };
@@ -393,7 +394,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element.average_temperature)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = element.date,
+                        Label = (int.Parse(element.date) + 1).ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.average_temperature.ToString()
                     };
@@ -405,7 +406,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element.average_pressure)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = element.date,
+                        Label = (int.Parse(element.date) + 1).ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.average_pressure.ToString()
                     };
@@ -417,7 +418,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element.average_light)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = element.date,
+                        Label = (int.Parse(element.date) + 1).ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.average_light.ToString()
                     };
@@ -433,7 +434,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element.average_temperature)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = element.date,
+                        Label = (int.Parse(element.date) + 1).ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.average_temperature.ToString()
                     };
@@ -445,7 +446,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element.average_humidity)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = element.date,
+                        Label = (int.Parse(element.date) + 1).ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.average_humidity.ToString()
                     };
@@ -457,7 +458,7 @@ namespace GUI.ViewModels
                     var entry = new ChartEntry(element.average_light)
                     {
                         Color = SKColor.Parse("#FF1E90FF"),
-                        Label = element.date,
+                        Label = (int.Parse(element.date) + 1).ToString(),
                         TextColor = SKColor.Parse("FF000000"),
                         ValueLabel = element.average_light.ToString()
                     };
@@ -472,19 +473,19 @@ namespace GUI.ViewModels
             if (name == graphPickerItems[0].Name)
             {
                 // TEMPERATURE:
-                Chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+                Chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
             }
 
             if (name == graphPickerItems[1].Name)
             {
                 // HUMIDITY:
-                Chart = new LineChart { Entries = chartEntries_hum, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+                Chart = new LineChart { Entries = chartEntries_hum, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
             }
 
             if (name == graphPickerItems[2].Name)
             {
                 // LIGHT:
-                Chart = new LineChart { Entries = chartEntries_light, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+                Chart = new LineChart { Entries = chartEntries_light, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
             }
         }
     }

@@ -233,10 +233,10 @@ namespace GUI.ViewModels
                 averageGraph.Add(allSensors);
             }
 
-            var sumAvgTemp = 0.0f;
-            var sumAvgPres = 0.0f;
-            var sumAvgHum = 0.0f;
-            var sumAvgLight = 0.0f;
+            var sumAvgTemp = 0.000f;
+            var sumAvgPres = 0.000f;
+            var sumAvgHum = 0.000f;
+            var sumAvgLight = 0.000f;
 
             for(int i = 0; i < pyWierden.Count; i++)
             {

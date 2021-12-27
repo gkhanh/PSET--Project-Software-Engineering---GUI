@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
-using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace GUI.ViewModels
 {
@@ -139,8 +137,6 @@ namespace GUI.ViewModels
             ComputeAllSensorAverage();
             SortSensorData();
             SetupImageSlider();
-
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 
         // Function to setup SSH connection
@@ -216,12 +212,6 @@ namespace GUI.ViewModels
                 averagePresPySensor.Add((pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2));
                 averageHumLhtSensor.Add((lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2));
                 averageLightLhtSensor.Add((lhtWierden[i].average_light + lhtGronau[i].average_light / 2));
-
-                /*// Combine all sensors
-                averageTempAllSensor.Add((pyWierden[i].average_temperature + pySaxion[i].average_temperature + lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 4));
-                averageLightAllSensor.Add((pyWierden[i].average_light + pySaxion[i].average_light + lhtWierden[i].average_light + lhtGronau[i].average_light / 4));
-                averageHumAllSensor.Add((lhtWierden[i].average_light + lhtGronau[i].average_light / 2));
-                averagePresAllSensor.Add((pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2));*/
             }
 
             for (int i = 0; i < lhtWierden.Count; i++)
@@ -246,10 +236,15 @@ namespace GUI.ViewModels
                 sumAvgLight += averageGraph[i].average_light;
             }
 
-            averageTemperature = "Temperature: " + Math.Round(sumAvgTemp / averageGraph.Count, 2).ToString() + "°C";
-            averagePressure = "Pressure: " + Math.Round(sumAvgPres / averageGraph.Count, 2).ToString() + " Pa";
-            averageHumidity = "Humidity: " + Math.Round(sumAvgHum / averageGraph.Count, 2).ToString() + "%";
-            averageLight = "Light: " + Math.Round(sumAvgLight / averageGraph.Count, 2).ToString() + " Lumen";
+            var temperature = Math.Round(sumAvgTemp / averageGraph.Count, 2);
+            var pressure = Math.Round(sumAvgPres / averageGraph.Count, 2);
+            var humidity = Math.Round(sumAvgHum / averageGraph.Count, 2);
+            var light = Math.Round(sumAvgLight / averageGraph.Count, 2);
+
+            averageTemperature = double.IsNaN(temperature) ? "Temperature: " + "0" + "°C" : "Temperature: " + temperature.ToString() + "°C";
+            averagePressure = double.IsNaN(pressure) ? "Pressure: " + "0" + " Pa" : "Pressure: " + pressure.ToString() + " Pa";
+            averageHumidity = double.IsNaN(humidity) ? "Humidity: " + "0" + "%" : "Humidity: " + humidity.ToString() + "%";
+            averageLight = double.IsNaN(pressure) ? "Light: " + "0" + " Lumen" : "Light: " + light.ToString() + " Lumen";
         }
     }
 }

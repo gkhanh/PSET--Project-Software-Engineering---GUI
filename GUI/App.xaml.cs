@@ -1,22 +1,15 @@
 ﻿using Backup.Services;
-using GUI.Services;
-using GUI.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace GUI
 {
     public partial class App : Application
     {
-
         public App()
         {
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
-            //MainPage = new NavigationPage(new AboutPage());
-            
         }
 
         protected override void OnStart()

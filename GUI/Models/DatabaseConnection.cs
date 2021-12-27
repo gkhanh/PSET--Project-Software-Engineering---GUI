@@ -60,25 +60,34 @@ namespace GUI.Models
             if (client.IsConnected)
             {
                 //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                //Read the data and store them in the list
-                int fieldCOunt = dataReader.FieldCount;
-                while (dataReader.Read())
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
-                    for (int i = 0; i < fieldCOunt; i++)
+                    try
                     {
-                        list.Add(dataReader.GetValue(i).ToString());
+                        //Create a data reader and Execute the command
+                        MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                        //Read the data and store them in the list
+                        int fieldCOunt = dataReader.FieldCount;
+                        while (dataReader.Read())
+                        {
+                            for (int i = 0; i < fieldCOunt; i++)
+                            {
+                                list.Add(dataReader.GetValue(i).ToString());
+                            }
+                        }
+
+                        //close Data Reader
+                        dataReader.Close();
+
+                        //return list to be displayed
+                        return list;
+                    }
+                    catch(Exception exception)
+                    {
+                        Debug.WriteLine($"Exception catched: {exception.ToString()}");
                     }
                 }
-
-                //close Data Reader
-                dataReader.Close();
-
-                //return list to be displayed
-                return list;
             }
             return list;
         }
@@ -104,22 +113,24 @@ namespace GUI.Models
                     Port = localPort,
                     UserID = databaseUserName,
                     Password = databasePassword,
-                    ConnectionTimeout = 30,
+                    ConnectionTimeout = 0,
+                    DefaultCommandTimeout = 0,
                 };
 
                 var connection = new MySqlConnection(csb.ConnectionString);
                 connection.Open();
 
-                Console.WriteLine($"\nDatabase connection status: {connection.State}");
-                Console.WriteLine($"Database name: {connection}");
-                Console.WriteLine($"Connection string: {connection.ConnectionString}\n");
+                Debug.WriteLine($"\nDatabase connection status: {connection.State}");
+                Debug.WriteLine($"Database name: {connection}");
+                Debug.WriteLine($"Connection string: {connection.ConnectionString}\n");
+                Debug.WriteLine($"Database name: { connection.Database}\n");
 
                 var temp_list = new List<string>();
                 var limit = 0;
                 var index = 42;
 
                 // queries can be made here
-                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc LIMIT 43";
+                var py_query = "SELECT" + " * FROM PSET_test_db.PyData  ORDER BY idPyData desc limit 43";
                 var py_list = Select(py_query, sshClient, connection);
 
                 for (int i = 0; i < 4; i++)

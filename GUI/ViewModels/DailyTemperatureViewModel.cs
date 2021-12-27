@@ -307,28 +307,43 @@ namespace GUI.ViewModels
             var pyTimes = sensorParser.GetTimes(pySaxion);
             pyTimes = Enumerable.Reverse(pyTimes).ToList();
 
+            var AvgTemp = 0.00;
+            var AvgPres = 0.00;
+            var AvgHum = 0.00;
+            var AvgLight = 0.00;
+
             for (int i = 0; i < pyWierden.Count; i++)
             {
+                AvgTemp = Math.Round(pyWierden[i].average_temperature + pySaxion[i].average_temperature / 2, 1);
+                AvgPres = Math.Round(pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2,1);
+                AvgLight = Math.Round(pyWierden[i].average_light + pySaxion[i].average_light / 2, 1);
+
                 // Combine py-sensors
-                averageTempPySensor.Add((float)Math.Round(pyWierden[i].average_temperature + pySaxion[i].average_temperature / 2,1));
-                averagePresPySensor.Add((float)Math.Round(pyWierden[i].average_pressure + pySaxion[i].average_pressure / 2,1));
-                averageLightPySensor.Add((float)Math.Round(pyWierden[i].average_light + pySaxion[i].average_light / 2,1));
+                averageTempPySensor.Add(!double.IsNaN(AvgTemp) ? (float)AvgTemp : 0.0f);
+                averagePresPySensor.Add(!double.IsNaN(AvgPres) ? (float)AvgPres : 0.0f);
+                averageLightPySensor.Add(!double.IsNaN(AvgLight) ? (float)AvgLight : 0.0f);
+
+                // Reset variables
+                AvgTemp = 0.00;
+                AvgPres = 0.00;
+                AvgLight = 0.00;
+                AvgHum = 0.00;
+
+                AvgTemp = Math.Round(lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 2, 1);
+                AvgHum = Math.Round(lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2, 1);
+                AvgLight = Math.Round(lhtWierden[i].average_light + lhtGronau[i].average_light / 2, 1);
 
                 // Combine lht-sensors
-                averageTempLhtSensor.Add((float)Math.Round(lhtWierden[i].average_temperature + lhtGronau[i].average_temperature / 2,1));
-                averageHumLhtSensor.Add((float)Math.Round(lhtWierden[i].average_humidity + lhtGronau[i].average_humidity / 2,1));
-                averageLightLhtSensor.Add((float)Math.Round(lhtWierden[i].average_light + lhtGronau[i].average_light / 2,1));
+                averageTempLhtSensor.Add(!double.IsNaN(AvgTemp) ? (float)AvgTemp : 0.0f);
+                averageHumLhtSensor.Add(!double.IsNaN(AvgHum) ? (float)AvgHum : 0.0f);
+                averageLightLhtSensor.Add(!double.IsNaN(AvgLight) ? (float)AvgLight : 0.0f);
             }
 
             for(int i = 0; i < pyWierden.Count; i++)
             {
-                // Gather all combined averages
-                var pySensors = new GraphData(averageTempPySensor[i], averagePresPySensor[i], 0.0f, averageLightPySensor[i], "Average_data_" + i, pyTimes[i]);
-                var lhtSensors = new GraphData(averageTempLhtSensor[i], 0.0f, averageHumLhtSensor[i], averageLightLhtSensor[i], "Average_data_" + i, pyTimes[i]);
-
                 // Add to list of average graphs
-                averagePyGraph.Add(pySensors);
-                averageLhtGraph.Add(lhtSensors);
+                averagePyGraph.Add(new GraphData(averageTempPySensor[i], averagePresPySensor[i], 0.0f, averageLightPySensor[i], "Average_data_" + i, pyTimes[i]));
+                averageLhtGraph.Add(new GraphData(averageTempLhtSensor[i], 0.0f, averageHumLhtSensor[i], averageLightLhtSensor[i], "Average_data_" + i, pyTimes[i]));
             }
         }
 

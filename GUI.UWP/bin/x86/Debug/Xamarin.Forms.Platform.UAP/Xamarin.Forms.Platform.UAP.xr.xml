@@ -337,6 +337,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="FlowDirection" />
+      <RootProperty Name="CornerRadius" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Height" />
     </RootType>
@@ -365,12 +366,13 @@
       <RootProperty Name="TextTrimming" />
       <RootProperty Name="MaxLines" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Visibility" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="IsHitTestVisible" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Visibility" />
@@ -485,12 +487,10 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="IsTabStop" />
-      <RootProperty Name="IsHitTestVisible" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="UseSystemFocusVisuals" />
       <RootProperty Name="Clip" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="MinHeight" />
       <RootProperty Name="Style" />
       <RootProperty Name="MinWidth" />
@@ -723,6 +723,7 @@
       <RootProperty Name="FlowDirection" />
       <RootProperty Name="IsEnabled" />
     </RootType>
+    <RootType FullName="Xamarin.Forms.Platform.UWP.FormsButton" />
     <RootType FullName="Xamarin.Forms.Platform.UWP.EntryCellTextBox">
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Header" />

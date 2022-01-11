@@ -1,6 +1,6 @@
 ﻿namespace GUI.Models
 {
-    class GraphData
+    public class GraphData
     {
         public float average_temperature { get; set; }
         public float average_pressure { get; set; }

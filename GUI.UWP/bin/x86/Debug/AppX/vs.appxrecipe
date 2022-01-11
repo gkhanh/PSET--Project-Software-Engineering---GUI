@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=ef7789e4-3ced-4baf-8659-90ba81522e99</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Arief\source\repos\Trying\GUI.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>6DD877C2E89B26B7D154A0F34AE4D577FE435E3D2B094345A66F4DA542DE3979</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a_1.0.0.0_x86__tvxn9nwg7qp2g</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9f2db38e-0bd0-4ee5-a6f7-0efceb55b54a_tvxn9nwg7qp2g!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-19T23:13:50.401</Modified>
+      <Modified>2022-01-11T11:34:37.042</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
       <PackagePath>entrypoint\GUI.UWP.exe</PackagePath>
-      <Modified>2021-12-19T23:13:49.418</Modified>
+      <Modified>2022-01-11T11:34:34.867</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\castle.core\4.4.1\lib\netstandard1.5\Castle.Core.dll">
       <PackagePath>Castle.Core.dll</PackagePath>
@@ -150,9 +150,9 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2021-12-09T10:31:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI\bin\Debug\netstandard2.0\GUI.dll">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI\bin\Debug\netstandard2.0\GUI.dll">
       <PackagePath>GUI.dll</PackagePath>
-      <Modified>2021-12-19T23:13:40.143</Modified>
+      <Modified>2022-01-11T11:24:33.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -166,172 +166,172 @@
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-12-09T10:24:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icons8-graph-30.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\icons8-graph-30.png">
       <PackagePath>icons8-graph-30.png</PackagePath>
-      <Modified>2021-12-18T10:16:24.750</Modified>
+      <Modified>2022-01-11T08:27:01.261</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.223</Modified>
+      <Modified>2022-01-11T08:27:00.538</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.223</Modified>
+      <Modified>2022-01-11T08:27:00.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.224</Modified>
+      <Modified>2022-01-11T08:27:00.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.225</Modified>
+      <Modified>2022-01-11T08:27:00.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.225</Modified>
+      <Modified>2022-01-11T08:27:00.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.226</Modified>
+      <Modified>2022-01-11T08:27:00.542</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.227</Modified>
+      <Modified>2022-01-11T08:27:00.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.227</Modified>
+      <Modified>2022-01-11T08:27:00.544</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.228</Modified>
+      <Modified>2022-01-11T08:27:00.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.229</Modified>
+      <Modified>2022-01-11T08:27:00.546</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.230</Modified>
+      <Modified>2022-01-11T08:27:00.546</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.230</Modified>
+      <Modified>2022-01-11T08:27:00.547</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.231</Modified>
+      <Modified>2022-01-11T08:27:00.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.232</Modified>
+      <Modified>2022-01-11T08:27:00.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.232</Modified>
+      <Modified>2022-01-11T08:27:00.549</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.233</Modified>
+      <Modified>2022-01-11T08:27:00.549</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.234</Modified>
+      <Modified>2022-01-11T08:27:00.550</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.234</Modified>
+      <Modified>2022-01-11T08:27:00.550</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.235</Modified>
+      <Modified>2022-01-11T08:27:00.551</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.236</Modified>
+      <Modified>2022-01-11T08:27:00.551</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.236</Modified>
+      <Modified>2022-01-11T08:27:00.552</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.237</Modified>
+      <Modified>2022-01-11T08:27:00.553</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.238</Modified>
+      <Modified>2022-01-11T08:27:00.553</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.238</Modified>
+      <Modified>2022-01-11T08:27:00.554</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.239</Modified>
+      <Modified>2022-01-11T08:27:00.554</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.240</Modified>
+      <Modified>2022-01-11T08:27:00.555</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-12-18T10:16:24.240</Modified>
+      <Modified>2022-01-11T08:27:00.556</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\xamarin_logo.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
-      <Modified>2021-12-18T10:16:24.818</Modified>
+      <Modified>2022-01-11T08:27:01.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icon_about.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\icon_about.png">
       <PackagePath>icon_about.png</PackagePath>
-      <Modified>2021-12-18T10:16:24.748</Modified>
+      <Modified>2022-01-11T08:27:01.260</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\icon_feed.png">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\icon_feed.png">
       <PackagePath>icon_feed.png</PackagePath>
-      <Modified>2021-12-18T10:16:24.749</Modified>
+      <Modified>2022-01-11T08:27:01.260</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-12-18T10:16:24.245</Modified>
+      <Modified>2022-01-11T08:27:00.561</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\GUI.UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\GUI.UWP.xr.xml">
       <PackagePath>GUI.UWP.xr.xml</PackagePath>
-      <Modified>2021-12-18T10:16:24.794</Modified>
+      <Modified>2022-01-11T08:27:01.312</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-12-19T23:13:49.318</Modified>
+      <Modified>2022-01-11T11:34:34.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-12-19T23:13:49.318</Modified>
+      <Modified>2022-01-11T11:34:34.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -345,13 +345,13 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-07-10T00:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-12-19T21:05:52.251</Modified>
+      <Modified>2022-01-11T09:40:53.190</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
+    <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
       <PackagePath>GUI.UWP.exe</PackagePath>
-      <Modified>2021-12-19T23:13:50.397</Modified>
+      <Modified>2022-01-11T11:34:37.032</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

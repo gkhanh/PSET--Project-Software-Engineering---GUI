@@ -1,1 +1,1 @@
-C:\Users\Arief\source\repos\PSET--Project-Software-Engineering---GUI\GUI.UWP\GUI.UWP.csproj;x86
+C:\Users\Arief\source\repos\Trying\GUI.UWP\GUI.UWP.csproj;x86

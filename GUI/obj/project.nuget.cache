@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1UppPWT09k+82qEfPie0PMV4fd0E5DaITd4kq5p8569n8FVdhIoixOE/yBiGnO/zRDpvRnPeR7q24FpU6VVczQ==",
+  "dgSpecHash": "OpMTKKsJA5y0tMcaRocbUJbv7HnWR6+wpExZLLMQ0H8T/32XPlWhfn8fPS5KUUJXFmROYb+6SC/m9EbV1hraNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj",
+  "projectFilePath": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI\\GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arief\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Arief\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",

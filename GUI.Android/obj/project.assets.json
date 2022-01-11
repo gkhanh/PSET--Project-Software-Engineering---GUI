@@ -4652,11 +4652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\GUI.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI.Android\\GUI.Android.csproj",
       "projectName": "GUI.Android",
-      "projectPath": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\GUI.Android.csproj",
+      "projectPath": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI.Android\\GUI.Android.csproj",
       "packagesPath": "C:\\Users\\Arief\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\obj\\",
+      "outputPath": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4679,8 +4679,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
-              "projectPath": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
+            "C:\\Users\\Arief\\source\\repos\\Trying\\GUI\\GUI.csproj": {
+              "projectPath": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI\\GUI.csproj"
             }
           }
         }

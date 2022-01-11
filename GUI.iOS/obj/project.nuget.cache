@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k4YuVikRuS3IbKOuw1qBrm5M4Rd9LQOQzpXWRUfEvIpNgjuFNbKQgJSyBOyIR01IJj9BdSVl411OyumJI5uO6g==",
+  "dgSpecHash": "Mhmy7ez77qLq+2qiMktsekjKVUdZBfpdI2lbZoMstpon+FDdZXRRFaV32sk5uuYe5I1CzRfS9u12IiDh/ofxvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.iOS\\GUI.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI.iOS\\GUI.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arief\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Arief\\.nuget\\packages\\microcharts.forms\\1.0.0-preview1\\microcharts.forms.1.0.0-preview1.nupkg.sha512",

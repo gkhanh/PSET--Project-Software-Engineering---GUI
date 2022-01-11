@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GUI.Models
 {
-    class LhtSensor : ISensor
+    public class LhtSensor : ISensor
     {
         // INTERFACE SENSOR DATA
         public int Sensor_id { get; set; }

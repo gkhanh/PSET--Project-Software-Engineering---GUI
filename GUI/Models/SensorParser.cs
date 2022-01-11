@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace GUI.Models
 {
-    class SensorParser
+    public class SensorParser
     {
         //-----------------------------------------------------------------------------------------------------------------------------
         // Variables used to parse received data from the remote database
@@ -21,10 +21,10 @@ namespace GUI.Models
         
         //-----------------------------------------------------------------------------------------------------------------------------
         // In this list the ordered data is stored
-        private List<PySensor> WierdenList_Py = new List<PySensor>();
-        private List<PySensor> SaxionList_Py = new List<PySensor>();
-        private List<LhtSensor> WierdenList_LHT = new List<LhtSensor>();
-        private List<LhtSensor> GronauList_LHT = new List<LhtSensor>();
+        private List<PySensor> WierdenList_Py { get; set; }
+        private List<PySensor> SaxionList_Py { get; set; }
+        private List<LhtSensor> WierdenList_LHT { get; set; }
+        private List<LhtSensor> GronauList_LHT { get; set; }
 
         //-----------------------------------------------------------------------------------------------------------------------------
         // Functions to get the sorted data 
@@ -32,6 +32,14 @@ namespace GUI.Models
         public List<PySensor> getSaxionPy() { return SaxionList_Py; }
         public List<LhtSensor> getWierenLHT() { return WierdenList_LHT; }
         public List<LhtSensor> getGronauLHT() { return GronauList_LHT; }
+
+        public SensorParser()
+        {
+            WierdenList_Py = new List<PySensor>();
+            SaxionList_Py = new List<PySensor>();
+            WierdenList_LHT = new List<LhtSensor>();
+            GronauList_LHT = new List<LhtSensor>();
+        }
 
         //-----------------------------------------------------------------------------------------------------------------------------
         // Function to parse the received data from the remote database

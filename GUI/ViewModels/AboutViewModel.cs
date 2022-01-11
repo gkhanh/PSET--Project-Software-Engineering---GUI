@@ -1,8 +1,10 @@
 ﻿using GUI.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace GUI.ViewModels
 {
@@ -142,13 +144,10 @@ namespace GUI.ViewModels
         // Function to setup SSH connection
         private void SetupConnection()
         {
-            sensorParser = new SensorParser();
-            var unparsedList = DatabaseConnection.Connect();
-            var parsedPySensor = sensorParser.Parse(unparsedList.First);
-            var parsedLhtSensor = sensorParser.Parse(unparsedList.Second);
+            var currentApp = Application.Current as App;
 
-            pySensors = parsedPySensor.First;
-            lhtSensors = parsedLhtSensor.Second;
+            pySensors = currentApp.SensorsPy;
+            lhtSensors = currentApp.SensorsLht;
         }
 
         // Function to setup images for image sliders
@@ -170,12 +169,20 @@ namespace GUI.ViewModels
         {
             averageDay = new CalculateAverageDay();
             averageGraph = new List<GraphData>();
+            sensorParser = new SensorParser();
 
-            sensorParser.SortData_Py(pySensors);
-            sensorParser.SortData_LHT(lhtSensors);
+            var currentApp = Application.Current as App;
 
-            averageDay.CalculateAveragePy(sensorParser.getWierenPy(), sensorParser.getSaxionPy());
-            averageDay.CalculateAverageLHT(sensorParser.getWierenLHT(), sensorParser.getGronauLHT());
+            currentApp._parser.SortData_Py(pySensors);
+            currentApp._parser.SortData_LHT(lhtSensors);
+
+            var wierden_py = currentApp._parser.getWierenPy();
+            var saxion_py = currentApp._parser.getSaxionPy();
+            var wierden_lht = currentApp._parser.getWierenLHT();
+            var gronau_lht = currentApp._parser.getGronauLHT();
+
+            averageDay.CalculateAveragePy(wierden_py, saxion_py);
+            averageDay.CalculateAverageLHT(wierden_lht, gronau_lht);
         }
 
         // Function to gather and sort data using the parsed sensor data
@@ -194,12 +201,6 @@ namespace GUI.ViewModels
             var averageHumLhtSensor = new List<float>();
             var averageLightLhtSensor = new List<float>();
             var averagePresPySensor = new List<float>();
-
-            /*// Create variable to store averages of all sensors combined
-            var averageTempAllSensor = new List<float>();
-            var averageHumAllSensor = new List<float>();
-            var averagePresAllSensor = new List<float>();
-            var averageLightAllSensor = new List<float>();*/
 
             // Using py-sensor timings
             var lhtTimes = sensorParser.GetTimes(lhtWierden);

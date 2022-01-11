@@ -3,7 +3,9 @@ using Microcharts;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using Xamarin.Forms;
 
 /************* IMPORTANT MESSAGE (PLEASE READ ME) *************/
 
@@ -203,6 +205,7 @@ namespace GUI.ViewModels
 
             // Set up connection and view elements
             SetupConnection();
+            Debug.WriteLine($"The connection function is called from the DailyTemperature view model");
             ComputeDailyAverage();
             SortSensorData();
             SetupPicker();
@@ -256,20 +259,23 @@ namespace GUI.ViewModels
         // Function to setup SSH connection
         private void SetupConnection()
         {
-            sensorParser = new SensorParser();
+            /*sensorParser = new SensorParser();
             var unparsedList = DatabaseConnection.Connect();
 
             var parsedPySensor = sensorParser.Parse(unparsedList.First);
             var parsedLhtSensor = sensorParser.Parse(unparsedList.Second);
+*/
+            var currentApp = Application.Current as App;
 
-            pySensors = parsedPySensor.First;
-            lhtSensors = parsedLhtSensor.Second;
+            pySensors = currentApp.SensorsPy;
+            lhtSensors = currentApp.SensorsLht;
         }
 
         // Function to calculate daily average
         private void ComputeDailyAverage()
         {
             averageDay = new CalculateAverageDay();
+            sensorParser = new SensorParser();
 
             sensorParser.SortData_Py(pySensors);
             sensorParser.SortData_LHT(lhtSensors);

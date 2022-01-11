@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BLozLOClnm5U/TQWyw191J1YVT+k5v5NBySlu/xdlIdBMwvSsMi4UF4nUr9ysUygVbSWbmO3F84uWcmzQA55SQ==",
+  "dgSpecHash": "/atMGA466rlePNOmoSHKWxExv4lpi8f3rlFjWDgFJI77LmzP+RGpLy9Yetd6kbZ2AyWFMACMyZmbbXzPNl3SrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arief\\source\\repos\\PSET--Project-Software-Engineering---GUI\\GUI.Android\\GUI.Android.csproj",
+  "projectFilePath": "C:\\Users\\Arief\\source\\repos\\Trying\\GUI.Android\\GUI.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arief\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Arief\\.nuget\\packages\\microcharts.android\\1.0.0-preview1\\microcharts.android.1.0.0-preview1.nupkg.sha512",

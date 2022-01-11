@@ -2,7 +2,7 @@
 
 namespace GUI.Models
 {
-    class PySensor : ISensor
+    public class PySensor : ISensor
     {
         // INTERFACE SENSOR DATA
         public int Sensor_id { get; set; }

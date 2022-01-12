@@ -191,7 +191,7 @@ namespace GUI.ViewModels
             graphTitle = "Daily Temperature";
 
             // Set chart with temperature data as default entries
-            chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent };
+            chart = new LineChart { Entries = chartEntries_temp, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
         }
         private void SetupConnection()
         {
@@ -239,8 +239,14 @@ namespace GUI.ViewModels
             var averageHumLhtSensor = new List<float>();
             var averageLightLhtSensor = new List<float>();
 
+            var pyTimes = new List<string>();
+
             // Using py-sensor timings
-            var pyTimes = sensorParser.GetTimes(pySaxion);
+            for (int i = 0; i < 7; i++)
+            {
+                pyTimes.Add(DateTime.Today.AddDays(-i).ToString(""));
+            }
+
             pyTimes = Enumerable.Reverse(pyTimes).ToList();
 
             var AvgTemp = 0.00;
@@ -293,7 +299,6 @@ namespace GUI.ViewModels
             graphPickerItems.Add(new Picker_Item { Name = "Temperature" });
             graphPickerItems.Add(new Picker_Item { Name = "Humidity" });
             graphPickerItems.Add(new Picker_Item { Name = "Light" });
-            graphPickerItems.Add(new Picker_Item { Name = "Air Pressure" });
 
             graphPickerSelectedItem = graphPickerItems[0];
 
@@ -301,10 +306,8 @@ namespace GUI.ViewModels
             sensorPickerSelectedItem = new Picker_Item { };
             sensorPickerTitle = "Select sensor data:";
 
-            sensorPickerItems.Add(new Picker_Item { Name = "Py-sensor Wierden" });
-            sensorPickerItems.Add(new Picker_Item { Name = "Py-sensor Saxion" });
-            sensorPickerItems.Add(new Picker_Item { Name = "Lht-sensor Wierden" });
-            sensorPickerItems.Add(new Picker_Item { Name = "Lht-sensor Gronau" });
+            sensorPickerItems.Add(new Picker_Item { Name = "Py-sensor" });
+            sensorPickerItems.Add(new Picker_Item { Name = "Lht-sensor" });
 
             sensorPickerSelectedItem = sensorPickerItems[0];
         }
@@ -323,10 +326,6 @@ namespace GUI.ViewModels
             if (name == graphPickerItems[2].Name)
             {
                 GraphTitle = "Daily Light";
-            }
-            if (name == graphPickerItems[3].Name)
-            {
-                GraphTitle = "Daily Air Pressure";
             }
         }
 
@@ -350,14 +349,14 @@ namespace GUI.ViewModels
                 chartEntries_temp.Add(entry);
             }
 
-            foreach (var element in averagePyGraph)
+            foreach (var element in averageLhtGraph)
             {
-                var entry = new ChartEntry(element.average_pressure)
+                var entry = new ChartEntry(element.average_humidity)
                 {
                     Color = SKColor.Parse("#FF1E90FF"),
                     Label = element.date.ToString(),
                     TextColor = SKColor.Parse("FF000000"),
-                    ValueLabel = element.average_pressure.ToString()
+                    ValueLabel = element.average_humidity.ToString()
                 };
                 chartEntries_hum.Add(entry);
             }
@@ -372,18 +371,6 @@ namespace GUI.ViewModels
                     ValueLabel = element.average_light.ToString()
                 };
                 chartEntries_light.Add(entry);
-            }
-
-            foreach (var element in averagePyGraph)
-            {
-                var entry = new ChartEntry(element.average_light)
-                {
-                    Color = SKColor.Parse("#FF1E90FF"),
-                    Label = element.date.ToString(),
-                    TextColor = SKColor.Parse("FF000000"),
-                    ValueLabel = element.average_humidity.ToString()
-                };
-                chartEntries_hum.Add(entry);
             }
         }
 
@@ -496,12 +483,6 @@ namespace GUI.ViewModels
             {
                 // LIGHT:
                 Chart = new LineChart { Entries = chartEntries_light, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
-            }
-
-            if (name == graphPickerItems[3].Name)
-            {
-                // Pressure:
-                Chart = new LineChart { Entries = chartEntries_pressure, LineMode = LineMode.Straight, BackgroundColor = SKColors.Transparent, ValueLabelOrientation = Orientation.Horizontal, LabelOrientation = Orientation.Horizontal, YAxisPosition = Position.Left };
             }
         }
     }

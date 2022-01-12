@@ -82,7 +82,7 @@
                     TextColor="Black"
                     VerticalOptions="CenterAndExpand" />
 
-                    <Label
+                    <!--<Label
                     Grid.Row="1"
                     FontSize="20"
                     HorizontalOptions="CenterAndExpand"
@@ -96,7 +96,7 @@
                     HorizontalOptions="CenterAndExpand"
                     Text="Date: 16 - 12 - 2021"
                     TextColor="Black"
-                    VerticalOptions="FillAndExpand" />
+                    VerticalOptions="FillAndExpand" />-->
                 </Grid>
             </StackLayout>
         </Grid>

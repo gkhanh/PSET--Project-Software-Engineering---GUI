@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI",
-    "\\GUI\\Views"
+    "\\GUI"
   ],
-  "SelectedNode": "\\GUI\\Views\\AboutPage.xaml.cs",
+  "SelectedNode": "\\GUI.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -365,7 +365,7 @@ namespace GUI.Models
         {
             var times = new List<string>();
 
-            foreach(var element in sensor)
+            foreach (var element in sensor)
             {
                 times.Add(element.date);
             }

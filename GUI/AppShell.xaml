@@ -90,9 +90,6 @@
     <FlyoutItem Title="Mainpage" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" Route="AboutPage" />
     </FlyoutItem>
-    <FlyoutItem Title="Overview page" Icon="icons8-graph-30.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Overview}" Route="DailyTemperature" />
-    </FlyoutItem>
     <FlyoutItem Title="Daily overview temperature" Icon="icons8-graph-30.png">
         <ShellContent ContentTemplate="{DataTemplate local:DailyTemperature}" Route="DailyTemperature" />
     </FlyoutItem>

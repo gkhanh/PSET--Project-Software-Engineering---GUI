@@ -28,6 +28,33 @@ namespace GUI.ViewModels
         // Declare an average light
         private string averageLight { get; set; }
 
+        // Declare a value holder for each city
+        private string averageTempSaxion { get; set; }
+
+        // Declare a value holder for each city
+        private string averagePresSaxion { get; set; }
+
+        // Declare a value holder for each city
+        private string averageLightSaxion { get; set; }
+
+        // Declare a value holder for each city
+        private string averageTempWierden { get; set; }
+
+        // Declare a value holder for each city
+        private string averageHumWierden { get; set; }
+
+        // Declare a value holder for each city
+        private string averageLightWierden { get; set; }
+
+        // Declare a value holder for each city
+        private string averageTempGronau { get; set; }
+
+        // Declare a value holder for each city
+        private string averageHumGronau { get; set; }
+
+        // Declare a value holder for each city
+        private string averageLightGronau { get; set; }
+
         // Declare a sensor parser
         private SensorParser sensorParser { get; set; }
 
@@ -98,6 +125,123 @@ namespace GUI.ViewModels
                 {
                     averageLight = value;
                     OnPropertyChanged();
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Enschede
+        public string AverageTempEnschede
+        {
+            get { return averageTempSaxion; }
+            set
+            {
+                if(value != averageTempSaxion)
+                {
+                    value = averageTempSaxion;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Enschede
+        public string AveragePresEnschede
+        {
+            get { return averagePresSaxion; }
+            set
+            {
+                if (value != averagePresSaxion)
+                {
+                    value = averagePresSaxion;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Enschede
+        public string AverageLightEnschede
+        {
+            get { return averageLightSaxion; }
+            set
+            {
+                if (value != averageLightSaxion)
+                {
+                    value = averageLightSaxion;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Wierden
+        public string AverageTempWierden
+        {
+            get { return averageTempWierden; }
+            set
+            {
+                if (value != averageTempWierden)
+                {
+                    value = averageTempWierden;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Wierden
+        public string AverageHumWierden
+        {
+            get { return averageHumWierden; }
+            set
+            {
+                if (value != averageHumWierden)
+                {
+                    value = averageHumWierden;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Wierden
+        public string AverageLightWierden
+        {
+            get { return averageLightWierden; }
+            set
+            {
+                if (value != averageLightWierden)
+                {
+                    value = averageLightWierden;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Gronau
+        public string AverageTempGronau
+        {
+            get { return averageTempGronau; }
+            set
+            {
+                if (value != averageTempGronau)
+                {
+                    value = averageTempGronau;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Gronau
+        public string AverageHumGronau
+        {
+            get { return averageHumGronau; }
+            set
+            {
+                if (value != averageHumGronau)
+                {
+                    value = averageHumGronau;
+                }
+            }
+        }
+
+        // Declare a PUBLIC average for Gronau
+        public string AverageLightGronau
+        {
+            get { return averageLightGronau; }
+            set
+            {
+                if (value != averageLightGronau)
+                {
+                    value = averageLightGronau;
                 }
             }
         }
@@ -192,9 +336,69 @@ namespace GUI.ViewModels
             var pyWierden = averageDay.getDayAverageWierdenPy();
             var pySaxion = averageDay.getDayAverageSaxionPy();
 
+            var sumAvgTempWierdenPy = 0.0f;
+            var sumAvgPresWierden = 0.0f;
+            var sumAvgLightWierden = 0.0f;
+
+            var sumAvgTempSaxion = 0.0f;
+            var sumAvgPresSaxion = 0.0f;
+            var sumAvgLightSaxion = 0.0f;
+
+            foreach (var element in pyWierden)
+            {
+                sumAvgTempWierdenPy += element.average_temperature;
+                sumAvgPresWierden += element.average_pressure;
+                sumAvgLightWierden += element.average_light;
+            }
+
+            foreach (var element in pySaxion)
+            {
+                sumAvgTempSaxion += element.average_temperature;
+                sumAvgPresSaxion += element.average_pressure;
+                sumAvgLightSaxion += element.average_light;
+            }
+
             // Lht-sensor data gathering
             var lhtWierden = averageDay.getDayAverageWierdenLHT();
-            var lhtGronau = averageDay.getDayAverageWierdenLHT();
+            var lhtGronau = averageDay.getDayAverageGronauLHT();
+
+            var sumAvgTempWierdenLht = 0.0f;
+            var sumAvgHumWierden = 0.0f;
+            var sumAvgLightWierdenLht = 0.0f;
+
+            var sumAvgTempGronau = 0.0f;
+            var sumAvgHumGronau = 0.0f;
+            var sumAvgLightGronau = 0.0f;
+
+            foreach (var element in lhtWierden)
+            {
+                sumAvgTempWierdenLht += element.average_temperature;
+                sumAvgHumWierden += element.average_humidity;
+                sumAvgLightWierdenLht += element.average_light;
+            }
+
+            foreach (var element in lhtGronau)
+            {
+                sumAvgTempGronau += element.average_temperature;
+                sumAvgHumGronau += element.average_humidity;
+                sumAvgLightGronau += element.average_light;
+            }
+
+            var AverageTempSaxion = sumAvgTempSaxion / lhtWierden.Count;
+            var AveragePresSaxion = sumAvgPresSaxion / lhtWierden.Count;
+            var AverageLightSaxion = sumAvgLightSaxion / lhtWierden.Count;
+
+            averageTempSaxion = "Temperature: " + Math.Round(AverageTempSaxion, 2).ToString() + "°C (inside temperature)";
+            averagePresSaxion = "Pressure: " + Math.Round(AveragePresSaxion, 2).ToString() + " Pa";
+            averageLightSaxion = "Light: " + Math.Round(AverageLightSaxion, 2).ToString() + " Lumen";
+
+            averageTempWierden = "Temperature: " + Math.Round(sumAvgTempWierdenLht / lhtWierden.Count, 2).ToString() + "°C";
+            averageHumWierden = "Humidity: " + Math.Round(sumAvgHumWierden / lhtWierden.Count, 2).ToString() + "%";
+            averageLightWierden = "Light: " + Math.Round(sumAvgLightWierden / lhtWierden.Count, 2).ToString() + " Lumen";
+
+            averageTempGronau = "Temperature: " + Math.Round(sumAvgTempGronau / lhtWierden.Count, 2).ToString() + "°C";
+            averageHumGronau = "Humidity: " + Math.Round(sumAvgHumGronau / lhtWierden.Count, 2).ToString() + "%";
+            averageLightGronau = "Light: " + Math.Round(sumAvgLightGronau / lhtWierden.Count, 2).ToString() + " Lumen";
 
             // Create variable to store lht-sensor averages
             var averageTempLhtSensor = new List<float>();

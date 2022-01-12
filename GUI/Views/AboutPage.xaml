@@ -179,7 +179,7 @@
                 </Frame>
 
                 <!--Data for location 1-->
-                <Label Text="{Binding AverageTemperature}"
+                <Label Text="{Binding AverageTempEnschede}"
                        Grid.Row="1"
                        Grid.Column="0"
                        Margin="10"
@@ -197,7 +197,7 @@
                        HorizontalOptions="StartAndExpand">
                 </Label>
 
-                <Label Text="{Binding AverageLight}"
+                <Label Text="{Binding AverageLightEnschede}"
                        Grid.Row="3"
                        Grid.Column="0"
                        Margin="10"
@@ -206,7 +206,7 @@
                        HorizontalOptions="StartAndExpand">
                 </Label>
 
-                <Label Text="{Binding AveragePressure}"
+                <Label Text="{Binding AveragePresEnschede}"
                        Grid.Row="4"
                        Grid.Column="0"
                        Margin="10"
@@ -216,7 +216,7 @@
                 </Label>
 
                 <!--Data for location 2-->
-                <Label Text="{Binding AverageTemperature}"
+                <Label Text="{Binding AverageTempWierden}"
                        Grid.Row="1"
                        Grid.Column="1"
                        Margin="10"
@@ -225,7 +225,7 @@
                        HorizontalOptions="StartAndExpand">
                 </Label>
                 
-                <Label Text="{Binding AverageHumidity}"
+                <Label Text="{Binding AverageHumWierden}"
                        Grid.Row="2"
                        Grid.Column="1"
                        Margin="10"
@@ -234,7 +234,7 @@
                        HorizontalOptions="StartAndExpand">
                 </Label>
 
-                <Label Text="{Binding AverageLight}"
+                <Label Text="{Binding AverageLightWierden}"
                        Grid.Row="3"
                        Grid.Column="1"
                        Margin="10"
@@ -253,7 +253,7 @@
                 </Label>
 
                 <!--Data for location 3-->
-                <Label Text="{Binding AverageTemperature}"
+                <Label Text="{Binding AverageTempGronau}"
                        Grid.Row="1"
                        Grid.Column="2"
                        Margin="10"
@@ -262,7 +262,7 @@
                        HorizontalOptions="StartAndExpand">
                 </Label>
                 
-                <Label Text="{Binding AverageHumidity}"
+                <Label Text="{Binding AverageHumGronau}"
                        Grid.Row="2"
                        Grid.Column="2"
                        Margin="10"
@@ -271,7 +271,7 @@
                        HorizontalOptions="StartAndExpand">
                 </Label>
 
-                <Label Text="{Binding AverageLight}"
+                <Label Text="{Binding AverageLightGronau}"
                        Grid.Row="3"
                        Grid.Column="2"
                        Margin="10"

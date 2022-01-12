@@ -177,7 +177,7 @@ namespace GUI.Models
                     DateTime.Now.AddHours(-i).Hour.ToString()));
             }
 
-            Debug.WriteLine("**********************************************************");
+            /*Debug.WriteLine("**********************************************************");
             Debug.WriteLine($"Below are average temperature results of Py-devices");
 
             // PRINT DEBUG LIST
@@ -189,7 +189,7 @@ namespace GUI.Models
             foreach (var item in Saxion_py)
             {
                 Debug.WriteLine(item.Temperature);
-            }
+            }*/
         }
 
         //-----------------------------------------------------------------------------------------------------------------------------
@@ -353,7 +353,7 @@ namespace GUI.Models
                     DateTime.Now.AddHours(-i).Hour.ToString()));
             }
 
-            Debug.WriteLine("**********************************************************");
+            /*Debug.WriteLine("**********************************************************");
             Debug.WriteLine($"Below are average temperature results of Lht-devices");
 
             // PRINT DEBUG LIST
@@ -365,7 +365,7 @@ namespace GUI.Models
             foreach (var item in Gronau_LHT)
             {
                 Debug.WriteLine(item.Temperature);
-            }
+            }*/
         }
     }
 }

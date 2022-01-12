@@ -5,8 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     xmlns:viewmodels="clr-namespace:GUI.ViewModels"
-    x:DataType="viewmodels:WeeklyOverviewViewModels"
     Title="{Binding Title}"
+    x:DataType="viewmodels:WeeklyOverviewViewModels"
     BackgroundColor="White">
     <StackLayout>
         <Grid>
@@ -23,34 +23,42 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Picker
-                        x:Name="picker"
-                        Grid.Row="0"
-                        Grid.Column="2"
+                    <StackLayout Grid.Row="0" Grid.Column="2">
+                        <Picker
+                        x:Name="GraphPicker"
                         TitleColor="Red"
-                        Title="{Binding PickerTitle}"
+                        Title="{Binding GraphPickerTitle}"
                         ItemDisplayBinding="{Binding Name}"
-                        ItemsSource="{Binding Items}"
-                        SelectedItem="{Binding SelectedItem}"
+                        ItemsSource="{Binding GraphPickerItems}"
+                        SelectedItem="{Binding SelectedGraphItem}"
                         VerticalOptions="Center"
-                        HorizontalOptions="End"
-                        />
+                        HorizontalOptions="End"/>
+
+                        <Picker
+                        x:Name="SensorPicker"
+                        TitleColor="Red"
+                        Title="{Binding SensorPickerTitle}"
+                        ItemDisplayBinding="{Binding Name}"
+                        ItemsSource="{Binding SensorPickerItems}"
+                        SelectedItem="{Binding SelectedSensorItem}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"/>
+                    </StackLayout>
 
                     <microcharts:ChartView
-                        Chart="{Binding Chart}"
                         Grid.Row="1"
                         Grid.Column="1"
                         Grid.ColumnSpan="2"
+                        Chart="{Binding Chart}"
                         HeightRequest="500"
-                        WidthRequest="1300"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand"
-                        />
+                        WidthRequest="1300" />
 
                 </Grid>
             </StackLayout>
@@ -64,28 +72,28 @@
                     </Grid.RowDefinitions>
 
                     <Label
-                    Grid.Row="0"
-                    FontSize="50"
-                    HorizontalOptions="CenterAndExpand"
-                    Text="{Binding GraphTitle}"
-                    TextColor="Black"
-                    VerticalOptions="CenterAndExpand" />
+                        Grid.Row="0"
+                        FontSize="50"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding GraphTitle}"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand" />
 
                     <Label
-                    Grid.Row="1"
-                    FontSize="20"
-                    HorizontalOptions="CenterAndExpand"
-                    Text="Location: Enschede"
-                    TextColor="Black"
-                    VerticalOptions="FillAndExpand" />
+                        Grid.Row="1"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Location: Enschede"
+                        TextColor="Black"
+                        VerticalOptions="FillAndExpand" />
 
                     <Label
-                    Grid.Row="2"
-                    FontSize="20"
-                    HorizontalOptions="CenterAndExpand"
-                    Text="Date: 16 - 12 - 2021"
-                    TextColor="Black"
-                    VerticalOptions="FillAndExpand" />
+                        Grid.Row="2"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Date: 16 - 12 - 2021"
+                        TextColor="Black"
+                        VerticalOptions="FillAndExpand" />
                 </Grid>
             </StackLayout>
         </Grid>

@@ -85,7 +85,7 @@ namespace GUI.Models
                     }
                     catch(Exception exception)
                     {
-                        Debug.WriteLine($"Exception catched: {exception.ToString()}");
+                        Debug.WriteLine($"Failed to gather data. Retrying...");
                     }
                 }
             }

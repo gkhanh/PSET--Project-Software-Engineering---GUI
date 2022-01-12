@@ -259,12 +259,6 @@ namespace GUI.ViewModels
         // Function to setup SSH connection
         private void SetupConnection()
         {
-            /*sensorParser = new SensorParser();
-            var unparsedList = DatabaseConnection.Connect();
-
-            var parsedPySensor = sensorParser.Parse(unparsedList.First);
-            var parsedLhtSensor = sensorParser.Parse(unparsedList.Second);
-*/
             var currentApp = Application.Current as App;
 
             pySensors = currentApp.SensorsPy;

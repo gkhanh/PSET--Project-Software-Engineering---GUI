@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-11T11:34:37.042</Modified>
+      <Modified>2022-01-12T09:11:51.864</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\GUI.UWP.exe">
       <PackagePath>entrypoint\GUI.UWP.exe</PackagePath>
-      <Modified>2022-01-11T11:34:34.867</Modified>
+      <Modified>2022-01-12T09:11:50.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\castle.core\4.4.1\lib\netstandard1.5\Castle.Core.dll">
       <PackagePath>Castle.Core.dll</PackagePath>
@@ -152,7 +152,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI\bin\Debug\netstandard2.0\GUI.dll">
       <PackagePath>GUI.dll</PackagePath>
-      <Modified>2022-01-11T11:24:33.806</Modified>
+      <Modified>2022-01-12T09:09:16.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -327,11 +327,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-11T11:34:34.692</Modified>
+      <Modified>2022-01-12T09:11:50.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-11T11:34:34.692</Modified>
+      <Modified>2022-01-12T09:11:50.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -351,7 +351,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Arief\source\repos\Trying\GUI.UWP\bin\x86\Debug\Core\GUI.UWP.exe">
       <PackagePath>GUI.UWP.exe</PackagePath>
-      <Modified>2022-01-11T11:34:37.032</Modified>
+      <Modified>2022-01-12T09:11:51.859</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

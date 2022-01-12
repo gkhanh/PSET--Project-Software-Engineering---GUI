@@ -23,7 +23,7 @@ namespace GUI.Models
         {
             // Humidity 100 % is 100
 
-            float result = (avg / 100) * 100;
+            float result = (avg / 150) * 100;
             if (result > 100)
             {
                 // If we get a weird value that is higher than what we said was 100 % it makes the value 100 %
@@ -407,19 +407,21 @@ namespace GUI.Models
                     DateTime.Now.AddHours(-i).Hour.ToString()));
             }
 
-            /*Debug.WriteLine("**********************************************************");
+            /*
+            Debug.WriteLine("**********************************************************");
             Debug.WriteLine($"Below are average temperature results of Lht-devices");
 
             // PRINT DEBUG LIST
             foreach (var item in Wierden_LHT)
             {
-                Debug.WriteLine(item.Temperature);
+                Debug.WriteLine(item.Light);
             }
 
             foreach (var item in Gronau_LHT)
             {
-                Debug.WriteLine(item.Temperature);
-            }*/
+                Debug.WriteLine(item.Light);
+            }
+            */
         }
     }
 }

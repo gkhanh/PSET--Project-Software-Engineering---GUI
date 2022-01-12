@@ -23,7 +23,7 @@ namespace GUI.Models
         {
             // Humidity 100 % is 100
             float result = sum / count;
-            result = (result / 100) * 100;
+            result = (result / 150) * 100;
             if (result > 100)
             {
                 // If we get a weird value that is higher than what we said was 100 % it makes the value 100 %

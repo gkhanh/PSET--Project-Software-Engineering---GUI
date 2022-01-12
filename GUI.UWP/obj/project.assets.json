@@ -22282,31 +22282,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gkhan\\.nuget\\packages\\": {},
+    "C:\\Users\\laris\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.UWP\\GUI.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
       "projectName": "GUI.UWP",
-      "projectPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.UWP\\GUI.UWP.csproj",
-      "packagesPath": "C:\\Users\\gkhan\\.nuget\\packages\\",
-      "outputPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI.UWP\\obj\\",
+      "projectPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\GUI.UWP.csproj",
+      "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\gkhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\laris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.16299"
@@ -22318,8 +22315,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.csproj": {
-              "projectPath": "D:\\2nd year\\Quarter 2\\Project Software Engineering\\GUI\\GUI\\GUI.csproj"
+            "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj": {
+              "projectPath": "C:\\Users\\laris\\Source\\Repos\\PSET--Project-Software-Engineering---GUI\\GUI\\GUI.csproj"
             }
           }
         }

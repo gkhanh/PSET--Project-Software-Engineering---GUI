@@ -377,6 +377,8 @@ namespace GUI.ViewModels
                 sumAvgLightWierdenLht += element.average_light;
             }
 
+            
+
             foreach (var element in lhtGronau)
             {
                 sumAvgTempGronau += element.average_temperature;
@@ -390,15 +392,21 @@ namespace GUI.ViewModels
 
             averageTempSaxion = "Temperature: " + Math.Round(AverageTempSaxion, 2).ToString() + "°C (inside temperature)";
             averagePresSaxion = "Pressure: " + Math.Round(AveragePresSaxion, 2).ToString() + " Pa";
-            averageLightSaxion = "Light: " + Math.Round(AverageLightSaxion, 2).ToString() + " Lumen";
+            averageLightSaxion = "Light: " + Math.Round(AverageLightSaxion, 2).ToString() + " %";
+            //averageLightSaxion = "Light: " + (averageDay.percentageLight(AverageLightSaxion), 2).ToString() + " Lumen";
 
             averageTempWierden = "Temperature: " + Math.Round(sumAvgTempWierdenLht / lhtWierden.Count, 2).ToString() + "°C";
             averageHumWierden = "Humidity: " + Math.Round(sumAvgHumWierden / lhtWierden.Count, 2).ToString() + "%";
-            averageLightWierden = "Light: " + Math.Round(sumAvgLightWierden / lhtWierden.Count, 2).ToString() + " Lumen";
+            //averageHumWierden = "Humidity: " + averageDay.percentageHumidity(sumAvgHumWierden / lhtWierden.Count).ToString() + "%";
+            averageLightWierden = "Light: " + Math.Round(sumAvgLightWierden / lhtWierden.Count, 2).ToString() + " %";
+            //averageLightWierden = "Light: " + averageDay.percentageLight(sumAvgLightWierden / lhtWierden.Count).ToString() + " Lumen";
+            
 
             averageTempGronau = "Temperature: " + Math.Round(sumAvgTempGronau / lhtWierden.Count, 2).ToString() + "°C";
             averageHumGronau = "Humidity: " + Math.Round(sumAvgHumGronau / lhtWierden.Count, 2).ToString() + "%";
-            averageLightGronau = "Light: " + Math.Round(sumAvgLightGronau / lhtWierden.Count, 2).ToString() + " Lumen";
+            //averageHumGronau = "Humidity: " + averageDay.percentageHumidity(sumAvgHumGronau / lhtWierden.Count).ToString() + "%";
+            averageLightGronau = "Light: " + Math.Round(sumAvgLightGronau / lhtWierden.Count, 2).ToString() + " %";
+            
 
             // Create variable to store lht-sensor averages
             var averageTempLhtSensor = new List<float>();
@@ -448,7 +456,7 @@ namespace GUI.ViewModels
 
             averageTemperature = double.IsNaN(temperature) ? "Temperature: " + "0" + "°C" : "Temperature: " + temperature.ToString() + "°C";
             averagePressure = double.IsNaN(pressure) ? "Pressure: " + "0" + " Pa" : "Pressure: " + pressure.ToString() + " Pa";
-            averageHumidity = double.IsNaN(humidity) ? "Humidity: " + "0" + "%" : "Humidity: " + humidity.ToString() + "%";
+            averageHumidity = double.IsNaN(humidity) ? "Humidity: " + "0" + "%" : "Humidity: " + averageDay.percentageHumidity((float)humidity).ToString() + "%";
             averageLight = double.IsNaN(pressure) ? "Light: " + "0" + "%" : "Light: " + light.ToString() + "%";
         }
     }

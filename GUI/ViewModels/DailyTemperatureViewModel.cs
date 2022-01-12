@@ -339,7 +339,10 @@ namespace GUI.ViewModels
                 averageLightLhtSensor.Add(!double.IsNaN(AvgLight) ? (float)AvgLight : 0.0f);
             }
 
-            for(int i = 0; i < pyWierden.Count; i++)
+            averageLightPySensor = Enumerable.Reverse(averageLightPySensor).ToList();
+            averageLightLhtSensor = Enumerable.Reverse(averageLightLhtSensor).ToList();
+
+            for (int i = 0; i < pyWierden.Count; i++)
             {
                 // Add to list of average graphs
                 averagePyGraph.Add(new GraphData(averageTempPySensor[i], averagePresPySensor[i], 0.0f, averageLightPySensor[i], "Average_data_" + i, pyTimes[i]));

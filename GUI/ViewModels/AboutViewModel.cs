@@ -449,7 +449,7 @@ namespace GUI.ViewModels
             averageTemperature = double.IsNaN(temperature) ? "Temperature: " + "0" + "°C" : "Temperature: " + temperature.ToString() + "°C";
             averagePressure = double.IsNaN(pressure) ? "Pressure: " + "0" + " Pa" : "Pressure: " + pressure.ToString() + " Pa";
             averageHumidity = double.IsNaN(humidity) ? "Humidity: " + "0" + "%" : "Humidity: " + humidity.ToString() + "%";
-            averageLight = double.IsNaN(pressure) ? "Light: " + "0" + " Lumen" : "Light: " + light.ToString() + " Lumen";
+            averageLight = double.IsNaN(pressure) ? "Light: " + "0" + "%" : "Light: " + light.ToString() + "%";
         }
     }
 }

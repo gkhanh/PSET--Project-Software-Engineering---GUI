@@ -19,6 +19,34 @@ namespace GUI.Models
         //-----------------------------------------------------------------------------------------------------------------------------
         // Calculate for Py
         //-----------------------------------------------------------------------------------------------------------------------------
+        public int percentageHumidity(float avg)
+        {
+            // Humidity 100 % is 100
+
+            float result = (avg / 100) * 100;
+            if (result > 100)
+            {
+                // If we get a weird value that is higher than what we said was 100 % it makes the value 100 %
+                result = 100;
+            }
+
+            return (int)result;
+        }
+
+        public int percentageLight(float avg)
+        {
+            // 6000 Lumen is 100 %
+
+            float result = (avg / 6000) * 100;
+            if (result > 100)
+            {
+                // If we get a weird value that is higher than what we said was 100 % it makes the value 100 %
+                result = 100;
+            }
+
+            return (int)result;
+        }
+
         public void CalculateAveragePy(List<PySensor> Wierden_py, List<PySensor> Saxion_py)
         {
             int count_TemperatureWierden = 0,
@@ -162,7 +190,7 @@ namespace GUI.Models
                 //-----------------------------------------------------------------------------------------------------------------------------
                 // Adding the average data to a list for Wierden & Saxion
                 //-----------------------------------------------------------------------------------------------------------------------------
-                DayAverageWierdenPy.Add(new GraphData(avg_TempWierden,
+                /*DayAverageWierdenPy.Add(new GraphData(avg_TempWierden,
                     avg_PresWierden,
                     0.0f,
                     avg_LightWierden,
@@ -173,6 +201,19 @@ namespace GUI.Models
                     avg_PresSaxion,
                     0.0f,
                     avg_LightWierden,
+                    "saxion-py",
+                    DateTime.Now.AddHours(-i).Hour.ToString()));*/
+                DayAverageWierdenPy.Add(new GraphData(avg_TempWierden,
+                    avg_PresWierden,
+                    0.0f,
+                    percentageLight(avg_LightWierden),
+                    "wierden-Py",
+                    DateTime.Now.AddHours(-i).Hour.ToString()));
+
+                DayAverageSaxionPy.Add(new GraphData(avg_TempSaxion,
+                    avg_PresSaxion,
+                    0.0f,
+                    percentageLight(avg_LightWierden),
                     "saxion-py",
                     DateTime.Now.AddHours(-i).Hour.ToString()));
             }
@@ -338,7 +379,7 @@ namespace GUI.Models
                 //-----------------------------------------------------------------------------------------------------------------------------
                 // Adding the average data to a list for Wierden & Saxion
                 //-----------------------------------------------------------------------------------------------------------------------------
-                DayAverageWierdenLHT.Add(new GraphData(avg_TempWierden,
+                /*DayAverageWierdenLHT.Add(new GraphData(avg_TempWierden,
                     0.0f,
                     avg_HumWierden,
                     avg_LightWierden,
@@ -349,6 +390,19 @@ namespace GUI.Models
                     0.0f,
                     avg_HumGronau,
                     avg_LightGronau,
+                    "gronau-lht",
+                    DateTime.Now.AddHours(-i).Hour.ToString()));*/
+                DayAverageWierdenLHT.Add(new GraphData(avg_TempWierden,
+                    0.0f,
+                    percentageHumidity(avg_HumWierden),
+                    percentageLight(avg_LightWierden),
+                    "wierden-lht",
+                    DateTime.Now.AddHours(-i).Hour.ToString()));
+
+                DayAverageGronauLHT.Add(new GraphData(avg_TempGronau,
+                    0.0f,
+                    percentageHumidity(avg_HumGronau),
+                    percentageLight(avg_LightGronau),
                     "gronau-lht",
                     DateTime.Now.AddHours(-i).Hour.ToString()));
             }

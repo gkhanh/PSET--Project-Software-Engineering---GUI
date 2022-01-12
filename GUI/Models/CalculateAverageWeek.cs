@@ -18,6 +18,35 @@ namespace GUI.Models
         //-----------------------------------------------------------------------------------------------------------------------------
         // Calculate for Py
         //-----------------------------------------------------------------------------------------------------------------------------
+
+        public int percentageHumidity(float sum, int count)
+        {
+            // Humidity 100 % is 100
+            float result = sum / count;
+            result = (result / 100) * 100;
+            if (result > 100)
+            {
+                // If we get a weird value that is higher than what we said was 100 % it makes the value 100 %
+                result = 100;
+            }
+
+            return (int)result;
+        }
+
+        public int percentageLight(float sum, int count)
+        {
+            // 6000 Lumen is 100 %
+            float result = sum / count;
+            result = (result / 6000) * 100;
+            if (result > 100)
+            {
+                // If we get a weird value that is higher than what we said was 100 % it makes the value 100 %
+                result = 100;
+            }
+
+            return (int)result;
+        }
+
         public void CalculateAveragePy(List<PySensor> Wierden_py, List<PySensor> Saxion_py)
         {
             int count_TemperatureWierden = 0,
@@ -161,7 +190,7 @@ namespace GUI.Models
                 //-----------------------------------------------------------------------------------------------------------------------------
                 // Adding the average data to a list for Wierden & Saxion
                 //-----------------------------------------------------------------------------------------------------------------------------
-                WeekAverageWierdenPy.Add(new GraphData(avg_TempWierden,
+                /*WeekAverageWierdenPy.Add(new GraphData(avg_TempWierden,
                     avg_PresWierden,
                     0.0f,
                     avg_LightWierden,
@@ -173,14 +202,27 @@ namespace GUI.Models
                     0.0f,
                     avg_LightWierden,
                     "saxion-py",
+                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));*/
+                WeekAverageWierdenPy.Add(new GraphData(sum_TemperatureWierden / count_TemperatureWierden,
+                    sum_PressureWierden / count_PressureWierden,
+                    0.0f,
+                    percentageLight(sum_LightWierden, count_LightWierden),
+                    "wierden-Py",
                     DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));
-            }
+
+                WeekAverageSaxionPy.Add(new GraphData(sum_TemperatureSaxion / count_TemperatureSaxion,
+                    sum_PressureSaxion / count_PressureSaxion,
+                    0.0f,
+                    percentageLight(sum_LightSaxion, count_LightSaxion),
+                    "saxion-py",
+                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy H")));
+            }      
         }
 
-        //-----------------------------------------------------------------------------------------------------------------------------
-        // Calculate for LHT
-        //-----------------------------------------------------------------------------------------------------------------------------
-        public void CalculateAverageLHT(List<LhtSensor> Wierden_LHT, List<LhtSensor> Gronau_LHT)
+    //-----------------------------------------------------------------------------------------------------------------------------
+    // Calculate for LHT
+    //-----------------------------------------------------------------------------------------------------------------------------
+    public void CalculateAverageLHT(List<LhtSensor> Wierden_LHT, List<LhtSensor> Gronau_LHT)
         {
             int count_TemperatureWierden = 0,
                     count_TemperatureGronau = 0,
@@ -323,7 +365,7 @@ namespace GUI.Models
                 //-----------------------------------------------------------------------------------------------------------------------------
                 // Adding the average data to a list for Wierden & Saxion
                 //-----------------------------------------------------------------------------------------------------------------------------
-                WeekAverageWierdenLHT.Add(new GraphData(avg_TempWierden,
+                /*WeekAverageWierdenLHT.Add(new GraphData(avg_TempWierden,
                     0.0f,
                     avg_HumWierden,
                     avg_LightWierden,
@@ -334,6 +376,19 @@ namespace GUI.Models
                     0.0f,
                     avg_HumGronau,
                     avg_LightGronau,
+                    "gronau-lht",
+                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy")));*/
+                WeekAverageWierdenLHT.Add(new GraphData(sum_TemperatureWierden / count_TemperatureWierden,
+                    0.0f,
+                    percentageHumidity(sum_HumidityWierden, count_HumidityWierden),
+                    percentageLight(sum_LightWierden, count_LightWierden),
+                    "wierden-lht",
+                    DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy")));
+
+                WeekAverageGronauLHT.Add(new GraphData(sum_TemperatureGronau / count_TemperatureGronau,
+                    0.0f,
+                    percentageHumidity(sum_HumidityGronau, count_HumidityGronau),
+                    percentageLight(sum_LightGronau, count_LightGronau),
                     "gronau-lht",
                     DateTime.Now.AddHours(-i).ToString("MM/dd/yyyy")));
             }

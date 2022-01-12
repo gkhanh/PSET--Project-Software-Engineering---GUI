@@ -44,9 +44,6 @@
     <EmbeddedResource Update="Views\ItemsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Overview.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\WeeklyTemperature.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

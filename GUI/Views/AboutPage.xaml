@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GUI.Views.AboutPage"
-             xmlns:vm="clr-namespace:GUI.ViewModels"
-             xmlns:local="clr-namespace:GUI.Models"
-             Title="{Binding Title}"
-             BackgroundImageSource="{local:ImageResourceExtention GUI.Resources.sky.jpg}"
-             >
+<ContentPage
+    x:Class="GUI.Views.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GUI.Models"
+    xmlns:vm="clr-namespace:GUI.ViewModels"
+    Title="{Binding Title}"
+    BackgroundImageSource="{local:ImageResourceExtention GUI.Resources.sky.jpg}">
 
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -28,266 +28,285 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!--Home text-->
-        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
-            <Label Text="{Binding CityTitle}"
-                       FontSize="35"
-                       TextColor="AliceBlue"
-                       HorizontalOptions="CenterAndExpand"
-                       Margin="25"></Label>
+        <!--  Home text  -->
+        <StackLayout
+            Grid.Row="0"
+            Grid.Column="1"
+            Grid.ColumnSpan="2">
+            <Label
+                Margin="25"
+                FontSize="35"
+                HorizontalOptions="CenterAndExpand"
+                Text="{Binding CityTitle}"
+                TextColor="AliceBlue" />
         </StackLayout>
-        
-        <!-- Image slider -->
-        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+
+        <!--  Image slider  -->
+        <StackLayout
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
             <CarouselView x:Name="MainImageView" CurrentItemChanged="MainImageView_CurrentItemChanged">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding .}" Aspect="AspectFit" HeightRequest="250" WidthRequest="250"/>
+                        <Image
+                            Aspect="AspectFit"
+                            HeightRequest="250"
+                            Source="{Binding .}"
+                            WidthRequest="250" />
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
         </StackLayout>
 
-        <!--Latest average information-->
-        <StackLayout Grid.Row ="2" Grid.Column="0" Grid.ColumnSpan="4">
+        <!--  Latest average information  -->
+        <StackLayout
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
             <Grid>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <Frame
-                HorizontalOptions="CenterAndExpand"
-                HeightRequest="60"
-                WidthRequest="400">
-                    <Label 
-                x:Name="TemperatureMainPage"
-                Text="{Binding AverageTemperature}"
-                TextColor="AliceBlue"
-                FontSize = "24"
-                HorizontalOptions="CenterAndExpand"/>
-                </Frame>
-                
-                <Frame  
-                Grid.Column="1"
-                Grid.Row="0"
-                x:Name="LightMainPageFrame"
-                HorizontalOptions="CenterAndExpand"
-                HeightRequest="60"
-                WidthRequest="400">
-                    <Label 
-                x:Name="LightMainPage"
-                Text="{Binding AverageLight}"
-                TextColor="AliceBlue"
-                FontSize = "24"
-                HorizontalOptions="CenterAndExpand"
-                    />
+                    HeightRequest="60"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="400">
+                    <Label
+                        x:Name="TemperatureMainPage"
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding AverageTemperature}"
+                        TextColor="AliceBlue" />
                 </Frame>
 
                 <Frame
-                Grid.Column="2"
-                Grid.Row="0"
-                VerticalOptions="CenterAndExpand"
-                HeightRequest="60"
-                WidthRequest="400">
-                    <Label 
-                x:Name="HumidityMainPage"
-                Text="{Binding AverageHumidity}"
-                TextColor="AliceBlue"
-                FontSize = "24"
-                HorizontalOptions="CenterAndExpand"/>
+                    x:Name="LightMainPageFrame"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HeightRequest="60"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="400">
+                    <Label
+                        x:Name="LightMainPage"
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding AverageLight}"
+                        TextColor="AliceBlue" />
                 </Frame>
 
                 <Frame
-                Grid.Column="3"
-                Grid.Row="0"
-                VerticalOptions="End"
-                HeightRequest="60"
-                WidthRequest="400">
-                    <Label 
-                Text="{Binding AveragePressure}"
-                TextColor="AliceBlue"
-                FontSize = "24"
-                HorizontalOptions="CenterAndExpand"/>
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HeightRequest="60"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="400">
+                    <Label
+                        x:Name="HumidityMainPage"
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding AverageHumidity}"
+                        TextColor="AliceBlue" />
+                </Frame>
+
+                <Frame
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    HeightRequest="60"
+                    VerticalOptions="End"
+                    WidthRequest="400">
+                    <Label
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding AveragePressure}"
+                        TextColor="AliceBlue" />
                 </Frame>
             </Grid>
         </StackLayout>
 
-        <!--Multiple sensor data-->
-        <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+        <!--  Multiple sensor data  -->
+        <StackLayout
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
             <Grid>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Frame Grid.Column="0"
-                       Grid.Row="0"
-                       BackgroundColor="#FF1E90FF"
-                       HeightRequest="30"
-                       WidthRequest="200"
-                       Margin="10"
-                       HorizontalOptions="CenterAndExpand">
-                    <Label Text="Enschede"
-                           FontSize="20"
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
+                <Frame
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="10"
+                    BackgroundColor="#FF1E90FF"
+                    HeightRequest="30"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200">
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Enschede" />
                 </Frame>
 
-                <Frame Grid.Column="1"
-                       Grid.Row="0"
-                       BackgroundColor="#FF1E90FF"
-                       HeightRequest="30"
-                       WidthRequest="200"
-                       Margin="10"
-                       HorizontalOptions="CenterAndExpand">
-                    <Label Text="Wierden"
-                           FontSize="20"
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
+                <Frame
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10"
+                    BackgroundColor="#FF1E90FF"
+                    HeightRequest="30"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200">
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Wierden" />
                 </Frame>
 
-                <Frame Grid.Column="2"
-                       Grid.Row="0"
-                       BackgroundColor="#FF1E90FF"
-                       HeightRequest="30"
-                       WidthRequest="200"
-                       Margin="10"
-                       HorizontalOptions="CenterAndExpand">
-                    <Label Text="Gronau"
-                           FontSize="20"
-                           HorizontalOptions="CenterAndExpand">
-                    </Label>
+                <Frame
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="10"
+                    BackgroundColor="#FF1E90FF"
+                    HeightRequest="30"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200">
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Gronau" />
                 </Frame>
 
-                <!--Data for location 1-->
-                <Label Text="{Binding AverageTempEnschede}"
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
-                
-                <Label Text="{Binding AverageHumidity}"
-                       Grid.Row="2"
-                       Grid.Column="0"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <!--  Data for location 1  -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageTempEnschede}"
+                    TextColor="AliceBlue" />
 
-                <Label Text="{Binding AverageLightEnschede}"
-                       Grid.Row="3"
-                       Grid.Column="0"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageHumidity}"
+                    TextColor="AliceBlue" />
 
-                <Label Text="{Binding AveragePresEnschede}"
-                       Grid.Row="4"
-                       Grid.Column="0"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageLightEnschede}"
+                    TextColor="AliceBlue" />
 
-                <!--Data for location 2-->
-                <Label Text="{Binding AverageTempWierden}"
-                       Grid.Row="1"
-                       Grid.Column="1"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
-                
-                <Label Text="{Binding AverageHumWierden}"
-                       Grid.Row="2"
-                       Grid.Column="1"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AveragePresEnschede}"
+                    TextColor="AliceBlue" />
 
-                <Label Text="{Binding AverageLightWierden}"
-                       Grid.Row="3"
-                       Grid.Column="1"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <!--  Data for location 2  -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageTempWierden}"
+                    TextColor="AliceBlue" />
 
-                <Label Text="{Binding AveragePressure}"
-                       Grid.Row="4"
-                       Grid.Column="1"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageHumWierden}"
+                    TextColor="AliceBlue" />
 
-                <!--Data for location 3-->
-                <Label Text="{Binding AverageTempGronau}"
-                       Grid.Row="1"
-                       Grid.Column="2"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
-                
-                <Label Text="{Binding AverageHumGronau}"
-                       Grid.Row="2"
-                       Grid.Column="2"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageLightWierden}"
+                    TextColor="AliceBlue" />
 
-                <Label Text="{Binding AverageLightGronau}"
-                       Grid.Row="3"
-                       Grid.Column="2"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AveragePressure}"
+                    TextColor="AliceBlue" />
 
-                <Label Text="{Binding AveragePressure}"
-                       Grid.Row="4"
-                       Grid.Column="2"
-                       Margin="10"
-                       TextColor="AliceBlue"
-                       FontSize="20"
-                       HorizontalOptions="StartAndExpand">
-                </Label>
+                <!--  Data for location 3  -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageTempGronau}"
+                    TextColor="AliceBlue" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageHumGronau}"
+                    TextColor="AliceBlue" />
+
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AverageLightGronau}"
+                    TextColor="AliceBlue" />
+
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Margin="10"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding AveragePressure}"
+                    TextColor="AliceBlue" />
             </Grid>
         </StackLayout>
     </Grid>

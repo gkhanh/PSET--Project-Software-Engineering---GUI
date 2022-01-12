@@ -201,7 +201,7 @@ namespace GUI.ViewModels
         // CONSTRUCTOR
         public DailyTemperatureViewModel()
         {
-            Title = "Hour overview";
+            Title = "Daily overview";
 
             // Set up connection and view elements
             SetupConnection();

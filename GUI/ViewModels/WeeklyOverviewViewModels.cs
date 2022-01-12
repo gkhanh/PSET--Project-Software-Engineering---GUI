@@ -182,7 +182,7 @@ namespace GUI.ViewModels
         // CONSTRUCTOR
         public WeeklyOverviewViewModels()
         {
-            Title = "Daily overview";
+            Title = "Weekly overview";
             SetupConnection();
             ComputeWeeklyAverage();
             SortSensorData();
@@ -335,8 +335,7 @@ namespace GUI.ViewModels
             chartEntries_temp = new List<ChartEntry>();
             chartEntries_hum = new List<ChartEntry>();
             chartEntries_light = new List<ChartEntry>();
-            chartEntries_pressure = new List<ChartEntry>();
-
+          
             foreach (var element in averagePyGraph)
             {
                 var entry = new ChartEntry(element.average_temperature)
@@ -372,6 +371,7 @@ namespace GUI.ViewModels
                 };
                 chartEntries_light.Add(entry);
             }
+
         }
 
         // Function that handles changing of graph entries source
@@ -381,6 +381,7 @@ namespace GUI.ViewModels
             chartEntries_temp = new List<ChartEntry>();
             chartEntries_hum = new List<ChartEntry>();
             chartEntries_light = new List<ChartEntry>();
+            chartEntries_pressure = new List<ChartEntry>();
 
             // Py-sensor selected
             if (name == sensorPickerItems[0].Name)
